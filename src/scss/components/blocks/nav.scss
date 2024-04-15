@@ -24,23 +24,29 @@
     @include property('font-size', 18, 14, 1920, 1200);
     line-height: 1.1;
     padding: rem(4);
-    transition: color var(--bs-transition);
+    transition: all var(--bs-transition);
 
     @include any-hover() {
       color: rgba(6, 115, 154, 0.6);
+    }
+
+    @include pseudo-cell(before) {
+      bottom: rem(-8);
+      left: 0;
+      width: 100%;
+      height: rem(7);
+      border-radius: rem(7) rem(7) 0 0;
+      background-color: rgba(6, 115, 154, 0.302);
+      transition: opacity var(--bs-transition);
+      opacity: 0;
     }
 
     &_active {
       font-weight: 700;
       pointer-events: none;
 
-      @include pseudo-cell(before) {
-        bottom: rem(-8);
-        left: 0;
-        width: 100%;
-        height: rem(7);
-        border-radius: rem(7) rem(7) 0 0;
-        background-color: rgba(6, 115, 154, 0.302);
+      &::before {
+        opacity: 1;
       }
     }
   }

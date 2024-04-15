@@ -28,6 +28,12 @@
       @include property('gap', 30, 15, 1024, 768);
     }
   }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    @include property('gap', 20, 15, 1920, 1200);
+  }
 }
 
 .logo {
@@ -38,11 +44,9 @@
     @include property('width', 208, 110, 1200, 320);
   }
 
-  img {
+  svg {
     width: 100%;
     height: 100%;
-    object-fit: contain;
-    object-position: center;
   }
 }
 
@@ -57,11 +61,18 @@
     justify-content: center;
     @include property('width', 54, 30, 1920, 1200);
     @include property('height', 54, 30, 1920, 1200);
-    @include property('padding', 12.5, 6, 1920, 1200);
+    @include property('padding', 14, 7, 1920, 1200);
+    color: #ffffff;
     background-color: #06739a;
     border: 1px solid #06739ae5;
     border-radius: 50%;
     box-shadow: 0px 0px 5px 0px #00000017;
+    transition: all var(--bs-transition);
+
+    @include any-hover() {
+      background-color: #ffffff;
+      color: #06739a;
+    }
 
     img {
       width: 100%;

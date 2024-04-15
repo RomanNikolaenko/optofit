@@ -8,10 +8,8 @@
   &__item {
     display: flex;
 
-    @media (max-width: 860px) {
-      &_active {
-        display: none;
-      }
+    &_active {
+      display: none;
     }
   }
 

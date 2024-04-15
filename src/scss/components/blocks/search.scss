@@ -2,7 +2,13 @@
   display: flex;
 
   &__btn {
+    color: #00719b;
     background-color: transparent;
+    transition: color var(--bs-transition);
+
+    @include any-hover() {
+      color: rgba(6, 115, 154, 0.6);
+    }
   }
 }
 

@@ -57,20 +57,35 @@
     /** Установить свои значения */
     top: rem(20);
     right: rem(20);
-    width: rem(56);
-    height: rem(56);
+    @include property('width', 56, 42);
+    @include property('height', 56, 42);
     display: flex;
     justify-content: center;
     align-items: center;
     background: #f4f4f4;
     color: #06739a;
+    border: 1px solid #06739a;
     border-radius: 50%;
-
     box-shadow: 0px 0px 2px 0px #00719b26;
+    transition: opacity var(--bs-transition);
+
+    @media (any-hover: hover) {
+      opacity: 0.5;
+    }
+
+    @include any-hover() {
+      opacity: 1;
+    }
   }
 }
 
 .map-popup {
+  &__text {
+    @include property('font-size', 28, 22);
+    padding-right: rem(50);
+    margin-bottom: 1rem;
+  }
+
   iframe {
     width: 100%;
     height: 70vh;
