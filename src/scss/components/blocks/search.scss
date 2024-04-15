@@ -1,0 +1,95 @@
+.search {
+  display: flex;
+
+  &__btn {
+    background-color: transparent;
+  }
+}
+
+.form-search {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all var(--bs-transition);
+
+  &_open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+  }
+
+  @include pseudo-cell(before) {
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: var(--vh);
+    background-color: #022e3ecc;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff;
+    border-radius: 0 0 rem(40) rem(40);
+    @include property('border-bottom-left-radius', 40, 20);
+    @include property('border-bottom-right-radius', 40, 20);
+    @include property('padding', 50, 16);
+  }
+
+  &__form {
+    position: relative;
+    color: #00719b;
+  }
+
+  &__label {
+    display: flex;
+    width: 100%;
+    @include property('padding-inline', 64, 45);
+    @include property('padding-block', 30, 16);
+    border-radius: rem(13);
+    border: rem(1) solid #186fa140;
+    background-color: #f5f6f7;
+    cursor: text;
+  }
+
+  &__input {
+    background-color: transparent;
+    color: inherit;
+    width: 100%;
+    font-size: rem(17);
+    line-height: 1.2;
+  }
+
+  &__submit {
+    @include property('left', 30, 16);
+  }
+
+  &__clean {
+    @include property('right', 30, 16);
+    transition: all var(--bs-transition);
+
+    &_hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+}
+
+.__cont {
+  max-width: rem(1256);
+  width: 100%;
+}
+
+.btn-form {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  color: inherit;
+  background-color: transparent;
+}

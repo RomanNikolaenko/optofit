@@ -1,0 +1,33 @@
+.lang {
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: rem(8);
+  }
+
+  &__item {
+    display: flex;
+
+    @media (max-width: 860px) {
+      &_active {
+        display: none;
+      }
+    }
+  }
+
+  &__link {
+    text-transform: uppercase;
+    color: #9bc7d7;
+    transition: color var(--bs-transition);
+    @include property('font-size', 17, 15, 1920, 1200);
+
+    @include any-hover() {
+      color: rgba(6, 115, 154, 0.6);
+    }
+
+    &_active {
+      pointer-events: none;
+      color: #388fae;
+    }
+  }
+}

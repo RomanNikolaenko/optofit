@@ -1,0 +1,48 @@
+.map {
+  display: flex;
+
+  @media (max-width: 360px) {
+    display: none;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    @include property('gap', 16, 10, 1920, 1200);
+  }
+
+  &__btn {
+    background-color: transparent;
+
+    @include any-hover() {
+      .map__icon {
+        color: rgba(6, 115, 154, 0.6);
+      }
+    }
+
+    * {
+      pointer-events: none;
+    }
+  }
+
+  &__icon {
+    color: #06739a;
+    transition: color var(--bs-transition);
+
+    svg {
+      transition: inherit;
+    }
+  }
+
+  &__text {
+    display: grid;
+    gap: rem(5);
+    color: #00719b;
+    @include property('font-size', 15, 13, 1920, 1200);
+    line-height: 1;
+
+    @media (max-width: 767.98px) {
+      display: none;
+    }
+  }
+}

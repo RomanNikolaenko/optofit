@@ -1,0 +1,27 @@
+<header class="header">
+  <div class="header__container">
+    <a href="#" class="header__logo logo">
+      <img src="../images/svg/logo.svg" width="300" height="84" alt="logo" />
+    </a>
+
+    @@include('./blocks/nav.html')
+
+    <div class="header__wrap">
+      @@include('./blocks/search.html') @@include('./blocks/lang.html')
+      @@include('./blocks/map.html') @@include('./blocks/phone.html')
+      <div class="header__btn btn-header cart">
+        <a href="#" class="btn-header__btn">
+          <span class="visually-hidden">Кошик</span>
+          <img src="../images/svg/cart.svg" width="27" height="27" alt="" />
+          <span class="cart__badge cart__badge_empty">3</span>
+        </a>
+      </div>
+      <div class="header__btn btn-header burger">
+        <button class="btn-header__btn">
+          <span class="visually-hidden">Меню</span>
+          <img src="../images/svg/burger.svg" width="27" height="27" alt="" />
+        </button>
+      </div>
+    </div>
+  </div>
+</header>

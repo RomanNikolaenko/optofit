@@ -1,0 +1,154 @@
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  width: 100%;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.11);
+  background-color: rgba(255, 255, 255, 0.96);
+  border-radius: 0 0 rem(16) rem(16);
+  padding: rem(8) 0;
+  min-height: rem(56);
+  display: flex;
+  align-items: center;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    @include property('gap', 30, 12, 1920, 1200);
+    width: 100%;
+  }
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+    @include property('gap', 40, 12, 1920, 1200);
+
+    @media (max-width: 1199.98px) {
+      @include property('gap', 30, 15, 1024, 768);
+    }
+  }
+}
+
+.logo {
+  flex: 0 0 auto;
+  @include property('width', 300, 150, 1920, 1200);
+
+  @media (max-width: 1199.98px) {
+    @include property('width', 208, 110, 1200, 320);
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+}
+
+.btn-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include property('width', 54, 30, 1920, 1200);
+    @include property('height', 54, 30, 1920, 1200);
+    @include property('padding', 12.5, 6, 1920, 1200);
+    background-color: #06739a;
+    border: 1px solid #06739ae5;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px 0px #00000017;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}
+
+.cart {
+  &__badge {
+    position: absolute;
+    top: rem(-5);
+    right: rem(-4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1.5px solid #ffffff;
+    border-radius: 100vmax;
+    background-color: #ed153e;
+    @include property('font-size', 14, 12, 1920, 1200);
+    max-height: rem(20);
+    height: 100%;
+    line-height: 1;
+    aspect-ratio: 1/1;
+    padding: 0 rem(4);
+    text-align: center;
+    color: #ffffff;
+
+    &_empty {
+      display: none;
+    }
+  }
+}
+
+// Burger
+/*
+.icon-menu {
+  display: none;
+
+  @include media-mx(768) {
+    display: block;
+    position: relative;
+    width: rem(30);
+    height: rem(18);
+    cursor: pointer;
+    z-index: 5;
+
+    span,
+    &::before,
+    &::after {
+      content: "";
+      transition: all 300ms ease 0ms;
+      right: 0;
+      position: absolute;
+      width: 100%;
+      height: rem(2);
+      background-color: #000;
+    }
+
+    &::before {
+      top: 0;
+    }
+
+    &::after {
+      bottom: 0;
+    }
+
+    span {
+      top: calc(50% - rem(1));
+    }
+
+    .menu-open & {
+      span {
+        width: 0;
+      }
+
+      &::before {
+        top: calc(50% - rem(1));
+        transform: rotate(-45deg);
+      }
+
+      &::after {
+        bottom: calc(50% - rem(1));
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
+*/

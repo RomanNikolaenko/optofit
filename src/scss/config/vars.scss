@@ -1,0 +1,19 @@
+$mainOffset: 20; // отступы безопасности для контейнера
+$maxWidth: 1920; // максимальная ширина страницы
+$minWidth: 320; // минимальная ширина телефона
+$containerWidth: 1880; // ширина контейнера из макета
+$maxWidthContainer: $containerWidth + ($mainOffset * 2); // ширина контейнера с учетом padding слева и справа
+
+:root {
+  --bs-font-family: 'Rubik', sans-serif; // Семейство шрифта по умолчанию
+  --bs-font-size: 17px; // Размер шрифта по умолчанию
+  --bs-font-weight: 400; // Жирность шрифта по умолчанию
+  --bs-line-height: 1.2; // Базовая высота шрифта
+  --bs-font-color: var(--primary); // Цвет шрифта по умолчанию
+  --bs-transition: 0.3s ease-in-out;
+  --bs-radius: 10px;
+
+  --primary: #00719b;
+  --white: #ffffff;
+  --black: #131313;
+}

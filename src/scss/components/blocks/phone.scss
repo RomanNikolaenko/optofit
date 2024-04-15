@@ -1,0 +1,51 @@
+.phone {
+  display: grid;
+  gap: rem(5);
+
+  @media (max-width: 599.98px) {
+    display: none;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: rem(5);
+  }
+
+  &__icon {
+    width: rem(16);
+    height: rem(16);
+    transition: color var(--bs-transition);
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__link {
+    @include property('font-size', 20, 14, 1920, 1200);
+    line-height: 1.2;
+    color: var(--bs-font-color);
+    transition: color var(--bs-transition);
+    text-wrap: nowrap;
+
+    ~ .phone__icon {
+      color: var(--bs-font-color);
+    }
+
+    @include any-hover() {
+      color: rgba(6, 115, 154, 0.6);
+
+      ~ .phone__icon {
+        color: rgba(6, 115, 154, 0.6);
+      }
+    }
+
+    @media (max-width: 1199.98px) {
+      @include property('font-size', 18, 16, 1200, 768);
+    }
+  }
+}
