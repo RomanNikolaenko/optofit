@@ -28,6 +28,10 @@
 
     @include any-hover() {
       color: rgba(6, 115, 154, 0.6);
+
+      &::before {
+        opacity: 1;
+      }
     }
 
     @include pseudo-cell(before) {

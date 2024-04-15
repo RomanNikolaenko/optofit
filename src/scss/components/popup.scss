@@ -81,7 +81,9 @@
 
 .map-popup {
   &__text {
-    @include property('font-size', 28, 22);
+    display: flex;
+    flex-wrap: wrap;
+    @include property('font-size', 22, 18);
     padding-right: rem(50);
     margin-bottom: 1rem;
   }

@@ -20,35 +20,63 @@
 
 <div id="search-form" class="form-search" data-close-search>
   <div class="form-search__top">
-    <form class="form-search__form __cont">
-      <button class="form-search__submit btn-form" type="submit">
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M15.4637 15.3053C15.4038 15.3511 15.3502 15.4048 15.3043 15.4647C14.1879 16.5436 12.6954 17.1455 11.1429 17.143C10.3548 17.1442 9.57418 16.9895 8.84604 16.688C8.11789 16.3864 7.45654 15.9439 6.90002 15.3859C6.34193 14.8294 5.89938 14.168 5.59782 13.4399C5.29627 12.7117 5.14165 11.9311 5.14288 11.143C5.14288 9.48615 5.81317 7.987 6.90002 6.90015C7.45654 6.3421 8.11789 5.89957 8.84604 5.59801C9.57418 5.29646 10.3548 5.14182 11.1429 5.143C12.7997 5.143 14.2989 5.81329 15.3857 6.90015C15.9438 7.45664 16.3864 8.11798 16.6879 8.84613C16.9895 9.57429 17.1441 10.3549 17.1429 11.143C17.1453 12.6959 16.5431 14.1888 15.4637 15.3053ZM20.3203 19.1084L17.1703 15.9584C18.2645 14.5922 18.8596 12.8934 18.8572 11.143C18.8584 10.1298 18.6594 9.12627 18.2717 8.19015C17.8839 7.25404 17.3151 6.40376 16.5977 5.68815C15.8821 4.97082 15.0318 4.40195 14.0957 4.01421C13.1596 3.62646 12.1561 3.42749 11.1429 3.42872C10.1296 3.42749 9.12615 3.62646 8.19003 4.01421C7.25392 4.40195 6.40364 4.97082 5.68802 5.68815C4.9707 6.40376 4.40183 7.25404 4.01409 8.19015C3.62634 9.12627 3.42737 10.1298 3.42859 11.143C3.42737 12.1562 3.62634 13.1597 4.01409 14.0959C4.40183 15.032 4.9707 15.8822 5.68802 16.5979C6.40364 17.3152 7.25392 17.8841 8.19003 18.2718C9.12615 18.6595 10.1296 18.8585 11.1429 18.8573C12.8933 18.8597 14.5921 18.2646 15.9583 17.1704L19.1083 20.3204C19.269 20.4812 19.487 20.5714 19.7143 20.5714C19.9416 20.5714 20.1596 20.4812 20.3203 20.3204C20.481 20.1597 20.5713 19.9417 20.5713 19.7144C20.5713 19.4871 20.481 19.2692 20.3203 19.1084Z"
-            fill="currentColor"
+    <div class="form-search__wrap __cont">
+      <form class="form-search__form">
+        <button class="form-search__submit btn-form" type="submit">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M15.4637 15.3053C15.4038 15.3511 15.3502 15.4048 15.3043 15.4647C14.1879 16.5436 12.6954 17.1455 11.1429 17.143C10.3548 17.1442 9.57418 16.9895 8.84604 16.688C8.11789 16.3864 7.45654 15.9439 6.90002 15.3859C6.34193 14.8294 5.89938 14.168 5.59782 13.4399C5.29627 12.7117 5.14165 11.9311 5.14288 11.143C5.14288 9.48615 5.81317 7.987 6.90002 6.90015C7.45654 6.3421 8.11789 5.89957 8.84604 5.59801C9.57418 5.29646 10.3548 5.14182 11.1429 5.143C12.7997 5.143 14.2989 5.81329 15.3857 6.90015C15.9438 7.45664 16.3864 8.11798 16.6879 8.84613C16.9895 9.57429 17.1441 10.3549 17.1429 11.143C17.1453 12.6959 16.5431 14.1888 15.4637 15.3053ZM20.3203 19.1084L17.1703 15.9584C18.2645 14.5922 18.8596 12.8934 18.8572 11.143C18.8584 10.1298 18.6594 9.12627 18.2717 8.19015C17.8839 7.25404 17.3151 6.40376 16.5977 5.68815C15.8821 4.97082 15.0318 4.40195 14.0957 4.01421C13.1596 3.62646 12.1561 3.42749 11.1429 3.42872C10.1296 3.42749 9.12615 3.62646 8.19003 4.01421C7.25392 4.40195 6.40364 4.97082 5.68802 5.68815C4.9707 6.40376 4.40183 7.25404 4.01409 8.19015C3.62634 9.12627 3.42737 10.1298 3.42859 11.143C3.42737 12.1562 3.62634 13.1597 4.01409 14.0959C4.40183 15.032 4.9707 15.8822 5.68802 16.5979C6.40364 17.3152 7.25392 17.8841 8.19003 18.2718C9.12615 18.6595 10.1296 18.8585 11.1429 18.8573C12.8933 18.8597 14.5921 18.2646 15.9583 17.1704L19.1083 20.3204C19.269 20.4812 19.487 20.5714 19.7143 20.5714C19.9416 20.5714 20.1596 20.4812 20.3203 20.3204C20.481 20.1597 20.5713 19.9417 20.5713 19.7144C20.5713 19.4871 20.481 19.2692 20.3203 19.1084Z"
+              fill="currentColor"
+            />
+          </svg>
+        </button>
+        <label class="form-search__label">
+          <input
+            id="search-input"
+            class="form-search__input"
+            type="text"
+            name="search"
+            placeholder="Пошук"
           />
-        </svg>
-      </button>
-      <label class="form-search__label">
-        <input
-          id="search-input"
-          class="form-search__input"
-          type="text"
-          name="search"
-        />
-      </label>
-      <button
-        class="form-search__clean form-search__clean_hidden btn-form"
-        type="button"
-      >
+        </label>
+        <button
+          class="form-search__clean form-search__clean_hidden btn-form"
+          type="button"
+        >
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M6 6L18.7742 18.7742"
+              stroke="currentCOlor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M6 18.7742L18.7742 5.99998"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </form>
+
+      <button class="form-search__close" type="button" data-close-search>
         <svg
           width="24"
           height="24"
@@ -72,6 +100,127 @@
           />
         </svg>
       </button>
-    </form>
+
+      <div class="form-search__popular form-search__inner popular-search">
+        <div class="popular-search__wrap">
+          <div class="popular-search__header">
+            <h2 class="popular-search__title">Популярні товари</h2>
+            <a href="#" class="popular-search__link">Усі товари</a>
+          </div>
+          <ul class="popular-search__products products-popular">
+            <li class="products-popular__item">
+              <a href="#" class="products-popular__link">
+                <div class="products-popular__img">
+                  <img
+                    src="../../images/Item.png"
+                    width="70"
+                    height="70"
+                    alt="product"
+                  />
+                </div>
+
+                <div class="products-popular__text">
+                  <h3 class="products-popular__title popular-title">
+                    Ski comfort black/orange
+                  </h3>
+                  <p class="products-popular__subtitle popular-subtitle">
+                    Чорно-Помаранчеві Ортопедичні Устілки для Комфортного
+                    Гірськолижного Відпочинку
+                  </p>
+                </div>
+                <div class="products-popular__price">
+                  <span class="products-popular__old-price"
+                    >320,79 <span>₴</span></span
+                  >
+                  <span class="products-popular__new-price"
+                    >220,79 <span>₴</span></span
+                  >
+                </div>
+              </a>
+            </li>
+            <li class="products-popular__item">
+              <a href="#" class="products-popular__link">
+                <div class="products-popular__img">
+                  <img
+                    src="../../images/Item.png"
+                    width="70"
+                    height="70"
+                    alt="product"
+                  />
+                </div>
+
+                <div class="products-popular__text">
+                  <h3 class="products-popular__title popular-title">
+                    Ski comfort black/orange
+                  </h3>
+                  <p class="products-popular__subtitle popular-subtitle">
+                    Чорно-Помаранчеві Ортопедичні Устілки для Комфортного
+                    Гірськолижного Відпочинку
+                  </p>
+                </div>
+                <div class="products-popular__price">
+                  <span class="products-popular__old-price"
+                    >320,79 <span>₴</span></span
+                  >
+                  <span class="products-popular__new-price"
+                    >220,79 <span>₴</span></span
+                  >
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="popular-search__wrap">
+          <div class="popular-search__header">
+            <h2 class="popular-search__title">Популярні послуги</h2>
+            <a href="#" class="popular-search__link">Усі послуги</a>
+          </div>
+          <ul class="popular-search__service service-popular">
+            <li class="service-popular__item">
+              <div class="service-popular__img">
+                <img
+                  src="../../images/Item1.png"
+                  width="317"
+                  height="214"
+                  alt="service"
+                />
+              </div>
+
+              <div class="service-popular__text">
+                <h3 class="service-popular__title popular-title">
+                  Кінезіотейпування
+                </h3>
+                <p class="service-popular__subtitle popular-subtitle">
+                  Наша клініка обладнана передовими технологіями для надання
+                  сучасних і ефективних медичних послуг
+                </p>
+              </div>
+              <a href="#" class="service-popular__link">Дізнатися більше</a>
+            </li>
+            <li class="service-popular__item">
+              <div class="service-popular__img">
+                <img
+                  src="../../images/Item1.png"
+                  width="317"
+                  height="214"
+                  alt="service"
+                />
+              </div>
+
+              <div class="service-popular__text">
+                <h3 class="products-popular__title popular-title">
+                  Кінезіотейпування
+                </h3>
+                <p class="products-popular__subtitle popular-subtitle">
+                  Наша клініка обладнана передовими технологіями для надання
+                  сучасних і ефективних медичних послуг
+                </p>
+              </div>
+              <a href="#" class="service-popular__link">Дізнатися більше</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

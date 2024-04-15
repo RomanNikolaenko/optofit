@@ -38,7 +38,7 @@
 
 .logo {
   flex: 0 0 auto;
-  @include property('width', 300, 150, 1920, 1200);
+  @include property('width', 318, 180, 1920, 1200);
 
   @media (max-width: 1199.98px) {
     @include property('width', 208, 110, 1200, 320);

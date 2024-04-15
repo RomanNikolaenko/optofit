@@ -23,6 +23,23 @@ class PopupManager extends Popup {
 
   addEventListeners() {
     document.addEventListener('click', this.togglePopup.bind(this));
+    document.addEventListener("keydown", (e) => {
+      const keyCode = e.keyCode;
+      const popup = document.querySelector('.popup.is-open');
+      
+      if(keyCode == 27 && popup) {
+        popup.classList.remove(this.options.isOpenClass);
+        popup.setAttribute('aria-hidden', 'true');
+
+        if(popup.querySelector(`.${this.options.buttonCloseName}`)) {
+          popup.querySelector(`.${this.options.buttonCloseName}`).setAttribute('tabindex', '-1')
+        }
+
+        setTimeout(()=> {
+          this.toggleBodyLock(false);
+        }, 400)
+      }
+    });
   }
 
   togglePopup({ target }) {

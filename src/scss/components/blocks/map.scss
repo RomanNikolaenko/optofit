@@ -5,17 +5,18 @@
     display: none;
   }
 
-  &__item {
+  &__btn {
     display: flex;
     align-items: center;
     @include property('gap', 16, 10, 1920, 1200);
-  }
-
-  &__btn {
     background-color: transparent;
 
     @include any-hover() {
       .map__icon {
+        color: rgba(6, 115, 154, 0.6);
+      }
+
+      .map__text {
         color: rgba(6, 115, 154, 0.6);
       }
     }
@@ -37,9 +38,12 @@
   &__text {
     display: grid;
     gap: rem(5);
+    text-align: left;
+    margin: 0;
     color: #00719b;
     @include property('font-size', 15, 13, 1920, 1200);
     line-height: 1;
+    transition: color var(--bs-transition);
 
     @media (max-width: 767.98px) {
       display: none;

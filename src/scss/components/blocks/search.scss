@@ -41,15 +41,14 @@
     display: flex;
     justify-content: center;
     background-color: #ffffff;
-    border-radius: 0 0 rem(40) rem(40);
-    @include property('border-bottom-left-radius', 40, 20);
-    @include property('border-bottom-right-radius', 40, 20);
-    @include property('padding', 50, 16);
+    @include property('border-bottom-left-radius', 40, 20, 1536, 1024);
+    @include property('border-bottom-right-radius', 40, 20, 1536, 1024);
   }
 
   &__form {
     position: relative;
     color: #00719b;
+    width: 100%;
   }
 
   &__label {
@@ -69,6 +68,10 @@
     width: 100%;
     font-size: rem(17);
     line-height: 1.2;
+
+    &::placeholder {
+      color: inherit;
+    }
   }
 
   &__submit {
@@ -84,10 +87,257 @@
       visibility: hidden;
     }
   }
+
+  &__close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 auto;
+    @include property('width', 56, 42);
+    @include property('height', 56, 42);
+    border-radius: 50%;
+    box-shadow: 0px 0px 2px 0px #00719b26;
+    background-color: #f4f4f4;
+    transition: all var(--bs-transition);
+
+    @include any-hover() {
+      background-color: #00719b;
+      color: #f4f4f4;
+    }
+
+    * {
+      pointer-events: none;
+    }
+  }
+
+  &__wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include property('padding', 50, 16, 1920, 1024);
+    @include property('gap', 20, 12, 1200);
+  }
+}
+
+.popular-search {
+  position: absolute;
+  @include property('left', 50, 16, 1920, 1024);
+  top: 100%;
+  padding-top: rem(20);
+  @include property('padding-inline', 40, 20);
+  @include property('padding-bottom', 40, 20);
+  background-color: #ffffff;
+  border-top: 1px solid #06739a4d;
+  @include property('border-bottom-left-radius', 40, 20, 1536, 1024);
+  @include property('border-bottom-right-radius', 40, 20, 1536, 1024);
+  max-width: 814px;
+  width: calc(100% - rem(40));
+  overflow-y: overlay;
+  max-height: calc(var(--vh) - var(--height-search) - rem(30));
+
+  &__header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: rem(16);
+    margin-bottom: 1rem;
+  }
+
+  &__link {
+    border: 1px solid #06739a;
+    padding: rem(13);
+    max-width: 178px;
+    width: 100%;
+    border-radius: 100vmax;
+    text-align: center;
+    transition: all var(--bs-transition);
+
+    @include any-hover() {
+      background-color: #06739a;
+      color: #ffffff;
+    }
+  }
+
+  &__wrap {
+    position: relative;
+
+    @include not-first() {
+      @include property('padding-top', 80, 40, 1024);
+
+      @include pseudo-cell(before) {
+        @include property('top', 40, 20, 1024);
+        left: 0;
+        background: #06739a4d;
+        width: 100%;
+        height: rem(1);
+      }
+    }
+  }
+}
+
+.service-popular {
+  display: grid;
+  gap: rem(20);
+
+  @media (min-width: 670px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: rem(20);
+    background-color: #f5f6f7;
+    box-shadow: 0px 0px 15px 0px #00719b12;
+    padding-block: rem(20);
+    @include property('padding-inline', 20, 12, 1024);
+    border-radius: rem(24);
+  }
+
+  &__img {
+    display: flex;
+    width: 100%;
+    aspect-ratio: 1.48/1;
+
+    img {
+      display: block;
+      border-radius: rem(24);
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+
+  &__text {
+    display: grid;
+    gap: rem(10);
+  }
+
+  &__link {
+    position: relative;
+    font-size: rem(18);
+    line-height: 1;
+    font-weight: 500;
+
+    @include pseudo-cell(before) {
+      top: calc(100% + rem(4));
+      left: 0;
+      background-color: #00719b;
+      width: 100%;
+      height: rem(1);
+      transition: width var(--bs-transition);
+    }
+
+    @include any-hover() {
+      &::before {
+        width: 70%;
+      }
+    }
+  }
+}
+
+.products-popular {
+  display: grid;
+  gap: rem(20);
+
+  &__item {
+    background: #f5f6f7;
+    box-shadow: 0px 0px 15px 0px #00719b12;
+    @include property('padding', 20, 12, 1024);
+    border-radius: rem(24);
+  }
+
+  &__img {
+    display: flex;
+    padding: rem(9);
+    background-color: #d3eaf2;
+    border-radius: rem(16);
+    width: 100%;
+    max-width: rem(88);
+    margin: 0 auto;
+    aspect-ratio: 1/1;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+
+  &__link {
+    display: grid;
+    align-items: center;
+    @include property('gap', 20, 12, 1024);
+
+    @media (min-width: 576px) {
+      grid-template-columns: rem(88) 1fr;
+    }
+
+    @media (min-width: 768px) {
+      grid-template-columns: rem(88) 1fr auto;
+    }
+  }
+
+  &__text {
+    display: grid;
+    gap: rem(10);
+  }
+
+  &__price {
+    display: grid;
+    justify-content: flex-end;
+    align-items: center;
+    gap: rem(2) rem(12);
+    text-wrap: nowrap;
+    text-align: end;
+
+    @media (max-width: 767.98px) {
+      grid-column: 1 / -1;
+      grid-template-columns: auto auto;
+    }
+  }
+
+  &__old-price {
+    color: #9bc7d7;
+    @include property('font-size', 24, 20, 1024);
+    line-height: 1.2;
+    text-decoration: line-through;
+
+    span {
+      @include property('font-size', 20, 16, 1024);
+      line-height: 1.2;
+    }
+  }
+
+  &__new-price {
+    color: #06739a;
+    @include property('font-size', 30, 24, 1024);
+    line-height: 1.125;
+
+    span {
+      @include property('font-size', 24, 20, 1024);
+      line-height: 1.2;
+    }
+  }
+}
+
+.popular-title {
+  @include property('font-size', 30, 22, 1024);
+  line-height: 1.125;
+}
+
+.popular-subtitle {
+  font-size: rem(15);
+  line-height: 1;
 }
 
 .__cont {
-  max-width: rem(1256);
+  max-width: rem(1332);
   width: 100%;
 }
 
@@ -98,4 +348,9 @@
   display: flex;
   color: inherit;
   background-color: transparent;
+  transition: opacity var(--bs-transition);
+
+  @include any-hover() {
+    opacity: 0.6;
+  }
 }
