@@ -1,4 +1,6 @@
 import Popup from '../helpers/popup';
+// const searchPopular = document.querySelector('.form-search__popular');
+// const searchResults = document.querySelector('.form-search__results');
 
 class PopupManager extends Popup {
   constructor(options = {}) {
@@ -35,6 +37,8 @@ class PopupManager extends Popup {
           popup.querySelector(`.${this.options.buttonCloseName}`).setAttribute('tabindex', '-1')
         }
 
+        this.cleanInput(popup);
+
         setTimeout(()=> {
           this.toggleBodyLock(false);
         }, 400)
@@ -56,6 +60,7 @@ class PopupManager extends Popup {
       target.closest(`.${this.options.buttonCloseName}`)
     ) {
       this.closePopup(target.closest('[data-popup]'));
+      this.cleanInput(target.closest('[data-popup]'))
 
       setTimeout(()=> {
         this.toggleBodyLock(false);
@@ -88,6 +93,23 @@ class PopupManager extends Popup {
     popup.setAttribute('aria-hidden', 'true');
     if(popup.querySelector(`.${this.options.buttonCloseName}`)) {
       popup.querySelector(`.${this.options.buttonCloseName}`).setAttribute('tabindex', '-1')
+    }
+
+    this.cleanInput(popup);
+  }
+
+  cleanInput(popup) {
+    const inputs = popup.querySelectorAll('input[type="text"]');
+    const searchPopular = popup.querySelector('.form-search__popular');
+    const searchResults = popup.querySelector('.form-search__results');
+
+    if(inputs.length) {
+      inputs.forEach((item) => {
+        item.value = null
+      })
+
+      searchPopular.classList.remove('popular-search_hidden');
+      searchResults.classList.add('popular-search_hidden');
     }
   }
 }

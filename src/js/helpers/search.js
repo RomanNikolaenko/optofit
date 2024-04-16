@@ -1,42 +1,31 @@
-const searchForm = document.getElementById('search-form');
 const searchInput = document.getElementById('search-input');
 const clean = document.querySelector('.form-search__clean');
 const searchBtn = document.querySelector('.search__btn');
+const searchPopular = document.querySelector('.form-search__popular');
+const searchResults = document.querySelector('.form-search__results');
 
 searchBtn.addEventListener('click', () => {
-    searchForm.classList.add('form-search_open');
     setTimeout(()=> {
         searchInput.focus()
-    },100)
+    },200)
 })
 
 searchInput.addEventListener('input', (e) => {
     if(e.target.value) {
-        clean.classList.remove('form-search__clean_hidden')
+        clean.classList.remove('form-search__clean_hidden');
+        searchPopular.classList.add('popular-search_hidden');
+        searchResults.classList.remove('popular-search_hidden');
     } else {
-        clean.classList.add('form-search__clean_hidden')
+        clean.classList.add('form-search__clean_hidden');
+        searchPopular.classList.remove('popular-search_hidden');
+        searchResults.classList.add('popular-search_hidden');
     }
 })
 
 clean.addEventListener('click', () => {
     searchInput.value = null;
-    searchInput.focus()
-    clean.classList.add('form-search__clean_hidden')
+    searchInput.focus();
+    clean.classList.add('form-search__clean_hidden');
+    searchPopular.classList.remove('popular-search_hidden');
+    searchResults.classList.add('popular-search_hidden');
 })
-
-searchForm.addEventListener('click', (e) => {
-    if(searchForm.classList.contains('form-search_open') && e.target.hasAttribute('data-close-search')) {
-        searchForm.classList.remove('form-search_open');
-        searchInput.value = null;
-        clean.classList.add('form-search__clean_hidden')
-    }
-})
-
-document.addEventListener("keydown", (e) => {
-    const keyCode = e.keyCode;
-    if(keyCode == 27 && searchForm.classList.contains('form-search_open')) {
-        searchForm.classList.remove('form-search_open');
-        searchInput.value = null;
-        clean.classList.add('form-search__clean_hidden')
-    }
-});
