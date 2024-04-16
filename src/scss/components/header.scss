@@ -69,7 +69,13 @@
     box-shadow: 0px 0px 5px 0px #00000017;
     transition: all var(--bs-transition);
 
-    @include any-hover() {
+    @include any-hover {
+      background-color: #ffffff;
+      color: #06739a;
+    }
+
+    &:focus-visible,
+    &:active {
       background-color: #ffffff;
       color: #06739a;
     }

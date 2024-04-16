@@ -1,6 +1,7 @@
 <header class="header">
   <div class="header__container">
     <a href="#" class="header__logo logo">
+      <span class="visually-hidden">logo</span>
       <svg
         width="334"
         height="63"
@@ -312,8 +313,12 @@
             <span class="cart__badge cart__badge_empt">3</span>
           </a>
         </div>
-        <div class="header__btn btn-header burger">
-          <button class="btn-header__btn">
+        <div class="header__btn btn-header">
+          <button
+            class="btn-header__btn burger"
+            data-type="burger"
+            type="button"
+          >
             <span class="visually-hidden">Меню</span>
             <svg
               width="24"

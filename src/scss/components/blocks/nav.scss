@@ -26,7 +26,16 @@
     padding: rem(4);
     transition: all var(--bs-transition);
 
-    @include any-hover() {
+    @include any-hover {
+      color: rgba(6, 115, 154, 0.6);
+
+      &::before {
+        opacity: 1;
+      }
+    }
+
+    &:focus-visible,
+    &:active {
       color: rgba(6, 115, 154, 0.6);
 
       &::before {

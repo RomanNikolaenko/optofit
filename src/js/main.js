@@ -17,7 +17,7 @@ import BaseHelpers from './helpers/base-helpers';
 import PopupManager from './modules/popup-manager';
 // import BurgerMenu from './modules/burger-menu';
 // import Tabs from './modules/tabs';
-// import Accordion from './modules/accordion';
+import Accordion from './modules/accordion';
 
 BaseHelpers.checkWebpSupport();
 
@@ -61,8 +61,9 @@ new PopupManager();
 // });
 
 // new Accordion('.accordion', {
-// 	shouldOpenAll: false, // true
-// 	defaultOpen: [2], // [0,1]
+// 	shouldOpenAll: true, // true
+// 	defaultOpen: [], // [0,1]
+// 	defaultOpenAll: true,
 // 	collapsedClass: 'open',
 // });
 

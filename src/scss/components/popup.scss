@@ -19,6 +19,10 @@
     @include property('padding-bottom', 30, 16);
   }
 
+  &.burger-popup {
+    padding: 0;
+  }
+
   &.is-open {
     opacity: 1;
     pointer-events: auto;
@@ -26,6 +30,13 @@
     .popup__content {
       transform: translateY(0);
       opacity: 1;
+    }
+
+    &.burger-popup {
+      .popup__content {
+        transform: translateX(0);
+        opacity: 1;
+      }
     }
   }
 
@@ -36,6 +47,11 @@
     min-height: 100%;
 
     .search-popup & {
+      align-items: flex-start;
+    }
+
+    .burger-popup & {
+      flex-direction: column;
       align-items: flex-start;
     }
   }
@@ -63,6 +79,17 @@
       @include property('border-bottom-left-radius', 40, 20, 1536, 1024);
       @include property('border-bottom-right-radius', 40, 20, 1536, 1024);
     }
+
+    .burger-popup & {
+      max-width: rem(440);
+      transform: translateX(rem(-200));
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      @include property('border-bottom-right-radius', 40, 20, 1536, 1024);
+      @include property('border-top-right-radius', 40, 20, 1536, 1024);
+      margin: 0;
+      flex: 1;
+    }
   }
 
   // .popup__close
@@ -88,7 +115,12 @@
       opacity: 0.5;
     }
 
-    @include any-hover() {
+    @include any-hover {
+      opacity: 1;
+    }
+
+    &:focus-visible,
+    &:active {
       opacity: 1;
     }
   }

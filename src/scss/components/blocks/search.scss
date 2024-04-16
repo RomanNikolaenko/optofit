@@ -6,7 +6,12 @@
     background-color: transparent;
     transition: color var(--bs-transition);
 
-    @include any-hover() {
+    @include any-hover {
+      color: rgba(6, 115, 154, 0.6);
+    }
+
+    &:focus-visible,
+    &:active {
       color: rgba(6, 115, 154, 0.6);
     }
 
@@ -76,7 +81,13 @@
     background-color: #f4f4f4;
     transition: all var(--bs-transition);
 
-    @include any-hover() {
+    @include any-hover {
+      background-color: #00719b;
+      color: #f4f4f4;
+    }
+
+    &:focus-visible,
+    &:active {
       background-color: #00719b;
       color: #f4f4f4;
     }
@@ -153,7 +164,13 @@
     text-align: center;
     transition: all var(--bs-transition);
 
-    @include any-hover() {
+    @include any-hover {
+      background-color: #06739a;
+      color: #ffffff;
+    }
+
+    &:focus-visible,
+    &:active {
       background-color: #06739a;
       color: #ffffff;
     }
@@ -231,7 +248,14 @@
       transition: width var(--bs-transition);
     }
 
-    @include any-hover() {
+    @include any-hover {
+      &::before {
+        width: 70%;
+      }
+    }
+
+    &:focus-visible,
+    &:active {
       &::before {
         width: 70%;
       }
@@ -279,7 +303,12 @@
       grid-template-columns: rem(88) 1fr auto;
     }
 
-    @include any-hover() {
+    @include any-hover {
+      background-color: #dfdfdf;
+    }
+
+    &:focus-visible,
+    &:active {
       background-color: #dfdfdf;
     }
   }
@@ -329,7 +358,7 @@
 
 .products-search {
   display: grid;
-  gap: rem(20);
+  gap: rem(12);
 
   &__item {
     display: flex;
@@ -343,6 +372,7 @@
     grid-template-columns: rem(24) 1fr auto;
     gap: rem(12);
     width: 100%;
+    padding: rem(4) 0;
     transition: color var(--bs-transition);
 
     @include media-mn(576) {
@@ -350,6 +380,11 @@
     }
 
     @include any-hover {
+      color: #06739aa6;
+    }
+
+    &:focus-visible,
+    &:active {
       color: #06739aa6;
     }
   }
@@ -398,7 +433,12 @@
   background-color: transparent;
   transition: opacity var(--bs-transition);
 
-  @include any-hover() {
+  @include any-hover {
+    opacity: 0.6;
+  }
+
+  &:focus-visible,
+  &:active {
     opacity: 0.6;
   }
 }

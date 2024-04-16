@@ -11,7 +11,18 @@
     @include property('gap', 16, 10, 1920, 1200);
     background-color: transparent;
 
-    @include any-hover() {
+    @include any-hover {
+      .map__icon {
+        color: rgba(6, 115, 154, 0.6);
+      }
+
+      .map__text {
+        color: rgba(6, 115, 154, 0.6);
+      }
+    }
+
+    &:focus-visible,
+    &:active {
       .map__icon {
         color: rgba(6, 115, 154, 0.6);
       }

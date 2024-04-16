@@ -1,0 +1,35 @@
+.burger {
+  * {
+    pointer-events: none;
+  }
+}
+
+.burger-popup {
+  &__logo {
+    display: block;
+    max-width: 220px;
+    width: 100%;
+    margin-bottom: rem(20);
+
+    img {
+      max-width: 100%;
+      width: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+
+  &__link {
+    padding: rem(4) rem(8);
+    transition: color var(--bs-transition);
+
+    @include any-hover {
+      color: #b4aea7;
+    }
+
+    &:focus-visible,
+    &:active {
+      color: #b4aea7;
+    }
+  }
+}

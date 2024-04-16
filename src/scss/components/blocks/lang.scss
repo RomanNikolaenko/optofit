@@ -19,7 +19,12 @@
     transition: color var(--bs-transition);
     @include property('font-size', 17, 15, 1920, 1200);
 
-    @include any-hover() {
+    @include any-hover {
+      color: rgba(6, 115, 154, 0.6);
+    }
+
+    &:focus-visible,
+    &:active {
       color: rgba(6, 115, 154, 0.6);
     }
 

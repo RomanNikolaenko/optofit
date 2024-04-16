@@ -1,6 +1,5 @@
 import Popup from '../helpers/popup';
-// const searchPopular = document.querySelector('.form-search__popular');
-// const searchResults = document.querySelector('.form-search__results');
+import Accordion from './accordion';
 
 class PopupManager extends Popup {
   constructor(options = {}) {
@@ -85,6 +84,15 @@ class PopupManager extends Popup {
     popup.setAttribute('aria-hidden', 'false');
     if(popup.querySelector(`.${this.options.buttonCloseName}`)) {
       popup.querySelector(`.${this.options.buttonCloseName}`).setAttribute('tabindex', '0')
+    }
+
+    if(popup.querySelector('.accordion')) {
+      new Accordion('.accordion', {
+        shouldOpenAll: true, // true
+        defaultOpen: [], // [0,1]
+        defaultOpenAll: true,
+        collapsedClass: 'open',
+      });
     }
   }
 

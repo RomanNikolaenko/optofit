@@ -36,7 +36,16 @@
       color: var(--bs-font-color);
     }
 
-    @include any-hover() {
+    @include any-hover {
+      color: rgba(6, 115, 154, 0.6);
+
+      ~ .phone__icon {
+        color: rgba(6, 115, 154, 0.6);
+      }
+    }
+
+    &:focus-visible,
+    &:active {
       color: rgba(6, 115, 154, 0.6);
 
       ~ .phone__icon {
