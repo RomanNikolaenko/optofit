@@ -52,9 +52,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 
     @media (max-width: 767.98px) {
       max-width: 400px;
+      width: 100%;
       margin: 0 auto;
     }
   }
@@ -100,12 +102,15 @@
     object-fit: contain;
     object-position: bottom;
     transform: translateY(var(--height-header)) scale(1.2);
+
+    @media (max-width: 1536px) {
+      transform: translateY(rem(30)) scale(1);
+    }
   }
 
   &__description {
     position: relative;
     color: #ffffff;
-    max-width: rem(500);
     @include property('margin-left', 150, 0, 1920, 1200);
     @include property('margin-top', 100, 50, 1920, 1200);
 
@@ -151,7 +156,6 @@
     * {
       @include property('font-size', 86, 36);
       line-height: 0.9;
-      letter-spacing: 1%;
       color: #ffffff;
       text-wrap: balance;
     }
