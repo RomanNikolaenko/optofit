@@ -51,17 +51,10 @@
 @import 'components/blocks/search';
 @import 'components/blocks/burger';
 @import 'components/blocks/socials';
+@import 'components/blocks/hero';
 
 @import 'components/popup';
 @import 'components/checkbox';
 @import 'components/tabs';
 @import 'components/accordion';
 @import 'components/footer';
-
-.visually-hidden {
-  position: absolute;
-  clip: rect(0 0 0 0);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-}
