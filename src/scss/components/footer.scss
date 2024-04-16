@@ -1,8 +1,111 @@
 .footer {
-  padding: rem(20) 0;
+  padding-top: rem(25);
+  @include property('padding-bottom', 50, 25);
 
   &__container {
     display: flex;
     align-items: center;
+    flex-direction: column;
+  }
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: rem(30);
+    width: 100%;
+    padding-bottom: rem(20);
+
+    @media (min-width: 1200px) {
+      display: grid;
+      grid-template-columns: rem(460) 1fr;
+    }
+  }
+
+  &__description {
+    display: grid;
+    align-content: flex-start;
+    @include property('gap', 30, 20, 1200);
+    max-width: rem(460);
+  }
+
+  &__title {
+    @include property('font-size', 30, 18, 1200);
+  }
+
+  &__subtitle {
+    @include property('font-size', 20, 15, 1200);
+  }
+
+  &__accordion {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(rem(250), 100%), 1fr));
+    justify-content: flex-end;
+    gap: rem(20);
+
+    @media (min-width: 1200px) {
+      grid-template-columns: repeat(
+        auto-fit,
+        minmax(min(rem(250), 100%), max-content)
+      );
+    }
+  }
+
+  &__copy {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: rem(20);
+    width: 100%;
+    @include property('font-size', 17, 15, 1024);
+    border-top: 1px solid #06739a;
+    padding-top: rem(20);
+  }
+
+  &__politics {
+    display: grid;
+    gap: rem(12);
+    text-wrap: balance;
+  }
+
+  &__politics-link {
+    transition: filter var(--bs-transition);
+
+    @include any-hover {
+      filter: contrast(0.1);
+    }
+
+    &:focus-visible,
+    &:active {
+      filter: contrast(0.1);
+    }
+  }
+
+  &__design {
+    display: flex;
+    flex-direction: column;
+    gap: rem(8);
+  }
+
+  &__design-link {
+    display: block;
+    max-width: 165px;
+    transition: filter var(--bs-transition);
+
+    @include any-hover {
+      filter: contrast(0.1);
+    }
+
+    &:focus-visible,
+    &:active {
+      filter: contrast(0.1);
+    }
+  }
+
+  &__design-img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
   }
 }

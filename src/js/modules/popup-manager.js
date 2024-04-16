@@ -86,8 +86,8 @@ class PopupManager extends Popup {
       popup.querySelector(`.${this.options.buttonCloseName}`).setAttribute('tabindex', '0')
     }
 
-    if(popup.querySelector('.accordion')) {
-      new Accordion('.accordion', {
+    if(popup.querySelector('.burger-popup__accordion')) {
+      new Accordion('.burger-popup__accordion', {
         shouldOpenAll: true, // true
         defaultOpen: [], // [0,1]
         defaultOpenAll: true,

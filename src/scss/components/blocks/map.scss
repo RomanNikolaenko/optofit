@@ -10,26 +10,15 @@
     align-items: center;
     @include property('gap', 16, 10, 1920, 1200);
     background-color: transparent;
+    transition: filter var(--bs-transition);
 
     @include any-hover {
-      .map__icon {
-        color: rgba(6, 115, 154, 0.6);
-      }
-
-      .map__text {
-        color: rgba(6, 115, 154, 0.6);
-      }
+      filter: contrast(0.1);
     }
 
     &:focus-visible,
     &:active {
-      .map__icon {
-        color: rgba(6, 115, 154, 0.6);
-      }
-
-      .map__text {
-        color: rgba(6, 115, 154, 0.6);
-      }
+      filter: contrast(0.1);
     }
 
     * {
@@ -39,7 +28,6 @@
 
   &__icon {
     color: #06739a;
-    transition: color var(--bs-transition);
 
     svg {
       transition: inherit;
@@ -59,5 +47,25 @@
     @media (max-width: 767.98px) {
       display: none;
     }
+  }
+}
+
+.map-popup {
+  &__text {
+    display: flex;
+    flex-wrap: wrap;
+    gap: rem(6);
+    @include property('font-size', 22, 18);
+    padding-right: rem(50);
+    margin-bottom: 1rem;
+  }
+
+  iframe {
+    width: 100%;
+    height: 70vh;
+    height: 70dvh;
+    border-radius: rem(30);
+    box-shadow: 0px 0px 15px 0px #00719b12;
+    box-shadow: 0px 0px 12px 0px #14131312;
   }
 }

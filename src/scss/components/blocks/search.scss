@@ -4,15 +4,15 @@
   &__btn {
     color: #00719b;
     background-color: transparent;
-    transition: color var(--bs-transition);
+    transition: filter var(--bs-transition);
 
     @include any-hover {
-      color: rgba(6, 115, 154, 0.6);
+      filter: contrast(0.1);
     }
 
     &:focus-visible,
     &:active {
-      color: rgba(6, 115, 154, 0.6);
+      filter: contrast(0.1);
     }
 
     * {
@@ -373,19 +373,19 @@
     gap: rem(12);
     width: 100%;
     padding: rem(4) 0;
-    transition: color var(--bs-transition);
+    transition: filter var(--bs-transition);
 
     @include media-mn(576) {
       grid-template-columns: rem(24) 1fr auto;
     }
 
     @include any-hover {
-      color: #06739aa6;
+      filter: contrast(0.1);
     }
 
     &:focus-visible,
     &:active {
-      color: #06739aa6;
+      filter: contrast(0.1);
     }
   }
 
@@ -431,14 +431,14 @@
   display: flex;
   color: inherit;
   background-color: transparent;
-  transition: opacity var(--bs-transition);
+  transition: filter var(--bs-transition);
 
   @include any-hover {
-    opacity: 0.6;
+    filter: contrast(0.1);
   }
 
   &:focus-visible,
   &:active {
-    opacity: 0.6;
+    filter: contrast(0.1);
   }
 }

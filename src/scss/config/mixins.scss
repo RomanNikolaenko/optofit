@@ -24,7 +24,7 @@
 }
 
 @mixin media-mx($value) {
-  $width: em($value);
+  $width: rem($value);
 
   @media (max-width: $width) {
     @content;
@@ -32,7 +32,7 @@
 }
 
 @mixin media-mn($value) {
-  $width: em($value + 0.98);
+  $width: rem($value + 0.98);
 
   @media (min-width: $width) {
     @content;

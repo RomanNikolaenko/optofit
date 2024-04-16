@@ -25,7 +25,7 @@
           />
         </svg>
       </button>
-      <div class="popup__body">
+      <div class="popup__body burger-popup__body">
         <a href="#" class="burger-popup__logo">
           <span class="visually-hidden">logo</span>
           <img
@@ -35,8 +35,9 @@
             alt="logo"
           />
         </a>
+
         <div class="accordion burger-popup__accordion">
-          <div class="accordion__item">
+          <div class="accordion__item open">
             <button type="button" class="accordion__header">
               Компанія
               <svg
@@ -65,7 +66,7 @@
             </div>
           </div>
 
-          <div class="accordion__item">
+          <div class="accordion__item open">
             <button type="button" class="accordion__header">
               Послуги
               <svg
@@ -96,7 +97,7 @@
             </div>
           </div>
 
-          <div class="accordion__item">
+          <div class="accordion__item open">
             <button type="button" class="accordion__header">
               Устілки
               <svg
@@ -123,6 +124,27 @@
               <a class="burger-popup__link" href="#">Усi товари</a>
             </div>
           </div>
+        </div>
+
+        <p class="burger-popup__text">
+          Єдиний медичний центр з персональних устілок та здорової ходьби у м.
+          Дніпро
+        </p>
+
+        @@include('./blocks/socials.html')
+
+        <div class="burger-popup__design">
+          <span class="burger-popup__design-text">
+            Дизайн та розробка сайту:
+          </span>
+          <a
+            href="https://www.instagram.com/boris__kruglov/"
+            target="_blank"
+            rel="noreferrer noopener"
+            class="burger-popup__design-link"
+          >
+            <u>kruglov-design</u>
+          </a>
         </div>
       </div>
     </div>

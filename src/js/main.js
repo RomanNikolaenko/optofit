@@ -60,7 +60,7 @@ new PopupManager();
 // 	},
 // });
 
-// new Accordion('.accordion', {
+// new Accordion('.footer__accordion', {
 // 	shouldOpenAll: true, // true
 // 	defaultOpen: [], // [0,1]
 // 	defaultOpenAll: true,

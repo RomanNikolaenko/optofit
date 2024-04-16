@@ -85,18 +85,20 @@
       transform: translateX(rem(-200));
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
-      @include property('border-bottom-right-radius', 40, 20, 1536, 1024);
-      @include property('border-top-right-radius', 40, 20, 1536, 1024);
+      @include property('padding-top', 15, 10, 1536, 1024);
+      @include property('border-bottom-right-radius', 20, 10, 1536, 1024);
+      @include property('border-top-right-radius', 20, 10, 1536, 1024);
       margin: 0;
       flex: 1;
+
+      @media (min-width: 1024px) {
+        max-width: max-content;
+      }
     }
   }
 
-  // .popup__close
   &__close {
     position: absolute;
-
-    /** Установить свои значения */
     top: rem(20);
     right: rem(20);
     @include property('width', 56, 42);
@@ -104,7 +106,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #f4f4f4;
+    background-color: #f4f4f4;
     color: #06739a;
     border: 1px solid #06739a;
     border-radius: 50%;
@@ -123,22 +125,5 @@
     &:active {
       opacity: 1;
     }
-  }
-}
-
-.map-popup {
-  &__text {
-    display: flex;
-    flex-wrap: wrap;
-    @include property('font-size', 22, 18);
-    padding-right: rem(50);
-    margin-bottom: 1rem;
-  }
-
-  iframe {
-    width: 100%;
-    height: 70vh;
-    height: 70dvh;
-    border-radius: rem(30);
   }
 }

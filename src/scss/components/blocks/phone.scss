@@ -29,7 +29,7 @@
     @include property('font-size', 20, 14, 1920, 1200);
     line-height: 1.2;
     color: var(--bs-font-color);
-    transition: color var(--bs-transition);
+    transition: filter var(--bs-transition);
     text-wrap: nowrap;
 
     ~ .phone__icon {
@@ -37,19 +37,19 @@
     }
 
     @include any-hover {
-      color: rgba(6, 115, 154, 0.6);
+      filter: contrast(0.1);
 
       ~ .phone__icon {
-        color: rgba(6, 115, 154, 0.6);
+        filter: contrast(0.1);
       }
     }
 
     &:focus-visible,
     &:active {
-      color: rgba(6, 115, 154, 0.6);
+      filter: contrast(0.1);
 
       ~ .phone__icon {
-        color: rgba(6, 115, 154, 0.6);
+        filter: contrast(0.1);
       }
     }
 
