@@ -7,6 +7,7 @@
  * Если мы хотим добавить модуль следует его раскомментировать
  */
 // import MousePRLX from './libs/parallaxMouse'
+import counter from './libs/counter';
 // import AOS from 'aos'
 // import Swiper, { Navigation, Pagination } from 'swiper';
 
@@ -67,4 +68,29 @@ new PopupManager();
 // 	collapsedClass: 'open',
 // });
 
+const stats = document.querySelectorAll('.data-stats__title')
+const dataStats = document.querySelector('.data-stats');
 
+const count = (parent, stats)=> {
+    const options = {
+        threshold: [0.3, 1],
+      };
+      
+      let hasRun = false;
+      
+      const callback = (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            if (!hasRun) {
+              counter(stats);
+              hasRun = true;
+            }
+          }
+        });
+      };
+      
+      const observer = new IntersectionObserver(callback, options);
+      observer.observe(parent);
+}
+
+count(dataStats, stats)

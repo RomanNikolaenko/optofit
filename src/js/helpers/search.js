@@ -5,27 +5,27 @@ const searchPopular = document.querySelector('.form-search__popular');
 const searchResults = document.querySelector('.form-search__results');
 
 searchBtn.addEventListener('click', () => {
-    setTimeout(()=> {
-        searchInput.focus()
-    },200)
-})
+  setTimeout(() => {
+    searchInput.focus();
+  }, 200);
+});
 
 searchInput.addEventListener('input', (e) => {
-    if(e.target.value) {
-        clean.classList.remove('form-search__clean_hidden');
-        searchPopular.classList.add('popular-search_hidden');
-        searchResults.classList.remove('popular-search_hidden');
-    } else {
-        clean.classList.add('form-search__clean_hidden');
-        searchPopular.classList.remove('popular-search_hidden');
-        searchResults.classList.add('popular-search_hidden');
-    }
-})
-
-clean.addEventListener('click', () => {
-    searchInput.value = null;
-    searchInput.focus();
+  if (e.target.value) {
+    clean.classList.remove('form-search__clean_hidden');
+    searchPopular.classList.add('popular-search_hidden');
+    searchResults.classList.remove('popular-search_hidden');
+  } else {
     clean.classList.add('form-search__clean_hidden');
     searchPopular.classList.remove('popular-search_hidden');
     searchResults.classList.add('popular-search_hidden');
-})
+  }
+});
+
+clean.addEventListener('click', () => {
+  searchInput.value = null;
+  searchInput.focus();
+  clean.classList.add('form-search__clean_hidden');
+  searchPopular.classList.remove('popular-search_hidden');
+  searchResults.classList.add('popular-search_hidden');
+});

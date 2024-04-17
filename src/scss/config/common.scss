@@ -1,1 +1,102 @@
-// Заголовки, общие БЄМ блоки и проче...
+.button {
+  position: relative;
+  @include property('font-size', 20, 16);
+  line-height: 1;
+  @include property('padding-block', 18, 12);
+  @include property('padding-inline', 38, 12);
+  border-radius: 100vmax;
+  transition: all var(--bs-transition);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: rem(10);
+  text-align: center;
+
+  &__red {
+    border: 1px solid #ec1940;
+    background-color: #ec1940;
+    color: #ffffff;
+
+    @include any-hover {
+      border: 1px solid #ffffff;
+      background-color: #ffffff;
+      color: #ec1940;
+    }
+
+    &:focus-visible,
+    &:active {
+      border: 1px solid #ffffff;
+      background-color: #ffffff;
+      color: #ec1940;
+    }
+  }
+
+  &__blue {
+    border: 1px solid #06739a;
+    background-color: #06739a;
+    color: #ffffff;
+
+    @include any-hover {
+      background-color: #ffffff;
+      color: #06739a;
+    }
+
+    &:focus-visible,
+    &:active {
+      background-color: #ffffff;
+      color: #06739a;
+    }
+  }
+
+  &__white {
+    border: 1px solid #06739a;
+    background-color: #ffffff;
+    color: #06739a;
+
+    @include any-hover {
+      background-color: #06739a;
+      color: #ffffff;
+    }
+
+    &:focus-visible,
+    &:active {
+      background-color: #06739a;
+      color: #ffffff;
+    }
+  }
+
+  svg {
+    pointer-events: none;
+    transition: inherit;
+  }
+}
+
+.button-line {
+  position: relative;
+  @include property('font-size', 20, 15);
+  line-height: 1;
+  background-color: transparent;
+
+  @include pseudo-cell(before) {
+    top: calc(100% + rem(4));
+    left: 0;
+    background-color: currentColor;
+    width: 100%;
+    height: rem(1);
+    transition: width var(--bs-transition);
+  }
+
+  @include any-hover {
+    &::before {
+      width: 70%;
+    }
+  }
+
+  &:focus-visible,
+  &:active {
+    &::before {
+      width: 70%;
+    }
+  }
+}

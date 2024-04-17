@@ -1,6 +1,7 @@
 .footer {
   padding-top: rem(25);
   @include property('padding-bottom', 50, 25);
+  border: 1px solid rgba(0, 113, 155, 0.3);
 
   &__container {
     display: flex;

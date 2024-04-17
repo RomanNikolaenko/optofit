@@ -43,12 +43,12 @@ class Accordion {
     this.accordions.forEach((accordion) => {
       const accordionItems = accordion.querySelectorAll('.accordion__item');
 
-      if(this.options.defaultOpenAll) {
+      if (this.options.defaultOpenAll) {
         accordionItems.forEach((item) => {
-          setTimeout(()=> {
+          setTimeout(() => {
             this.open(item);
-          })
-        },200);
+          });
+        }, 200);
       }
 
       accordionItems.forEach((item, index) => {
@@ -78,7 +78,7 @@ class Accordion {
   }
 
   closeOthers(currentItem, items) {
-    if(items) {
+    if (items) {
       for (const item of items) {
         if (item !== currentItem && this.isCollapsed(item)) {
           this.close(item);
