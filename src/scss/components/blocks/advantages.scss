@@ -1,0 +1,159 @@
+.advantages {
+  counter-reset: my-sec-counter;
+
+  &__container {
+    display: grid;
+    gap: rem(20);
+    padding: rem(30);
+    background-color: #ffffff;
+    border-radius: rem(40);
+    box-shadow: 0px 0px 15px 0px #00719b12;
+
+    @media (min-width: 1200px) {
+      grid-template-columns: 1.2fr 1fr 2.2fr;
+      grid-template-rows: auto 1fr;
+      grid-template-areas:
+        'text one advantages'
+        'btn one advantages';
+    }
+
+    @media (min-width: 768px) and (max-width: 1199.98px) {
+      grid-template-columns: auto auto;
+      grid-template-rows: auto auto auto;
+      grid-template-areas:
+        'text one'
+        'btn one '
+        'advantages advantages';
+    }
+  }
+
+  &__desc {
+    @media (min-width: 768px) {
+      grid-area: text;
+      align-self: flex-start;
+    }
+  }
+
+  &__one {
+    box-shadow: 0px 0px 15px 0px #00719b12;
+    background-color: #06739a;
+    border-radius: rem(40);
+    @include property('padding', 40, 30, 1920, 1200);
+    color: #ffffff;
+    height: 100%;
+
+    @media (min-width: 768px) {
+      grid-area: one;
+      align-self: flex-start;
+    }
+  }
+
+  &__title {
+    @include property('font-size', 46, 24);
+    padding-bottom: rem(30);
+    margin-bottom: rem(30);
+    border-bottom: 1px solid rgba(6, 115, 154, 0.5);
+  }
+
+  &__text {
+    @include property('font-size', 20, 17);
+  }
+
+  &__list {
+    display: grid;
+    box-shadow: 0px 0px 15px 0px #00719b12;
+    background-color: #f4f4f4;
+    border-radius: rem(40);
+    @include property('gap', 30, 16);
+    @include property('padding', 40, 20, 1920, 1200);
+
+    @media (min-width: 768px) {
+      grid-area: advantages;
+      align-self: flex-start;
+
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    position: relative;
+    flex-grow: 1;
+    @include property('padding-block', 16, 8);
+
+    @include pseudo-cell(before) {
+      top: 0;
+      @include property('right', -15, -8);
+      width: 1px;
+      height: 100%;
+      background-color: rgba(6, 115, 154, 0.25);
+    }
+
+    @media (max-width: 767.98px) {
+      &::before {
+        display: none;
+      }
+
+      &:not(:nth-of-type(1)) {
+        @include pseudo-cell(after) {
+          @include property('top', -15, -8);
+          right: 0;
+          width: 100%;
+          height: 1px;
+          background-color: rgba(6, 115, 154, 0.25);
+        }
+      }
+    }
+
+    @media (min-width: 768px) {
+      flex-basis: calc(33.333% - rem(20));
+
+      &:nth-of-type(3n + 3),
+      &:nth-last-of-type(1) {
+        &::before {
+          display: none;
+        }
+      }
+
+      &:nth-of-type(n + 4) {
+        @include pseudo-cell(after) {
+          @include property('top', -15, -8);
+          right: 0;
+          width: 100%;
+          height: 1px;
+          background-color: rgba(6, 115, 154, 0.25);
+        }
+
+        .advantages__number {
+          flex-direction: row;
+          align-items: center;
+        }
+      }
+    }
+  }
+
+  &__btn {
+    @include property('margin-top', 40, 20);
+    max-width: rem(300);
+
+    @media (min-width: 768px) {
+      grid-area: btn;
+      align-self: flex-start;
+    }
+  }
+
+  &__number {
+    display: flex;
+    flex-direction: column;
+    gap: rem(12);
+    @include property('font-size', 20, 17);
+
+    &:before {
+      counter-increment: my-sec-counter;
+      content: counter(my-sec-counter, decimal-leading-zero);
+      @include property('font-size', 86, 42);
+      opacity: 0.2;
+      font-weight: 300;
+    }
+  }
+}

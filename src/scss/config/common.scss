@@ -66,6 +66,22 @@
     }
   }
 
+  &__play {
+    padding-inline: rem(55);
+    max-height: 48px;
+    overflow: hidden;
+
+    @include pseudo-cell(before) {
+      top: 0;
+      left: 0;
+      height: 100%;
+      aspect-ratio: 1/1;
+      background-image: url('../../images/svg/play.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+
   svg {
     pointer-events: none;
     transition: inherit;

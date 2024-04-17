@@ -24,7 +24,7 @@
 
     .footer__accordion & {
       padding: rem(4) 0;
-      @include property('font-size', 18, 18, 1200);
+      font-size: rem(18);
     }
 
     @include any-hover {

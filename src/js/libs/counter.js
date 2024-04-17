@@ -64,7 +64,7 @@ const counter = (el) => {
       value = unformat(content),
       values = interpolation(fps, easing.quadratic, value);
 
-    animateEl(values, 1200, function (current, i, values) {
+    animateEl(values, 1300, function (current, i, values) {
       var isLast = i === values.length - 1,
         value = round(current, decimalPlaces.length);
       el.firstChild.textContent = isLast ? content : format(value);
