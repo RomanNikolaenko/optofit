@@ -1,7 +1,7 @@
 .advantages {
   counter-reset: my-sec-counter;
 
-  &__container {
+  &__wrap {
     display: grid;
     gap: rem(20);
     padding: rem(30);

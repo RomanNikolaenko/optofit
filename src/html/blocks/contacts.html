@@ -1,0 +1,123 @@
+<div class="contacts">
+    <div class="contacts__container">
+        <div class="contacts__inner">
+            <div class="contacts__desc">
+                <div class="contacts__title">
+                    <h2>Контакти</h2>
+                </div>
+                <div class="contacts__text">
+                    <p>
+                        Ми завжди вам раді та із задоволенням готові допомогти,
+                        щоб
+                        покращити ваш стан стоп
+                    </p>
+                </div>
+            </div>
+
+            <div class="contacts__contacts">
+                <address class="contacts__address">
+                    м.Дніпро, вул. Центральна, 6-2б
+
+                    <button class="button-line contacts__address-btn"
+                        data-type="map" title="Мапа"
+                        type="button">
+                        Показати на мапі
+                    </button>
+                </address>
+
+                <div class="contacts__time time-contacts">
+                    <span class="time-contacts__title">Час роботи:</span>
+                    <ul class="time-contacts__list">
+                        <li class="time-contacts__item"><span>Пн-Пт:</span>
+                            10:00-19:00
+                        </li>
+                        <li class="time-contacts__item"><span>Сб:</span>
+                            9:00-18:00
+                        </li>
+                        <li class="time-contacts__item"><span>Нд:</span>
+                            9:00-15:00
+                        </li>
+                    </ul>
+                </div>
+
+                @@include('./phone.html')
+            </div>
+        </div>
+
+        <div class="contacts__lady">
+            <img class="contacts__lady-img" src="../../images/contacts-lady.jpg"
+                width="930" height="750"
+                alt>
+
+            <ul class="contacts__socials socials-list">
+                <li class="socials-list__item">
+                    <a href="#" class="socials-list__link">
+                        <span class="visually-hidden">fb</span>
+                        <img
+                            src="../../images/svg/contacts-fb.svg"
+                            width="56"
+                            height="56"
+                            alt />
+                    </a>
+                </li>
+                <li class="socials-list__item">
+                    <a href="#" class="socials-list__link">
+                        <span class="visually-hidden">instagram</span>
+                        <img
+                            src="../../images/svg/contacts-inst.svg"
+                            width="56"
+                            height="56"
+                            alt />
+                    </a>
+                </li>
+                <li class="socials-list__item">
+                    <a href="#" class="socials-list__link">
+                        <span class="visually-hidden">yt</span>
+                        <img
+                            src="../../images/svg/contacts-yt.svg"
+                            width="56"
+                            height="56"
+                            alt />
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="contacts__wrap form-contacts">
+            <form class="form-contacts__form" action method="post">
+                <fieldset class="form-contacts__fieldset">
+                    <label class="form-contacts__label">
+                        <input type="text" name="name"
+                            class="form-contacts__input" placeholder="Ім'я">
+                    </label>
+                </fieldset>
+
+                <fieldset class="form-contacts__fieldset">
+                    <label class="form-contacts__label">
+                        <input type="phone" name="phone"
+                            class="form-contacts__input" placeholder="Телефон">
+                    </label>
+                </fieldset>
+
+                <fieldset class="form-contacts__fieldset">
+                    <label class="form-contacts__checkbox checkbox">
+                        <input class="checkbox__input" type="checkbox"
+                            name="sex" />
+                        <span class="checkbox__box"></span>
+                        <span class="checkbox__name">
+                            Підтверджуючи, ви погоджуєтесь з <span
+                                class="checkbox__politics">
+                                політикою конфіденсальності
+                            </span>
+                        </span>
+                    </label>
+                </fieldset>
+
+                @@include('../components/button.html', { "title":
+                "Замовити зворотній зв’язок", "flag": true, "class":
+                'button__blue' })
+            </form>
+        </div>
+
+    </div>
+</div>

@@ -3,7 +3,9 @@
   gap: rem(5);
 
   @media (max-width: 599.98px) {
-    display: none;
+    .header & {
+      display: none;
+    }
   }
 
   &__item {
