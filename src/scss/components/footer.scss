@@ -18,6 +18,10 @@
     @media (min-width: 1200px) {
       display: grid;
       grid-template-columns: rem(460) 1fr;
+
+      background-image: url('../../images/svg/crug-3.svg');
+      background-position: 20% center;
+      background-repeat: no-repeat;
     }
   }
 

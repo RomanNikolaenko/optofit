@@ -87,6 +87,7 @@
 
   &__title {
     @include property('font-size', 110, 32, 1920, 768);
+    font-weight: 300;
     line-height: 1.2;
   }
 

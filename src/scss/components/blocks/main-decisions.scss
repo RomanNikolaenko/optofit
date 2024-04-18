@@ -1,0 +1,108 @@
+.main-decisions {
+  display: grid;
+  gap: rem(20);
+
+  box-shadow: 3px 7px 18px 0px #07749905;
+  background-color: #ffffff;
+  border-radius: rem(40);
+  @include property('padding', 30, 20);
+
+  @media (min-width: 768px) {
+    grid-template-columns: 1.085fr 1fr;
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas:
+      'one two'
+      'three two'
+      'four two';
+  }
+
+  @media (min-width: 768px) and (min-height: 600px) {
+    position: sticky;
+    top: calc(var(--height-header) + rem(20));
+    left: 0;
+  }
+
+  &__inner {
+    position: relative;
+    border-radius: rem(40);
+    overflow: hidden;
+
+    @media (min-width: 768px) {
+      grid-area: two;
+    }
+
+    @media (max-width: 767.98px) {
+      aspect-ratio: 1.4375/1;
+    }
+
+    @include pseudo-cell(before) {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: rem(40);
+      background: linear-gradient(
+        176.99deg,
+        rgba(0, 113, 155, 0.135) -3.04%,
+        rgba(0, 113, 155, 0.36) 92.51%
+      );
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__container {
+    display: grid;
+    align-content: flex-start;
+    gap: rem(24);
+  }
+
+  &__title {
+    @media (min-width: 768px) {
+      grid-area: one;
+      align-self: flex-start;
+    }
+
+    * {
+      @include property('font-size', 30, 20);
+    }
+  }
+
+  &__subtitle {
+    @media (min-width: 768px) {
+      grid-area: three;
+      align-self: flex-start;
+    }
+
+    @include property('font-size', 17, 16);
+  }
+
+  &__btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: rem(20);
+    align-items: center;
+
+    @media (min-width: 768px) {
+      grid-area: four;
+      align-self: flex-start;
+    }
+  }
+}
+
+.questions {
+  display: grid;
+  gap: rem(20);
+
+  &__wrap {
+    position: relative;
+    display: grid;
+    gap: rem(20);
+  }
+}

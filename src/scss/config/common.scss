@@ -1,5 +1,6 @@
 .button {
   position: relative;
+  font-weight: 500;
   @include property('font-size', 20, 16);
   line-height: 1;
   @include property('padding-block', 18, 12);
@@ -66,6 +67,23 @@
     }
   }
 
+  &__grey {
+    border: 1px solid #06739a;
+    background-color: #f4f4f4;
+    color: #06739a;
+
+    @include any-hover {
+      background-color: #06739a;
+      color: #ffffff;
+    }
+
+    &:focus-visible,
+    &:active {
+      background-color: #06739a;
+      color: #ffffff;
+    }
+  }
+
   &__play {
     padding-inline: rem(55);
     max-height: 48px;
@@ -90,6 +108,7 @@
 
 .button-line {
   position: relative;
+  font-weight: 500;
   @include property('font-size', 20, 15);
   line-height: 1;
   background-color: transparent;
@@ -178,4 +197,38 @@
   background-color: rgba(0, 113, 155, 0.3);
   margin: rem(30) auto;
   max-width: rem($containerWidth);
+}
+
+.block {
+  &__container {
+    display: grid;
+    justify-content: flex-end;
+    grid-template-columns: minmax(260px, rem(945));
+    gap: rem(20);
+
+    @media (min-width: 1200px) {
+      grid-template-columns: 1fr minmax(rem(620), 1fr);
+    }
+  }
+
+  &__wrap {
+    display: grid;
+    align-content: flex-start;
+    @include property('gap', 30, 20);
+    background-image: url('../../images/svg/crug-2.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &__title {
+    max-width: rem(480);
+    text-wrap: balance;
+    * {
+      @include property('font-size', 46, 26);
+    }
+  }
+
+  &__subtitle {
+    max-width: rem(540);
+  }
 }
