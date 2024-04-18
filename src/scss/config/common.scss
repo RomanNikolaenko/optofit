@@ -173,7 +173,7 @@
 
 .line {
   display: block;
-  width: 100%;
+  width: calc(100% - calc(rem($mainOffset) * 2));
   height: 1px;
   background-color: rgba(0, 113, 155, 0.3);
   margin: rem(30) auto;
