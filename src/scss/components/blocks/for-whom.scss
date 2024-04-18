@@ -15,7 +15,7 @@
     align-content: flex-start;
     box-shadow: 0px 0px 20px 0px #00719b1a;
     background-color: #ffffff;
-    border-radius: rem(40);
+    @include property('border-radius', 40, 30);
     @include property('padding', 30, 20);
   }
 
@@ -33,7 +33,7 @@
     gap: rem(20);
     box-shadow: 0px 4px 20px 0px #00719b0d;
     background-color: #06739a;
-    border-radius: rem(40);
+    @include property('border-radius', 40, 30);
     @include property('padding', 30, 20);
     @include property('font-size', 46, 26);
 
@@ -54,7 +54,7 @@
 
   &__personal {
     position: relative;
-    border-radius: rem(40);
+    @include property('border-radius', 40, 30);
     overflow: hidden;
     display: grid;
 

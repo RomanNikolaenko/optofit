@@ -13,6 +13,7 @@ import counter from './libs/counter';
 
 import './helpers/bounding-client-rect';
 import './helpers/search';
+import './helpers/animation';
 
 import BaseHelpers from './helpers/base-helpers';
 import PopupManager from './modules/popup-manager';
@@ -68,7 +69,7 @@ new PopupManager();
 // 	collapsedClass: 'open',
 // });
 
-const stats = document.querySelectorAll('.data-stats__title')
+const stats = document.querySelectorAll('.data-stats__title span')
 const dataStats = document.querySelector('.data-stats');
 
 const count = (parent, stats)=> {

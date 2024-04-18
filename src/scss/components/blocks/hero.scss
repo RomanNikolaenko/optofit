@@ -118,7 +118,7 @@
   &__description {
     position: relative;
     color: #ffffff;
-    @include property('margin-left', 150, 1, 1920, 1200);
+    margin-left: 21%;
     @include property('margin-top', 100, 50, 1920, 1200);
 
     &-ellipse {

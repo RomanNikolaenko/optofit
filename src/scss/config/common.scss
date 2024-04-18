@@ -1,8 +1,8 @@
 .button {
   position: relative;
   font-weight: 500;
-  @include property('font-size', 20, 16);
   line-height: 1;
+  @include property('font-size', 20, 16);
   @include property('padding-block', 18, 12);
   @include property('padding-inline', 38, 12);
   border-radius: 100vmax;
@@ -72,6 +72,10 @@
     background-color: #f4f4f4;
     color: #06739a;
 
+    font-size: rem(18);
+    @include property('padding-block', 15, 12);
+    @include property('padding-inline', 14, 12);
+
     @include any-hover {
       background-color: #06739a;
       color: #ffffff;
@@ -86,7 +90,7 @@
 
   &__play {
     padding-inline: rem(55);
-    max-height: 48px;
+    max-height: rem(50);
     overflow: hidden;
 
     @include pseudo-cell(before) {
@@ -138,7 +142,7 @@
 
 .form-contacts {
   background-color: #ffffff;
-  border-radius: rem(40);
+  @include property('border-radius', 40, 30);
   @include property('padding', 30, 20);
 
   &__form {
@@ -191,12 +195,24 @@
 }
 
 .line {
+  overflow: hidden;
   display: block;
   width: calc(100% - calc(rem($mainOffset) * 2));
   height: 1px;
   background-color: rgba(0, 113, 155, 0.3);
   margin: rem(30) auto;
   max-width: rem($containerWidth);
+  transform: translateX(calc(-100% - calc(rem($mainOffset) * 2)));
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: transform 0.5s linear, opacity 0.2s linear;
+
+  &.animation-block {
+    transform: translateX(0);
+    visibility: visible;
+    opacity: 1;
+  }
 }
 
 .block {
@@ -221,6 +237,9 @@
   }
 
   &__title {
+    position: sticky;
+    top: calc(var(--height-header) + rem(20));
+    left: 0;
     max-width: rem(480);
     text-wrap: balance;
     * {

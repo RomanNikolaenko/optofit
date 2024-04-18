@@ -4,8 +4,9 @@
 
   box-shadow: 3px 7px 18px 0px #07749905;
   background-color: #ffffff;
-  border-radius: rem(40);
+  @include property('border-radius', 40, 30);
   @include property('padding', 30, 20);
+  box-shadow: rgba(0, 113, 155, 0.07) 0px 0px 15px 0px;
 
   @media (min-width: 768px) {
     grid-template-columns: 1.085fr 1fr;
@@ -23,8 +24,7 @@
   }
 
   &__inner {
-    position: relative;
-    border-radius: rem(40);
+    @include property('border-radius', 40, 30);
     overflow: hidden;
 
     @media (min-width: 768px) {
@@ -33,19 +33,6 @@
 
     @media (max-width: 767.98px) {
       aspect-ratio: 1.4375/1;
-    }
-
-    @include pseudo-cell(before) {
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border-radius: rem(40);
-      background: linear-gradient(
-        176.99deg,
-        rgba(0, 113, 155, 0.135) -3.04%,
-        rgba(0, 113, 155, 0.36) 92.51%
-      );
     }
 
     img {
@@ -81,17 +68,25 @@
     }
 
     @include property('font-size', 17, 16);
+
+    * {
+      @include line-clamp(7);
+    }
   }
 
   &__btns {
     display: flex;
     flex-wrap: wrap;
-    gap: rem(20);
+    gap: rem(20) rem(10);
     align-items: center;
 
     @media (min-width: 768px) {
       grid-area: four;
       align-self: flex-start;
+    }
+
+    .button-line {
+      font-size: rem(18);
     }
   }
 }

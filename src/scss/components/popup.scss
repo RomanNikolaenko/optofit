@@ -68,7 +68,7 @@
     max-width: rem(1250);
     background-color: #ffffffed;
     transform: translateY(rem(-200));
-    border-radius: rem(40);
+    @include property('border-radius', 40, 30);
     opacity: 0;
     transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
 
