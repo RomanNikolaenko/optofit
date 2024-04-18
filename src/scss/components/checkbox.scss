@@ -43,6 +43,7 @@
     user-select: none;
     color: rgba(6, 115, 154, 0.5);
     transition: filter var(--bs-transition);
+    font-size: rem(14);
 
     @include any-hover {
       filter: contrast(0.1);

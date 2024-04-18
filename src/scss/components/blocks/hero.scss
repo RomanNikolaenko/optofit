@@ -52,7 +52,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+    height: 100%;
 
     @media (max-width: 767.98px) {
       max-width: 400px;
@@ -64,11 +64,12 @@
   &__image-ellipse {
     position: absolute;
     top: 0;
-    left: 0;
+    left: 50%;
     z-index: 1;
-    width: 100%;
+    min-width: 100%;
     height: 100%;
-    transform: translateY(var(--height-header));
+    aspect-ratio: 1 / 1;
+    transform: translate(-50%, var(--height-header));
     background: radial-gradient(
       circle,
       rgba(224, 247, 255, 0.12) 0%,
@@ -106,6 +107,12 @@
     @media (max-width: 1536px) {
       transform: translateY(rem(30)) scale(1);
     }
+  }
+
+  &__inner {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
   }
 
   &__description {
@@ -153,6 +160,8 @@
   &__title {
     position: relative;
     z-index: 3;
+    @include property('max-width', 580, 400, 1920, 1024);
+
     * {
       @include property('font-size', 86, 36);
       line-height: 0.9;
