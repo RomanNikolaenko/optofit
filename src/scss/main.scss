@@ -43,6 +43,11 @@
 /**
 * Подключение стилей отдельных блоков и секций
 */
+@import 'components/popup';
+@import 'components/checkbox';
+@import 'components/tabs';
+@import 'components/accordion';
+
 @import 'components/header';
 @import 'components/blocks/nav';
 @import 'components/blocks/lang';
@@ -57,9 +62,6 @@
 @import 'components/blocks/contacts';
 @import 'components/blocks/for-whom';
 @import 'components/blocks/main-decisions';
+@import 'components/blocks/frequently-asked-questions';
 
-@import 'components/popup';
-@import 'components/checkbox';
-@import 'components/tabs';
-@import 'components/accordion';
 @import 'components/footer';

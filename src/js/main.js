@@ -62,12 +62,12 @@ new PopupManager();
 // 	},
 // });
 
-// new Accordion('.footer__accordion', {
-// 	shouldOpenAll: true, // true
-// 	defaultOpen: [], // [0,1]
-// 	defaultOpenAll: true,
-// 	collapsedClass: 'open',
-// });
+new Accordion('.frequently-asked-questions__accordion', {
+	shouldOpenAll: true, // true
+	defaultOpen: [], // [0,1]
+	defaultOpenAll: false,
+	collapsedClass: 'open',
+});
 
 const stats = document.querySelectorAll('.data-stats__title span')
 const dataStats = document.querySelector('.data-stats');

@@ -3,6 +3,7 @@
     display: grid;
     grid-template-rows: max-content 0fr;
     transition: grid-template-rows var(--bs-transition);
+
     &.open {
       grid-template-rows: max-content 1fr;
 
@@ -27,6 +28,21 @@
       transition: all var(--bs-transition);
       text-transform: uppercase;
       font-size: rem(15);
+
+      @media (min-width: 1024px) {
+        pointer-events: none;
+      }
+
+      @include any-hover {
+        background-color: #06739a;
+        color: #ffffff;
+      }
+
+      &:focus-visible,
+      &:active {
+        background-color: #06739a;
+        color: #ffffff;
+      }
     }
 
     .footer__accordion & {
@@ -41,21 +57,6 @@
       svg {
         display: none;
       }
-    }
-
-    @media (min-width: 1024px) {
-      pointer-events: none;
-    }
-
-    @include any-hover {
-      background-color: #06739a;
-      color: #ffffff;
-    }
-
-    &:focus-visible,
-    &:active {
-      background-color: #06739a;
-      color: #ffffff;
     }
 
     svg {
