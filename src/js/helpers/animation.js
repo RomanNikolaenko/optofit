@@ -7,8 +7,6 @@ const scrollItems = document.querySelectorAll('.line');
     const clientHeight = document.documentElement.clientHeight;
     const height = window.scrollY + clientHeight + 300;
 
-    console.log(height);
-
     scrollItems.forEach(el => {
       const jEl = el;
       const scrollOffset = jEl.offsetTop;

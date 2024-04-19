@@ -4,17 +4,19 @@
 
   box-shadow: 3px 7px 18px 0px #07749905;
   background-color: #ffffff;
-  @include property('border-radius', 40, 30);
-  @include property('padding', 30, 20);
+  padding: rem(20);
   box-shadow: rgba(0, 113, 155, 0.07) 0px 0px 15px 0px;
+  border-radius: rem(30);
 
   @media (min-width: 768px) {
     grid-template-columns: 1.085fr 1fr;
-    grid-template-rows: auto auto 1fr;
+    grid-template-rows: max-content auto max-content;
     grid-template-areas:
       'one two'
       'three two'
       'four two';
+    border-radius: rem(40);
+    padding: rem(40);
   }
 
   @media (min-width: 768px) and (min-height: 600px) {
@@ -24,10 +26,11 @@
   }
 
   &__inner {
-    @include property('border-radius', 40, 30);
     overflow: hidden;
+    border-radius: rem(30);
 
     @media (min-width: 768px) {
+      border-radius: rem(40);
       grid-area: two;
     }
 
@@ -53,7 +56,8 @@
   &__title {
     @media (min-width: 768px) {
       grid-area: one;
-      align-self: flex-start;
+      height: max-content;
+      align-self: flex-end;
     }
 
     * {
@@ -64,7 +68,7 @@
   &__subtitle {
     @media (min-width: 768px) {
       grid-area: three;
-      align-self: flex-start;
+      height: max-content;
     }
 
     @include property('font-size', 17, 16);
@@ -77,23 +81,36 @@
   &__btns {
     display: flex;
     flex-wrap: wrap;
-    gap: rem(20) rem(10);
+    gap: rem(20) rem(16);
     align-items: center;
 
     @media (min-width: 768px) {
       grid-area: four;
+      height: max-content;
       align-self: flex-start;
     }
 
+    .button__grey {
+      font-size: rem(17);
+
+      @media (min-width: 768px) {
+        font-size: rem(18);
+      }
+    }
+
     .button-line {
-      font-size: rem(18);
+      font-size: rem(15);
+
+      @media (min-width: 768px) {
+        font-size: rem(18);
+      }
     }
   }
 }
 
 .questions {
   display: grid;
-  gap: rem(20);
+  gap: rem(33);
 
   &__wrap {
     position: relative;

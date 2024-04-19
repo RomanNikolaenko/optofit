@@ -11,9 +11,13 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: rem(30);
+    gap: rem(20);
     width: 100%;
     padding-bottom: rem(20);
+
+    @media (min-width: 768px) {
+      gap: rem(30);
+    }
 
     @media (min-width: 1200px) {
       display: grid;
@@ -44,7 +48,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(rem(250), 100%), 1fr));
     justify-content: flex-end;
-    gap: rem(20);
+    @include property('gap', 70, 20, 1920, 1200);
 
     @media (min-width: 1200px) {
       grid-template-columns: repeat(

@@ -69,13 +69,24 @@
   &__content {
     display: grid;
     align-content: flex-start;
-    gap: rem(12);
+    gap: rem(10);
     margin: rem(8);
     overflow: hidden;
 
+    @media (min-width: 768px) {
+      gap: rem(16);
+    }
+
     .footer__accordion & {
       margin: 0;
-      font-size: rem(18);
+
+      * {
+        font-size: rem(16);
+
+        @media (min-width: 768px) {
+          font-size: rem(18);
+        }
+      }
     }
   }
 }

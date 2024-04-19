@@ -128,19 +128,13 @@ h5,
 h6 {
   font-size: inherit;
   font-weight: 400;
-  color: #00719b;
-}
-
-h1 {
-  font-size: rem(40);
-  line-height: 1.1;
-}
-
-h2 {
-  font-size: rem(32);
-  line-height: 1.125;
 }
 
 sup {
   color: inherit;
+}
+
+b,
+strong {
+  font-weight: 500;
 }

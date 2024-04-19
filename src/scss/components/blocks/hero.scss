@@ -1,6 +1,11 @@
 .hero {
+  display: flex;
+  align-items: center;
+
   margin-top: calc(var(--height-header) * -1);
+  padding-top: calc(var(--height-header));
   width: 100%;
+  max-height: 900px;
   background-image: url('../../../images/1.png');
   background-color: #06739a;
   background-repeat: no-repeat;
@@ -8,26 +13,30 @@
   overflow: hidden;
   border-radius: rem(20);
 
+  @media (min-width: 1400px) {
+    height: 100vh;
+    height: 100dvh;
+  }
+
   &__container {
     position: relative;
-    display: grid;
-    align-items: center;
-    padding-bottom: rem(40);
-    @include property('gap', 50, 20, 1920, 1200);
-    max-width: 1640px;
+    padding-top: rem(10);
+    padding-bottom: rem(43);
 
     @media (min-width: 768px) {
-      height: 100vh;
-      height: 100dvh;
-      max-height: 900px;
+      display: grid;
+      align-items: center;
       grid-template-columns: 1fr 1fr;
-      padding-bottom: 0;
+      padding-bottom: rem(50);
+    }
+
+    @media (min-width: 1200px) {
+      padding-bottom: rem(20);
     }
 
     @include pseudo-cell(before) {
-      top: 70%;
-      right: 7%;
-
+      top: 83%;
+      right: 15%;
       z-index: 1;
       transform: translate(50%, 50%);
       @include property('width', 142, 100, 1920, 1200);
@@ -36,14 +45,36 @@
       background-repeat: no-repeat;
       background-size: contain;
 
-      @media (min-width: 1200px) {
-        top: 25%;
-        right: 0;
-        transform: translate(
-          calc(-10px + (75 - -10) * ((100vw - 1440px) / (1920 - 1440))),
-          -50%
-        );
+      @media (min-width: 768px) {
+        top: 39%;
+        right: 1%;
       }
+
+      @media (min-width: 1200px) {
+        top: 67%;
+        right: 9%;
+      }
+
+      @media (min-width: 1440px) {
+        top: 8%;
+        right: 8%;
+      }
+    }
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    @media (min-width: 768px) {
+      padding: 0 rem(16);
+    }
+
+    @media (min-width: 1200px) {
+      padding: rem(50);
     }
   }
 
@@ -53,11 +84,16 @@
     align-items: center;
     justify-content: center;
     height: 100%;
+    width: 100%;
 
     @media (max-width: 767.98px) {
-      max-width: 400px;
-      width: 100%;
-      margin: 0 auto;
+      max-width: rem(400);
+      margin: 0 auto rem(12);
+    }
+
+    @media (min-width: 1440px) {
+      transform: translateY(10%);
+      height: calc(100% + 20%);
     }
   }
 
@@ -69,7 +105,7 @@
     min-width: 100%;
     height: 100%;
     aspect-ratio: 1 / 1;
-    transform: translate(-50%, var(--height-header));
+    transform: translate(-50%, 0);
     background: radial-gradient(
       circle,
       rgba(224, 247, 255, 0.12) 0%,
@@ -83,99 +119,142 @@
     );
 
     @include pseudo-cell(before) {
-      top: 6.5%;
-      right: 14%;
-      width: 142px;
-      height: 142px;
+      top: 134.5%;
+      right: 51%;
+      width: rem(100);
+      height: rem(100);
       background-image: url('../../../images/svg/crug.svg');
       background-repeat: no-repeat;
       background-size: contain;
+
+      @media (min-width: 768px) {
+        top: 17.5%;
+        right: -24%;
+      }
+
+      @media (min-width: 1200px) {
+        top: 74.5%;
+        right: 78%;
+      }
+
+      @media (min-width: 1440px) {
+        width: rem(150);
+        height: rem(150);
+        top: 11.5%;
+        right: 23%;
+      }
     }
   }
 
   &__img {
     position: relative;
     z-index: 2;
+    aspect-ratio: 1/1.09;
 
     display: block;
     width: 100%;
     height: 100%;
     object-fit: contain;
     object-position: bottom;
-    transform: translateY(var(--height-header)) scale(1.2);
-
-    @media (max-width: 1536px) {
-      transform: translateY(rem(30)) scale(1);
-    }
-  }
-
-  &__inner {
-    position: relative;
-    height: 100%;
-    overflow: hidden;
   }
 
   &__description {
     position: relative;
+    z-index: 3;
     color: #ffffff;
-    margin-left: 21%;
-    @include property('margin-top', 100, 50, 1920, 1200);
+
+    @media (min-width: 768px) {
+      margin-top: 136px;
+    }
+
+    @media (min-width: 1200px) {
+      margin-top: 100px;
+    }
+
+    @media (min-width: 1440px) {
+      margin-top: 143px;
+      margin-left: 170px;
+    }
 
     &-ellipse {
       position: relative;
+      z-index: -1;
 
       @include pseudo-cell(before) {
-        top: 0;
-        left: 0;
         z-index: 1;
-        transform: translate(50%, 50%);
-        @include property('width', 142, 100, 1920, 1200);
-        @include property('height', 142, 100, 1920, 1200);
+        transform: translate(-50%, -50%);
+        width: rem(142);
+        height: rem(142);
         background-image: url('../../../images/svg/crug.svg');
         background-repeat: no-repeat;
         background-size: contain;
-
-        @media (min-width: 1200px) {
-          transform: translate(-50%, -50%);
-        }
+        display: none;
       }
 
       @include pseudo-cell(after) {
-        position: absolute;
-        top: 0;
-        left: 0;
-        transform: translate(-50px, -50px);
-        @include property('width', 360, 300, 1920, 1200);
-        @include property('height', 360, 300, 1920, 1200);
+        transform: translate(-50%, -50%);
+        width: rem(360);
+        height: rem(360);
         background-color: rgba(255, 255, 255, 0.12);
         border-radius: 50%;
+        display: none;
+      }
 
-        @media (min-width: 1200px) {
-          transform: translate(-50%, -50%);
+      @media (min-width: 1200px) {
+        &::before,
+        &::after {
+          top: rem(100);
+          left: rem(120);
+          display: block;
+        }
+      }
+
+      @media (min-width: 1440px) {
+        &::before,
+        &::after {
+          top: rem(10);
+          left: rem(20);
         }
       }
     }
   }
 
   &__title {
-    position: relative;
-    z-index: 3;
-    @include property('max-width', 580, 400, 1920, 1024);
+    letter-spacing: rem(-0.3);
+    font-size: rem(36);
+    font-weight: 400;
+    line-height: 1;
+    margin-bottom: rem(19);
+    max-width: rem(350);
 
-    * {
-      @include property('font-size', 86, 36);
+    @media (min-width: 768px) {
+      font-size: rem(48);
       line-height: 0.9;
-      color: #ffffff;
-      text-wrap: balance;
+      max-width: rem(370);
+      letter-spacing: 1px;
+    }
+
+    @media (min-width: 1200px) {
+      font-size: rem(68);
+      max-width: rem(580);
+      margin-bottom: rem(25);
+    }
+
+    @media (min-width: 1440px) {
+      font-size: rem(86);
+      max-width: rem(480);
     }
   }
 
   &__text {
-    position: relative;
-    z-index: 3;
-    @include property('font-size', 20, 18);
-    margin-top: rem(15);
-    text-wrap: balance;
+    font-size: rem(18);
+    margin-bottom: rem(28);
+    max-width: rem(290);
+
+    @media (min-width: 1200px) {
+      font-size: rem(20);
+      max-width: rem(465);
+    }
   }
 
   &__btns {
@@ -185,6 +264,5 @@
     flex-wrap: wrap;
     align-items: center;
     gap: rem(20);
-    margin-top: rem(25);
   }
 }

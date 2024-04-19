@@ -6,11 +6,11 @@
 
   &__container {
     display: grid;
-    gap: 0 rem(20);
+    gap: 0 rem(27);
     overflow: hidden;
 
-    @media (min-width: 768px) {
-      grid-template-columns: minmax(rem(320), 1fr) 4.2fr;
+    @media (min-width: 1200px) {
+      grid-template-columns: minmax(rem(320), 1fr) 5fr;
       grid-template-rows: auto 1fr;
       grid-template-areas:
         'text stats'
@@ -19,12 +19,25 @@
   }
 
   &__text {
-    padding: rem(30) 0;
-    @include property('font-size', 36, 21);
+    padding: rem(30) 0 rem(12);
+    font-size: rem(21);
+    letter-spacing: -0.5px;
 
     @media (min-width: 768px) {
+      font-size: rem(24);
+      letter-spacing: -1px;
+      max-width: rem(345);
+      letter-spacing: -0.2px;
+      padding: rem(30) 0 rem(18);
+    }
+
+    @media (min-width: 1200px) {
+      font-size: rem(30);
       grid-area: text;
       align-self: flex-start;
+      max-width: 100%;
+      letter-spacing: -0.5px;
+      padding: rem(30) 0;
     }
 
     * {
@@ -35,12 +48,14 @@
   }
 
   &__btn {
+    font-weight: 400;
     width: 100%;
-    margin-bottom: rem(30);
+    margin-bottom: rem(16);
 
-    @media (min-width: 768px) {
+    @media (min-width: 1200px) {
       grid-area: btn;
       align-self: flex-start;
+      margin-bottom: rem(30);
     }
   }
 }
@@ -49,24 +64,34 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   overflow: hidden;
+  margin-bottom: rem(16);
 
-  @media (min-width: 768px) {
+  @media (min-width: 1200px) {
     grid-area: stats;
+    margin-bottom: 0;
   }
 
   @media (min-width: 1440px) {
     grid-template-columns: repeat(4, 1fr);
   }
 
-  @media (max-width: 767.98px) {
-    margin-bottom: rem(30);
-  }
-
   &__item {
     display: flex;
     flex-direction: column;
     border-left: 1px solid rgba(0, 113, 155, 0.5);
-    padding: rem(30) rem(15);
+    padding: rem(22) rem(12);
+
+    @media (min-width: 768px) {
+      padding: rem(38) rem(15) rem(64);
+    }
+
+    @media (min-width: 1200px) {
+      padding: rem(30) rem(15) rem(115);
+    }
+
+    @media (min-width: 1440px) {
+      padding: rem(30) rem(15);
+    }
 
     @media (max-width: 1439.98px) {
       &:nth-last-of-type(1) {
@@ -85,9 +110,21 @@
   }
 
   &__title {
-    @include property('font-size', 110, 32, 1920, 768);
     font-weight: 300;
-    line-height: 1.2;
+    line-height: 1;
+    font-size: rem(32);
+
+    @media (min-width: 768px) {
+      font-size: rem(72);
+    }
+
+    @media (min-width: 1200px) {
+      font-size: rem(110);
+    }
+
+    @media (min-width: 1440px) {
+      @include property('font-size', 110, 32, 1920, 768);
+    }
   }
 
   &__text {

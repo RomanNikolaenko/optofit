@@ -23,8 +23,6 @@ class BaseHelpers {
     testWebp((support) => {
       const className = support ? 'webp' : 'no-webp';
       BaseHelpers.html.classList.add(className);
-
-      console.log(support ? 'webp поддерживается' : 'webp не поддерживается');
     });
   }
 
@@ -47,31 +45,6 @@ class BaseHelpers {
       }, 0);
     });
   }
-
-  // /** Получение хеша в адресе сайта */
-  // static get getHash() {
-  //   return location.hash?.replace('#', '');
-  // }
-
-  // /** Указание хеша в адресе сайта */
-  // static setHash(hash) {
-  //   hash = hash ? `#${hash}` : location.href.split('#')[0];
-  //   history.pushState('', '', hash);
-  // }
-
-  // /** Функция для фиксированной шапки при скролле */
-  // static headerFixed() {
-  //   const headerStickyObserver = new IntersectionObserver(([entry]) => {
-  //     BaseHelpers.html.classList.toggle(
-  //       'header-is-sticky',
-  //       !entry.isIntersecting
-  //     );
-  //   });
-
-  //   if (BaseHelpers.firstScreen) {
-  //     headerStickyObserver.observe(BaseHelpers.firstScreen);
-  //   }
-  // }
 }
 
 export default BaseHelpers;

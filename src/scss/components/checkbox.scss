@@ -1,8 +1,7 @@
 .checkbox {
   display: inline-grid;
   grid-template-columns: rem(20) auto;
-  align-items: center;
-  gap: rem(12);
+  gap: rem(8);
   cursor: pointer;
 
   &__input {
@@ -42,8 +41,9 @@
   &__name {
     user-select: none;
     color: rgba(6, 115, 154, 0.5);
-    transition: filter var(--bs-transition);
     font-size: rem(14);
+    padding-top: rem(2);
+    transition: filter var(--bs-transition);
 
     @include any-hover {
       filter: contrast(0.1);

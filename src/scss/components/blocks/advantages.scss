@@ -2,111 +2,195 @@
   counter-reset: my-sec-counter;
 
   &__wrap {
-    display: grid;
-    gap: rem(20);
-    @include property('padding', 30, 20);
-    background-color: #ffffff;
-    @include property('border-radius', 40, 30);
-    box-shadow: 0px 0px 15px 0px #00719b12;
+    border-radius: rem(30);
 
-    @media (min-width: 1200px) {
-      grid-template-columns: 1.2fr 1fr 2.2fr;
-      grid-template-rows: auto 1fr;
-      grid-template-areas:
-        'text one advantages'
-        'btn one advantages';
-    }
-
-    @media (min-width: 768px) and (max-width: 1199.98px) {
-      grid-template-columns: auto auto;
+    @media (min-width: 768px) {
+      display: grid;
+      gap: rem(20);
+      padding: rem(36) rem(30);
+      box-shadow: 0px 0px 15px 0px #00719b12;
+      background-color: #ffffff;
+      border-radius: rem(40);
+      grid-template-columns: 1fr 1fr;
       grid-template-rows: auto auto auto;
       grid-template-areas:
         'text one'
         'btn one '
         'advantages advantages';
     }
+
+    @media (min-width: 1440px) {
+      grid-template-columns: 1.2fr 0.93fr 2.2fr;
+      grid-template-rows: auto 1fr;
+      grid-template-areas:
+        'text one advantages'
+        'btn one advantages';
+    }
   }
 
   &__desc {
+    @media (max-width: 767.98px) {
+      background-color: #ffffff;
+      border-radius: rem(30);
+      padding-top: rem(24);
+      padding-inline: rem(20);
+      padding-bottom: rem(60);
+      box-shadow: 0px 0px 15px 0px #00719b12;
+    }
+
     @media (min-width: 768px) {
       grid-area: text;
       align-self: flex-start;
     }
   }
 
-  &__one {
-    box-shadow: 0px 0px 15px 0px #00719b12;
-    background-color: #06739a;
-    @include property('border-radius', 40, 30);
-    @include property('padding', 56, 38, 1920, 1200);
-    color: #ffffff;
-    height: 100%;
+  &__title {
+    padding-bottom: rem(11);
+    margin-bottom: rem(12);
+    border-bottom: 1px solid rgba(6, 115, 154, 0.5);
+    font-size: rem(26);
 
     @media (min-width: 768px) {
-      grid-area: one;
-      align-self: flex-start;
+      font-size: rem(34);
+      padding-bottom: rem(18);
+      margin-top: rem(31);
+      margin-bottom: rem(14);
+    }
+
+    @media (min-width: 1200px) {
+      font-size: rem(46);
+      padding-bottom: rem(25);
+      margin-top: rem(53);
+      margin-bottom: rem(34);
     }
   }
 
-  &__title {
-    @include property('font-size', 46, 24);
-    padding-bottom: rem(30);
-    margin-bottom: rem(30);
-    border-bottom: 1px solid rgba(6, 115, 154, 0.5);
+  &__text {
+    max-width: rem(217);
+
+    @media (min-width: 768px) {
+      font-size: rem(20);
+      max-width: rem(313);
+    }
+
+    @media (min-width: 1440px) {
+      max-width: rem(400);
+    }
   }
 
-  &__text {
-    @include property('font-size', 20, 17);
+  &__one {
+    box-shadow: 0px 8px 8px 0px #00719b12;
+    background-color: #06739a;
+    color: #ffffff;
+    height: 100%;
+    border-radius: rem(30);
+    text-wrap: balance;
+    line-height: 1.1;
+    padding: rem(28) rem(21) rem(21);
+    margin-top: rem(-50);
+
+    @media (min-width: 768px) {
+      box-shadow: 0px 0px 15px 0px #00719b12;
+      grid-area: one;
+      align-self: flex-start;
+      border-radius: rem(40);
+      padding: rem(32) rem(54);
+      margin-top: 0;
+    }
+
+    @media (min-width: 1200px) {
+      padding: rem(40) rem(54);
+    }
+
+    @media (min-width: 1440px) {
+      padding: 60px 54px;
+    }
+  }
+
+  &__number {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+    column-gap: 24px;
+
+    @media (min-width: 768px) {
+      font-size: rem(18);
+    }
+
+    &:before {
+      counter-increment: my-sec-counter;
+      content: counter(my-sec-counter, decimal-leading-zero);
+      font-size: rem(34);
+      opacity: 0.2;
+      font-weight: 300;
+
+      @media (min-width: 768px) {
+        font-size: rem(58);
+      }
+
+      @media (min-width: 1200px) {
+        font-size: rem(86);
+      }
+
+      @media (min-width: 1440px) {
+        margin-bottom: 10px;
+      }
+    }
+
+    span {
+      line-height: 1.2;
+    }
   }
 
   &__list {
     display: grid;
     box-shadow: 0px 0px 15px 0px #00719b12;
-    background-color: #f4f4f4;
-    @include property('border-radius', 40, 30);
-    @include property('gap', 30, 16);
-    @include property('padding', 40, 20, 1920, 1200);
+    background-color: #ffffff;
+
+    @media (max-width: 767.98px) {
+      margin-top: rem(10);
+      border-radius: rem(30);
+      padding-top: rem(24);
+      padding-inline: rem(20);
+      padding-bottom: rem(70);
+      box-shadow: 0px 0px 15px 0px #00719b12;
+    }
 
     @media (min-width: 768px) {
       grid-area: advantages;
       align-self: flex-start;
+      border-radius: rem(40);
+      padding: rem(40);
+      background-color: #f4f4f4;
 
       display: flex;
       flex-wrap: wrap;
+      gap: rem(56) rem(40);
+    }
+
+    @media (min-width: 1440px) {
+      padding: rem(59) rem(62);
+    }
+
+    @media (min-width: 768px) and (max-width: 1439.98px) {
+      @include property('padding-inline', 175, 40, 1200, 768);
     }
   }
 
   &__item {
     position: relative;
     flex-grow: 1;
-    @include property('padding-block', 16, 8);
-
-    @include pseudo-cell(before) {
-      top: 0;
-      @include property('right', -15, -8);
-      width: 1px;
-      height: 100%;
-      background-color: rgba(6, 115, 154, 0.25);
-    }
+    padding: rem(15) 0;
 
     @media (max-width: 767.98px) {
-      &::before {
-        display: none;
-      }
-
-      &:not(:nth-of-type(1)) {
-        @include pseudo-cell(after) {
-          @include property('top', -15, -8);
-          right: 0;
-          width: 100%;
-          height: 1px;
-          background-color: rgba(6, 115, 154, 0.25);
-        }
+      &:not(:last-child) {
+        border-bottom: 1px solid rgba(6, 115, 154, 0.25);
       }
     }
 
     @media (min-width: 768px) {
-      flex-basis: calc(33.333% - rem(20));
+      flex-basis: calc(33.333% - rem(80) / 3);
+      padding: 0;
 
       &:nth-of-type(3n + 3),
       &:nth-last-of-type(1) {
@@ -117,7 +201,7 @@
 
       &:nth-of-type(n + 4) {
         @include pseudo-cell(after) {
-          @include property('top', -15, -8);
+          top: rem(-28);
           right: 0;
           width: 100%;
           height: 1px;
@@ -127,33 +211,35 @@
         .advantages__number {
           flex-direction: row;
           align-items: center;
+
+          span {
+            max-width: rem(460);
+          }
         }
       }
+    }
+
+    @include pseudo-cell(before) {
+      top: 0;
+      right: rem(-20);
+      width: 1px;
+      height: 100%;
+      background-color: rgba(6, 115, 154, 0.25);
     }
   }
 
   &__btn {
-    max-width: rem(300);
+    @media (max-width: 767.98px) {
+      max-width: calc(100% - 32px);
+      margin: 0 auto;
+      margin-top: rem(-66);
+    }
 
     @media (min-width: 768px) {
-      @include property('margin-top', 40, 20);
+      margin-top: rem(56);
       grid-area: btn;
       align-self: flex-start;
-    }
-  }
-
-  &__number {
-    display: flex;
-    flex-direction: column;
-    gap: rem(12);
-    @include property('font-size', 20, 17);
-
-    &:before {
-      counter-increment: my-sec-counter;
-      content: counter(my-sec-counter, decimal-leading-zero);
-      @include property('font-size', 86, 42);
-      opacity: 0.2;
-      font-weight: 300;
+      max-width: rem(292);
     }
   }
 }

@@ -5,22 +5,54 @@
 
     @media (min-width: 768px) {
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
+      grid-template-rows: auto auto;
+    }
+
+    @media (min-width: 1440px) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: minmax(rem(367), 1fr) minmax(rem(367), 1fr);
     }
   }
 
   &__desc {
-    display: grid;
-    gap: rem(30);
-    align-content: flex-start;
-    box-shadow: 0px 0px 20px 0px #00719b1a;
-    background-color: #ffffff;
-    @include property('border-radius', 40, 30);
-    @include property('padding', 30, 20);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: rem(20);
+    border-radius: rem(30);
+
+    background-image: url('../../images/svg/crug-4.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 60%;
+
+    @media (min-width: 768px) {
+      gap: rem(30);
+      border-radius: rem(40);
+      padding: 0;
+    }
+
+    @media (min-width: 1440px) {
+      justify-content: flex-start;
+      background-image: none;
+      background-color: #ffffff;
+      box-shadow: 0px 0px 20px 0px #00719b1a;
+      padding: rem(50);
+    }
   }
 
   &__title {
-    @include property('font-size', 46, 26);
+    font-size: rem(26);
+    line-height: 1;
+
+    @media (min-width: 768px) {
+      font-size: rem(34);
+      max-width: 280px;
+    }
+
+    @media (min-width: 1200px) {
+      font-size: rem(46);
+    }
   }
 
   &__subtitle {
@@ -32,39 +64,76 @@
     align-content: flex-start;
     gap: rem(20);
     box-shadow: 0px 4px 20px 0px #00719b0d;
+    color: #ffffff;
     background-color: #06739a;
-    @include property('border-radius', 40, 30);
-    @include property('padding', 30, 20);
-    @include property('font-size', 46, 26);
+    padding: rem(40) rem(20);
+    border-radius: rem(30);
+    font-size: rem(21);
+    line-height: 1;
+    text-align: center;
 
-    @media (min-width: 1200px) {
-      grid-column: 2;
-      grid-row: 1;
+    @media (min-width: 768px) {
+      font-size: rem(34);
+      align-items: center;
+      justify-content: center;
+      padding: rem(40) rem(30);
+      border-radius: rem(40);
     }
 
-    @media (max-width: 767.98px) {
-      min-height: 220px;
+    @media (min-width: 1200px) {
+      font-size: rem(46);
+      padding: rem(34) rem(23);
+      text-align: left;
+      justify-content: flex-start;
+    }
+
+    @media (min-width: 1440px) {
+      grid-column: 2;
+      grid-row: 1;
+      padding: rem(40);
+    }
+
+    @media (min-width: 768px) and (max-width: 1199.98px) {
+      grid-column: 1/-1;
     }
 
     * {
-      color: #ffffff;
       max-width: rem(530);
     }
   }
 
   &__personal {
     position: relative;
-    @include property('border-radius', 40, 30);
     overflow: hidden;
     display: grid;
 
-    @media (min-width: 1200px) {
+    @media (min-width: 1440px) {
       grid-column: 1;
       grid-row: 2;
     }
 
     @media (max-width: 767.98px) {
       min-height: 220px;
+    }
+  }
+
+  &__img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: rem(30);
+    aspect-ratio: 1.33/1;
+
+    @media (min-width: 768px) {
+      border-radius: rem(40);
+    }
+
+    @media (min-width: 1440px) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
     }
 
     @include pseudo-cell(before) {
@@ -77,10 +146,6 @@
     }
 
     img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 1;
       display: block;
       width: 100%;
       height: 100%;
@@ -92,11 +157,33 @@
   &__wrap {
     position: relative;
     z-index: 3;
-    color: #ffffff;
     max-width: rem(700);
     display: flex;
     align-items: flex-end;
-    @include property('font-size', 30, 16);
-    @include property('padding', 30, 20);
+    font-size: rem(16);
+    padding: rem(20) 0 0;
+
+    @media (min-width: 768px) {
+      font-size: rem(20);
+      border-radius: rem(40);
+      padding: 0 0 rem(30);
+      grid-row: 1;
+    }
+
+    @media (min-width: 1200px) {
+      font-size: rem(30);
+    }
+
+    @media (min-width: 1440px) {
+      color: #ffffff;
+      padding: rem(30);
+      grid-row: initial;
+    }
+  }
+
+  .form-contacts {
+    @media (min-width: 768px) and (max-width: 1199.98px) {
+      grid-column: 1/-1;
+    }
   }
 }

@@ -74,24 +74,22 @@ const dataStats = document.querySelector('.data-stats');
 
 const count = (parent, stats)=> {
     const options = {
-        threshold: [0.3, 1],
-      };
-      
-      let hasRun = false;
-      
-      const callback = (entries, observer) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            if (!hasRun) {
-              counter(stats);
-              hasRun = true;
-            }
-          }
-        });
-      };
-      
-      const observer = new IntersectionObserver(callback, options);
-      observer.observe(parent);
+      threshold: [0.3, 0.7],
+    };
+    
+    let hasRun = false;
+    
+    const callback = (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && !hasRun) {
+          counter(stats);
+          hasRun = true;
+        }
+      });
+    };
+    
+    const observer = new IntersectionObserver(callback, options);
+    observer.observe(parent);
 }
 
 count(dataStats, stats)
