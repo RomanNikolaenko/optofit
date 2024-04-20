@@ -10,11 +10,21 @@ new Swiper('.swiper', {
     prevEl: '.swiper-button-prev',
     clickable: true,
   },
-  slidesPerView: 'auto',
-  spaceBetween: 30,
+  slidesPerView: 1,
+  slidesPerColumn: 1,
+  centeredSlides: true,
+  spaceBetween: 20,
   speed: 1500,
   autoplay: {
     delay: 4000,
     disableOnInteraction: false,
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+    },
+    576: {
+      slidesPerView: 'auto',
+    },
   },
 });

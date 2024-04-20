@@ -263,6 +263,10 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: rem(20);
+    gap: rem(24);
+
+    .button-line {
+      font-size: rem(18);
+    }
   }
 }
