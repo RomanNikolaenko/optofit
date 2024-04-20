@@ -1,0 +1,17 @@
+.swiper {
+  &-slide {
+    height: auto;
+    width: calc(32% - 60px / 3);
+
+    &.top {
+      width: calc(36% - 60px / 3);
+    }
+  }
+
+  .block-slider {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 100%;
+  }
+}

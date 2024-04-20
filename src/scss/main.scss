@@ -23,7 +23,7 @@
 * раскомментировать для использования
 */
 // @import 'libs/aos';
-// @import 'libs/swiper';
+@import 'libs/swiper';
 
 /**
 * Подключение custom scrollbar для всего сайта
@@ -43,6 +43,7 @@
 /**
 * Подключение стилей отдельных блоков и секций
 */
+// @import '../../node_modules/swiper/swiper-bundle.min.css';
 @import 'components/popup';
 @import 'components/checkbox';
 @import 'components/tabs';
@@ -63,5 +64,6 @@
 @import 'components/blocks/for-whom';
 @import 'components/blocks/main-decisions';
 @import 'components/blocks/frequently-asked-questions';
+@import 'components/blocks/slider';
 
 @import 'components/footer';

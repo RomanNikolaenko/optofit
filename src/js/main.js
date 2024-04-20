@@ -8,12 +8,11 @@
  */
 // import MousePRLX from './libs/parallaxMouse'
 import counter from './libs/counter';
-// import AOS from 'aos'
-// import Swiper, { Navigation, Pagination } from 'swiper';
 
 import './helpers/bounding-client-rect';
 import './helpers/search';
 import './helpers/animation';
+import './helpers/swiper';
 
 import BaseHelpers from './helpers/base-helpers';
 import PopupManager from './modules/popup-manager';
@@ -27,40 +26,7 @@ BaseHelpers.addTouchClass();
 
 BaseHelpers.addLoadedClass();
 
-// BaseHelpers.headerFixed();
-
-/**
- * Открытие/закрытие модальных окон
- * Чтобы модальное окно открывалось и закрывалось
- * На окно повешай атрибут data-popup="<название окна>"
- * На кнопку, которая вызывает окно повешай атрибут data-type="<название окна>"
-
- * На обертку(.popup) окна добавь атрибут '[data-close-overlay]'
- * На кнопку для закрытия окна добавь класс '.button-close'
- * */
 new PopupManager();
-
-/**
- *  Модуль для работы с меню (Бургер)
- * */
-// new BurgerMenu().init();
-
-/**
- *  Библиотека для анимаций
- *  документация: https://michalsnik.github.io/aos
- * */
-// AOS.init();
-
-/**
- * Параллакс мышей
- * */
-// new MousePRLX();
-
-// new Tabs('tabs-example', {
-// 	onChange: (data) => {
-// 		console.log(data);
-// 	},
-// });
 
 new Accordion('.frequently-asked-questions__accordion', {
 	shouldOpenAll: true, // true
