@@ -123,7 +123,11 @@
   overflow-y: overlay;
   max-height: calc(
     var(--vh) - var(--height-search) -
-      calc(16px + (30 - 16) * ((100vw - 320px) / (1920 - 320)))
+      clamp(
+        rem(16),
+        calc(rem(16) + (30 - 16) * ((100vw - 320px) / (1920 - 320))),
+        rem(30)
+      )
   );
   transition: all var(--bs-transition);
 

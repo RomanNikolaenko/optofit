@@ -8,13 +8,16 @@
  */
 // import MousePRLX from './libs/parallaxMouse'
 import counter from './libs/counter';
+import { useDynamicAdapt } from './libs/adaptive.js'
+
+useDynamicAdapt()
 
 import './helpers/bounding-client-rect';
 import './helpers/search';
 import './helpers/animation';
 import './helpers/swiper';
-
 import BaseHelpers from './helpers/base-helpers';
+
 import PopupManager from './modules/popup-manager';
 // import BurgerMenu from './modules/burger-menu';
 // import Tabs from './modules/tabs';
