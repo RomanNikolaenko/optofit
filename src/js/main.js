@@ -8,14 +8,15 @@
  */
 // import MousePRLX from './libs/parallaxMouse'
 import counter from './libs/counter';
-import { useDynamicAdapt } from './libs/adaptive.js'
+import { useDynamicAdapt } from './libs/adaptive.js';
 
-useDynamicAdapt()
+useDynamicAdapt();
 
 import './helpers/bounding-client-rect';
 import './helpers/search';
 import './helpers/animation';
 import './helpers/swiper';
+import './helpers/YT';
 import BaseHelpers from './helpers/base-helpers';
 
 import PopupManager from './modules/popup-manager';
@@ -32,33 +33,39 @@ BaseHelpers.addLoadedClass();
 new PopupManager();
 
 new Accordion('.frequently-asked-questions__accordion', {
-	shouldOpenAll: true, // true
-	defaultOpen: [], // [0,1]
-	defaultOpenAll: false,
-	collapsedClass: 'open',
+  shouldOpenAll: true, // true
+  defaultOpen: [], // [0,1]
+  defaultOpenAll: false,
+  collapsedClass: 'open',
 });
 
-const stats = document.querySelectorAll('.data-stats__title span')
+const stats = document.querySelectorAll('.data-stats__title span');
 const dataStats = document.querySelector('.data-stats');
 
-const count = (parent, stats)=> {
-    const options = {
-      threshold: [0.3, 0.7],
-    };
-    
-    let hasRun = false;
-    
-    const callback = (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting && !hasRun) {
-          counter(stats);
-          hasRun = true;
-        }
-      });
-    };
-    
-    const observer = new IntersectionObserver(callback, options);
-    observer.observe(parent);
-}
+const count = (parent, stats) => {
+  const options = {
+    threshold: [0.3, 0.7],
+  };
 
-count(dataStats, stats)
+  let hasRun = false;
+
+  const callback = (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting && !hasRun) {
+        counter(stats);
+        hasRun = true;
+      }
+    });
+  };
+
+  const observer = new IntersectionObserver(callback, options);
+  observer.observe(parent);
+};
+
+count(dataStats, stats);
+
+const tooltip = document.querySelector('.hero .tooltip');
+
+tooltip.addEventListener('click', () => {
+  tooltip.classList.toggle('tooltip_open');
+});

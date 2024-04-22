@@ -34,7 +34,7 @@ new Swiper('.services__swiper', {
   },
   slidesPerView: 1,
   spaceBetween: 20,
-  speed: 300,
+  speed: 3000,
   autoplay: {
     delay: 8000,
     disableOnInteraction: false,

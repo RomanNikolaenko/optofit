@@ -103,6 +103,7 @@ class PopupManager extends Popup {
   closePopup(popup) {
     popup.classList.remove(this.options.isOpenClass);
     popup.setAttribute('aria-hidden', 'true');
+
     if (popup.querySelector(`.${this.options.buttonCloseName}`)) {
       popup
         .querySelector(`.${this.options.buttonCloseName}`)
