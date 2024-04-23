@@ -1,15 +1,17 @@
-* {
-  &::-webkit-scrollbar {
-    width: rem(12);
-  }
+@media (any-hover: hover) {
+  * {
+    &::-webkit-scrollbar {
+      width: rem(12);
+    }
 
-  &::-webkit-scrollbar-track {
-    background: #d3eaf2;
-    border-radius: rem(6);
-  }
+    &::-webkit-scrollbar-track {
+      background: #d3eaf2;
+      border-radius: rem(6);
+    }
 
-  &::-webkit-scrollbar-thumb {
-    background: #388fae;
-    border-radius: rem(6);
+    &::-webkit-scrollbar-thumb {
+      background: #388fae;
+      border-radius: rem(6);
+    }
   }
 }

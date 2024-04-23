@@ -1,0 +1,213 @@
+.fixed-block {
+  position: fixed;
+  bottom: rem(24);
+  right: rem(16);
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  gap: rem(20);
+
+  &__btn {
+    position: relative;
+    border: 1px solid #388fae26;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.9);
+    width: rem(42);
+    height: rem(42);
+    transition: all var(--bs-transition);
+
+    @media (min-width: 768px) {
+      width: rem(50);
+      height: rem(50);
+    }
+
+    @media (min-width: 1200px) {
+      width: rem(56);
+      height: rem(56);
+    }
+
+    .open & {
+      z-index: 30;
+
+      @include any-hover {
+        filter: contrast(0.7);
+      }
+
+      &:focus-visible,
+      &:active {
+        filter: contrast(0.7);
+      }
+    }
+
+    &:not(.open &) {
+      @include any-hover {
+        border-color: #ffffff;
+        background-color: rgba(6, 115, 154, 0.8);
+        color: #ffffff;
+      }
+
+      &:focus-visible,
+      &:active {
+        border-color: #ffffff;
+        background-color: rgba(6, 115, 154, 0.8);
+        color: #ffffff;
+      }
+    }
+  }
+
+  &__phone {
+    .fixed-block__btn {
+      --border: 5px;
+
+      @include pseudo-cell(before) {
+        top: calc(var(--border) * -1);
+        right: calc(var(--border) * -1);
+        bottom: calc(var(--border) * -1);
+        left: calc(var(--border) * -1);
+        border: var(--border) solid rgba(56, 143, 174, 0.5);
+        border-radius: 50%;
+        animation: ripple 2s linear infinite;
+      }
+
+      @include pseudo-cell(after) {
+        top: calc(var(--border) * -1);
+        right: calc(var(--border) * -1);
+        bottom: calc(var(--border) * -1);
+        left: calc(var(--border) * -1);
+        border: var(--border) solid rgba(56, 143, 174, 0.5);
+        border-radius: 50%;
+        animation: ripple 2s 1s linear infinite;
+      }
+    }
+  }
+
+  &__img {
+    width: rem(24);
+    height: rem(24);
+    margin-top: rem(3);
+    pointer-events: none;
+    transition: all var(--bs-transition);
+
+    @media (min-width: 768px) {
+      width: rem(32);
+      height: rem(32);
+    }
+  }
+
+  &__wrap {
+    position: absolute;
+    top: 0;
+    right: 70%;
+    z-index: -1;
+    border-radius: rem(16);
+    padding: rem(20) rem(34) rem(20) rem(20);
+    background-color: rgba(255, 255, 255, 0.8);
+    width: max-content;
+    height: max-content;
+    border: 1px solid currentColor;
+    cursor: pointer;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translate(10px, 10px);
+    transition: all var(--bs-transition);
+
+    .open & {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: all;
+      transform: translate(0, 0);
+    }
+  }
+}
+
+.messangers {
+  z-index: 2;
+
+  &__list {
+    position: absolute;
+    bottom: rem(-3);
+    left: 50%;
+    z-index: -1;
+    transform: translate(-50%, rem(4));
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 0px 20px 0px #494f5538;
+    border-radius: 100vmax;
+    cursor: pointer;
+    max-height: calc(100vh - rem(40) - var(--height-header));
+    overflow: clip overlay;
+
+    display: flex;
+    flex-direction: column-reverse;
+    gap: rem(6);
+    padding: rem(3) rem(3) rem(53);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translate(-50%, rem(10));
+    transition: all var(--bs-transition);
+
+    @media (min-width: 768px) {
+      padding: rem(3) rem(3) rem(61);
+    }
+
+    @media (min-width: 1200px) {
+      padding: rem(3) rem(3) rem(67);
+    }
+
+    .open & {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: all;
+      transform: translate(-50%, 0);
+    }
+  }
+
+  &__link {
+    display: flex;
+    width: rem(42);
+    height: rem(42);
+    transition: opacity var(--bs-transition);
+
+    @media (min-width: 768px) {
+      width: rem(50);
+      height: rem(50);
+    }
+
+    @media (min-width: 1200px) {
+      width: rem(56);
+      height: rem(56);
+    }
+
+    @include any-hover {
+      opacity: 0.7;
+    }
+
+    &:focus-visible,
+    &:active {
+      opacity: 0.7;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(1);
+    opacity: 0;
+  }
+  10% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}

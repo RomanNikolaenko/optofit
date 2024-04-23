@@ -64,8 +64,47 @@ const count = (parent, stats) => {
 
 count(dataStats, stats);
 
+// --------
 const tooltip = document.querySelector('.hero .tooltip');
 
 tooltip.addEventListener('click', () => {
   tooltip.classList.toggle('tooltip_open');
+});
+
+const fixedBlockPhone = document.querySelector('.fixed-block__phone');
+fixedBlockPhone.addEventListener('click', () => {
+  fixedBlockPhone.classList.toggle('open');
+});
+
+const fixedBlockMessangers = document.querySelector('.fixed-block__messangers');
+fixedBlockMessangers.addEventListener('click', (e) => {
+  fixedBlockMessangers.classList.toggle('open');
+});
+
+document.addEventListener('click', function (e) {
+  if (!e.target.closest('.hero .tooltip') && tooltip.classList.contains('tooltip_open')) {
+    tooltip.classList.remove('tooltip_open');
+  }
+  if (!e.target.closest('.fixed-block__phone') && fixedBlockPhone.classList.contains('open')) {
+    fixedBlockPhone.classList.remove('open');
+  }
+  if (!e.target.closest('.fixed-block__messangers') && fixedBlockMessangers.classList.contains('open')) {
+    fixedBlockMessangers.classList.remove('open');
+  }
+});
+
+document.addEventListener('keydown', (e) => {
+  const keyCode = e.keyCode;
+
+  if (keyCode == 27) {
+    if (tooltip.classList.contains('tooltip_open')) {
+      tooltip.classList.remove('tooltip_open');
+    }
+    if (fixedBlockPhone.classList.contains('open')) {
+      fixedBlockPhone.classList.remove('open');
+    }
+    if (fixedBlockMessangers.classList.contains('open')) {
+      fixedBlockMessangers.classList.remove('open');
+    }
+  }
 });

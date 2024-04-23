@@ -27,6 +27,7 @@ function YTIframe(event) {
       autoplay: 0,
       controls: 1,
       playsinline: 1,
+      mute: 1,
     },
     events: {
       onReady: onPlayerReady,

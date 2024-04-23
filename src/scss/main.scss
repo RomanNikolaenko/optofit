@@ -1,63 +1,28 @@
 @use 'sass:math';
 
-/**
-* Подключение шрифтов локально из папки "./src/fonts"
-*/
 @import 'config/fonts';
-
-/** Подключение переменных */
 @import 'config/vars';
-
-/**
-* Подключение sass function и mixins и extends стилей
-*/
 @import 'config/functions';
 @import 'config/mixins';
 @import 'config/placeholders';
-
-/** Обнуление */
 @import 'config/reset';
 
-/**
-* Библиотеки
-* раскомментировать для использования
-*/
-// @import 'libs/aos';
 @import 'libs/swiper';
 
-/**
-* Подключение custom scrollbar для всего сайта
-*/
 @import 'config/scrollbar';
-
-/**
-* Общие параметры, шаблоны(заготовки) и вспомогательные классы
-*/
 @import 'config/base';
-
-/**
-* БЕМ блоки используемые во всё проекте
-*/
 @import 'config/common';
 
-/**
-* Подключение стилей отдельных блоков и секций
-*/
-// @import '../../node_modules/swiper/swiper-bundle.min.css';
-@import 'components/popup';
-@import 'components/checkbox';
-@import 'components/tabs';
-@import 'components/accordion';
-
 @import 'components/header';
+@import 'components/blocks/hero';
 @import 'components/blocks/nav';
 @import 'components/blocks/lang';
 @import 'components/blocks/map';
 @import 'components/blocks/phone';
 @import 'components/blocks/search';
+@import 'components/blocks/fixed-block';
 @import 'components/blocks/burger';
 @import 'components/blocks/socials';
-@import 'components/blocks/hero';
 @import 'components/blocks/stats';
 @import 'components/blocks/advantages';
 @import 'components/blocks/contacts';
@@ -70,3 +35,8 @@
 @import 'components/blocks/creation-process';
 
 @import 'components/footer';
+
+@import 'components/popup';
+@import 'components/checkbox';
+@import 'components/tabs';
+@import 'components/accordion';
