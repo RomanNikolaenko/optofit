@@ -70,7 +70,6 @@
       align-items: center;
       justify-content: flex-start;
       overflow: hidden;
-      gap: rem(30);
       letter-spacing: 1px;
       height: rem(42);
       opacity: 0.12;
@@ -353,6 +352,6 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-100% - rem(30)));
+    transform: translateX(-100%);
   }
 }

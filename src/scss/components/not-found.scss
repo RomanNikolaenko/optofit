@@ -1,0 +1,51 @@
+.not-found {
+  display: grid;
+  gap: rem(24);
+  align-items: flex-end;
+  max-width: rem(930);
+  padding-top: rem(20);
+  padding-bottom: rem(40);
+
+  @media (min-width: 1200px) {
+    grid-template-columns: 1fr 1fr;
+    gap: rem(40);
+  }
+
+  &__img {
+    grid-column: 1/-1;
+    max-height: rem(502);
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  &__link {
+    grid-column: 1/-1;
+  }
+
+  &__title {
+    font-weight: 300;
+    font-size: rem(82);
+
+    @media (min-width: 1200px) {
+      font-size: rem(110);
+    }
+  }
+
+  &__subtitle {
+    font-size: rem(32);
+
+    @media (min-width: 1200px) {
+      font-size: rem(40);
+    }
+  }
+
+  &__text {
+    font-size: rem(20);
+    color: #6aabc2;
+
+    @media (min-width: 1200px) {
+      font-size: rem(24);
+    }
+  }
+}

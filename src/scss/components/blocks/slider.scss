@@ -11,6 +11,11 @@
 }
 
 .catalog {
+  &__swiper {
+    padding-top: rem(10);
+    margin-top: rem(-10);
+  }
+
   &__slide {
     height: auto;
     width: calc(32% - 60px / 3);

@@ -6,14 +6,18 @@ tag.src = 'https://www.youtube.com/iframe_api';
 const firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-creationProcessButton.addEventListener('click', (e)=> {
-  YTIframe(e.target);
-  creationProcessButton.classList.add('creation-process__button_hide');
-});
+if(creationProcessButton) {
+  creationProcessButton.addEventListener('click', (e)=> {
+    YTIframe(e.target);
+    creationProcessButton.classList.add('creation-process__button_hide');
+  });
+}
 
-remotelyVideo.addEventListener('click', (e)=> {
-  YTIframe(e.target);
-})
+if(remotelyVideo) {
+  remotelyVideo.addEventListener('click', (e)=> {
+    YTIframe(e.target);
+  })
+}
 
 let player;
 

@@ -268,25 +268,42 @@
       font-size: rem(18);
     }
   }
+
+  &__tooltip {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    z-index: 20;
+    width: rem(56);
+    height: rem(56);
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 0px 4px 0px #06739a73;
+  }
 }
 
 .tooltip {
-  position: absolute;
-  top: 50%;
-  left: 20%;
-  z-index: 20;
-  width: rem(56);
-  height: rem(56);
+  display: block;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.8);
-  box-shadow: 0px 0px 4px 0px #06739a73;
+  transition: filter var(--bs-transition);
+
+  @include any-hover {
+    filter: contrast(0.7);
+  }
+
+  &:focus-visible,
+  &:active {
+    filter: contrast(0.7);
+  }
 
   @media (max-width: 480px) {
     top: 70%;
     left: 0%;
   }
 
-  &.tooltip_open {
+  .tooltip_open & {
     &::after {
       transform: translate(-50%, -50%) rotate(90deg);
     }

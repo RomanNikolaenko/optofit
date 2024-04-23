@@ -31,6 +31,15 @@
 
       @media (min-width: 1024px) {
         pointer-events: none;
+        border: none;
+        border-bottom: 1px solid rgba(6, 115, 154, 0.35);
+        border-radius: initial;
+        opacity: 0.6;
+        padding: 12px 0;
+
+        svg {
+          display: none;
+        }
       }
 
       @include any-hover {
@@ -76,6 +85,10 @@
 
     @media (min-width: 768px) {
       gap: rem(16);
+    }
+
+    .burger-popup__accordion & {
+      margin: rem(8) 0;
     }
 
     .footer__accordion & {

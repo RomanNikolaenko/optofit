@@ -326,6 +326,7 @@
   background-color: #ffffff;
   border: 1px solid #00719b12;
   border-radius: rem(30);
+  overflow: hidden;
   box-shadow: 0px 0px 15px 0px #00719b12;
 
   .button__blue {
@@ -345,7 +346,6 @@
   }
 
   .top & {
-    background-color: #00719b;
     color: #ffffff;
     border-color: #f6f6f6;
 
@@ -371,6 +371,7 @@
 
   &__header {
     position: relative;
+    z-index: 3;
     display: grid;
     background-color: #f2f8fa;
     border-radius: rem(30);
@@ -395,10 +396,21 @@
     }
 
     .top & {
+      position: relative;
+      z-index: 2;
+      background-color: #00719b;
       padding: rem(30) rem(20);
 
       @media (min-width: 1200px) {
         padding: rem(40) rem(39) rem(38);
+      }
+
+      @include pseudo-cell(before) {
+        bottom: 100%;
+        left: 0;
+        width: 100%;
+        height: rem(30);
+        background-color: #00719b;
       }
     }
   }
@@ -452,14 +464,14 @@
   &__hit {
     font-size: rem(24);
     line-height: 0.78;
-    max-width: rem(230);
+    max-width: rem(150);
 
     @media (min-width: 768px) {
-      font-size: rem(32);
+      font-size: rem(30);
     }
 
     @media (min-width: 1200px) {
-      font-size: rem(46);
+      font-size: rem(39);
     }
 
     .top & {

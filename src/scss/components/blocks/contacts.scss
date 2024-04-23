@@ -125,7 +125,7 @@
     padding-left: rem(20);
 
     @include pseudo-cell(before) {
-      top: 0;
+      @include property('top', 2, 0);
       left: 0;
       width: rem(16);
       height: rem(16);
@@ -137,6 +137,7 @@
 
     &-btn {
       opacity: 0.5;
+      font-size: rem(16);
     }
   }
 

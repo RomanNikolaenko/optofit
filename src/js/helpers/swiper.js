@@ -13,9 +13,9 @@ new Swiper('.catalog__swiper', {
   slidesPerView: 1,
   centeredSlides: true,
   spaceBetween: 20,
-  speed: 3000,
+  speed: 4000,
   autoplay: {
-    delay: 8000,
+    delay: 12000,
     disableOnInteraction: false,
   },
   breakpoints: {
@@ -34,9 +34,9 @@ new Swiper('.services__swiper', {
   },
   slidesPerView: 1,
   spaceBetween: 20,
-  speed: 3000,
+  speed: 4000,
   autoplay: {
-    delay: 8000,
+    delay: 12000,
     disableOnInteraction: false,
   },
   breakpoints: {
