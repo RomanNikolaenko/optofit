@@ -89,6 +89,11 @@
     transition: all var(--bs-transition);
 
     @media (min-width: 768px) {
+      width: rem(28);
+      height: rem(28);
+    }
+
+    @media (min-width: 1200px) {
       width: rem(32);
       height: rem(32);
     }
