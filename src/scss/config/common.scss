@@ -13,10 +13,6 @@
   text-align: center;
   height: rem(42);
 
-  @media (min-width: 768px) {
-    padding: rem(14) rem(33);
-  }
-
   @media (min-width: 1200px) {
     font-size: rem(20);
     height: rem(50);
