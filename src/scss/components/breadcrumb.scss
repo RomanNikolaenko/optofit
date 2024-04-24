@@ -1,0 +1,53 @@
+.breadcrumb {
+  margin-block: rem(24);
+
+  &__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: rem(8) rem(4);
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: rem(4);
+
+    &:not(:last-child) {
+      color: rgba(6, 115, 154, 0.65);
+    }
+
+    &:not(:first-child) {
+      @include pseudo-cell(before, relative) {
+        flex: 0 0 auto;
+        width: rem(16);
+        height: rem(16);
+        background-color: currentColor;
+        mask-image: url('../../images/svg/arrow-up.svg');
+        mask-repeat: no-repeat;
+        mask-size: 100% 100%;
+        mask-position: center;
+        transform: rotate(90deg);
+      }
+    }
+
+    &:last-child {
+      pointer-events: none;
+    }
+  }
+
+  &__link {
+    font-size: rem(15);
+    line-height: 1;
+    transition: all var(--bs-transition);
+
+    @include any-hover {
+      color: rgba(6, 115, 154, 1);
+    }
+
+    &:focus-visible,
+    &:active {
+      color: rgba(6, 115, 154, 1);
+    }
+  }
+}
