@@ -123,7 +123,7 @@ class PopupManager extends Popup {
         item.value = null;
       });
 
-      searchPopular.classList.remove('popular-search_hidden');
+      searchPopular.classList.add('popular-search_hidden');
       searchResults.classList.add('popular-search_hidden');
     }
   }
