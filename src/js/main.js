@@ -67,7 +67,7 @@ if(dataStats) {
 }
 
 // --------
-const tooltip = document.querySelector('.hero .hero__tooltip');
+const tooltip = document.querySelector('.hero__tooltip');
 if(tooltip) {
   tooltip.addEventListener('click', () => {
     tooltip.classList.toggle('tooltip_open');
@@ -90,7 +90,7 @@ if(fixedBlockMessangers) {
 
 document.addEventListener('click', function (e) {
   if(tooltip) {
-    if (!e.target.closest('.hero .tooltip') && tooltip.classList.contains('tooltip_open')) {
+    if (!e.target.closest('.tooltip') && tooltip.classList.contains('tooltip_open')) {
       tooltip.classList.remove('tooltip_open');
     }
   }

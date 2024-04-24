@@ -1,0 +1,187 @@
+.hero-internal {
+  display: flex;
+  width: 100%;
+  background-image: url('../../../images/1.png');
+  background-color: #06739a;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  border-radius: rem(20);
+  padding-top: var(--height-header);
+
+  @media (min-width: 768px) {
+    height: 100vmax;
+    max-height: rem(750);
+  }
+
+  &__container {
+    height: 100%;
+    width: 100%;
+    padding: rem(30) 0;
+  }
+
+  &__wrap {
+    display: grid;
+    align-items: center;
+    height: 100%;
+
+    @media (min-width: 768px) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media (min-width: 1200px) {
+      grid-template-columns: 1.2fr 1fr;
+    }
+
+    @media (min-width: 1440px) {
+      grid-template-columns: 1.45fr 1fr;
+    }
+  }
+
+  &__image {
+    display: flex;
+    height: 100%;
+
+    &-wrap {
+      position: relative;
+      z-index: 3;
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      flex: 1 1 auto;
+      padding-inline: rem(20);
+
+      @include pseudo-cell(before, relative) {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(2);
+        grid-column: 1;
+        grid-row: 1;
+        width: 120%;
+        height: 100%;
+        background: radial-gradient(
+          circle,
+          rgba(224, 247, 255, 0.122) 0%,
+          rgba(224, 247, 255, 0.122) 32%,
+          rgba(224, 247, 255, 0.08) 32%,
+          rgba(224, 247, 255, 0.08) 40%,
+          rgba(224, 247, 255, 0.04) 40%,
+          rgba(224, 247, 255, 0.04) 49%,
+          rgba(224, 247, 255, 0) 49%,
+          rgba(224, 247, 255, 0) 100%
+        );
+
+        @media (min-width: 1680px) {
+          transform: translate(-50%, -50%) scale(2.1);
+        }
+
+        @media (min-width: 1920px) {
+          transform: translate(-50%, -50%) scale(2.2);
+        }
+      }
+
+      @include pseudo-cell(after) {
+        z-index: -1;
+        top: 3%;
+        left: 63%;
+        @include property('width', 140, 100, 1920, 1200);
+        @include property('height', 140, 100, 1920, 1200);
+        background-image: url('../../../images/svg/crug.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+
+    &-img {
+      display: block;
+      grid-column: 1;
+      grid-row: 1;
+      @include property('max-width', 460, 350, 1920, 1200);
+      @include property('max-height', 460, 350, 1920, 1200);
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+      border-radius: 50px;
+    }
+  }
+
+  &__description {
+    position: relative;
+    z-index: 2;
+    color: #ffffff;
+    @include property('margin-top', 85, 42, 768, 320);
+    padding-inline: rem(20);
+    margin-inline: auto;
+
+    @media (min-width: 768px) {
+      margin-left: rem(-20);
+    }
+
+    @media (min-width: 1440px) and (max-width: 1920px) {
+      margin-left: clamp(
+        rem(-20),
+        calc(
+          rem(20) + (-20 - 20) * ((100vw - 84.7058823529rem) / (1920 - 1440))
+        ),
+        rem(20)
+      );
+    }
+
+    @include pseudo-cell(before) {
+      top: rem(-60);
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      max-height: rem(300);
+      background-image: url('../../../images/svg/crug-2-1.svg');
+      background-position: right center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      transform: rotate(100deg);
+
+      @media (min-width: 1680px) {
+        transform: rotate(0);
+      }
+    }
+
+    &-ellipse {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: rem(142);
+      height: rem(142);
+
+      @include pseudo-cell(before) {
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        background-image: url('../../../images/svg/crug.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: none;
+      }
+
+      @include pseudo-cell(after) {
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(
+          circle,
+          rgba(255, 255, 255, 0.122) 0%,
+          rgba(255, 255, 255, 0.122) 100%
+        );
+        transform: scale(2.7);
+        border-radius: 50%;
+        display: none;
+      }
+
+      @media (min-width: 1200px) {
+        &::before,
+        &::after {
+          display: block;
+        }
+      }
+    }
+  }
+}

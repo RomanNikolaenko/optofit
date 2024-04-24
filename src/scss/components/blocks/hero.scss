@@ -1,16 +1,19 @@
 .hero {
   display: flex;
   align-items: center;
-  margin-top: calc(var(--height-header) * -1);
   padding-top: calc(var(--height-header));
   width: 100%;
-  max-height: 900px;
+  max-height: rem(900);
   background-image: url('../../../images/1.png');
   background-color: #06739a;
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
   border-radius: rem(20);
+
+  &.hero-internal {
+    max-height: rem(750);
+  }
 
   @media (min-width: 1400px) {
     height: 100vh;
@@ -21,6 +24,12 @@
     position: relative;
     padding-top: rem(10);
     padding-bottom: rem(43);
+
+    .hero-internal & {
+      box-sizing: content-box;
+      height: 100%;
+      max-height: calc(rem(750) - var(--height-header));
+    }
 
     @media (min-width: 768px) {
       display: grid;
@@ -84,6 +93,12 @@
     justify-content: center;
     height: 100%;
     width: 100%;
+
+    .hero-internal & {
+      height: 100%;
+      max-height: inherit;
+      transform: none;
+    }
 
     @media (max-width: 767.98px) {
       max-width: rem(400);
@@ -218,13 +233,25 @@
     }
   }
 
+  &__page {
+    font-size: rem(30);
+    line-height: 0.95;
+    color: rgba(255, 255, 255, 0.3);
+    margin-bottom: rem(12);
+  }
+
   &__title {
-    letter-spacing: rem(-0.3);
-    font-size: rem(36);
     font-weight: 400;
+    font-size: rem(36);
+    font-style: italic;
     line-height: 1;
-    margin-bottom: rem(19);
+    letter-spacing: rem(-0.3);
     max-width: rem(350);
+    text-wrap: balance;
+
+    &:not(:last-child) {
+      margin-bottom: rem(19);
+    }
 
     @media (min-width: 768px) {
       font-size: rem(48);
@@ -236,19 +263,25 @@
     @media (min-width: 1200px) {
       font-size: rem(68);
       max-width: rem(580);
-      margin-bottom: rem(25);
+
+      &:not(:last-child) {
+        margin-bottom: rem(25);
+      }
     }
 
     @media (min-width: 1440px) {
       font-size: rem(86);
-      max-width: rem(480);
+      max-width: 100%;
     }
   }
 
   &__text {
     font-size: rem(18);
-    margin-bottom: rem(28);
     max-width: rem(290);
+
+    &:not(:last-child) {
+      margin-bottom: rem(28);
+    }
 
     @media (min-width: 1200px) {
       font-size: rem(20);
@@ -299,6 +332,21 @@
 
     @media (min-width: 1740px) {
       top: 57%;
+    }
+
+    .hero-internal & {
+      top: 80%;
+      left: 6%;
+
+      @media (min-width: 420px) {
+        top: 70%;
+        left: 30%;
+      }
+
+      @media (min-width: 1200px) {
+        top: 75%;
+        left: 33%;
+      }
     }
   }
 }
@@ -400,7 +448,10 @@
     font-weight: 500;
     font-size: rem(15);
     line-height: 1;
-    text-transform: uppercase;
+
+    &:not(.hero-internal &) {
+      text-transform: uppercase;
+    }
   }
 
   &__subtitle {

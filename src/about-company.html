@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="uk">
+  @@include('html/head.html', { 'title': 'Про компанію' })
+  <body>
+    <div class="wrapper">
+      @@include('html/header.html')
+
+      <main class="page">
+        @@include('html/blocks/hero-internal.html')
+        @@include('html/blocks/stats.html')
+        <div class="line"></div>
+      </main>
+
+      @@include('html/footer.html')
+      @@include('html/components/fixed-block.html')
+    </div>
+
+    @@include('html/popups.html')
+  </body>
+</html>
