@@ -121,6 +121,7 @@
     height: rem(160);
     object-fit: cover;
     object-position: right center;
+    border-radius: rem(30);
 
     @media (min-width: 1200px) {
       position: absolute;
@@ -130,6 +131,7 @@
       height: 100%;
       width: auto;
       margin-bottom: 0;
+      border-radius: initial;
     }
   }
 

@@ -189,7 +189,7 @@
   &__form {
     display: flex;
     flex-direction: column;
-    gap: rem(17);
+    gap: rem(15);
 
     @media (min-width: 1200px) {
       gap: rem(20);
@@ -258,14 +258,14 @@
   display: block;
   width: calc(100% - calc(rem($mainOffset) * 2));
   height: 1px;
-  background-color: rgba(0, 113, 155, 0.3);
+  background-color: rgba(0, 113, 155, 0.5);
   margin: rem(24) auto;
   max-width: rem($containerWidth);
   transform: translateX(calc(-100% - calc(rem($mainOffset) * 2)));
   pointer-events: none;
   visibility: hidden;
   opacity: 0;
-  transition: transform 0.5s linear, opacity 0.2s linear;
+  transition: transform 1.2s linear, opacity 0.4s linear;
 
   @media (min-width: 768px) {
     margin: rem(48) auto;

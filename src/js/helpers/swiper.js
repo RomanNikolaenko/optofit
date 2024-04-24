@@ -13,7 +13,7 @@ new Swiper('.catalog__swiper', {
   slidesPerView: 1,
   centeredSlides: true,
   spaceBetween: 20,
-  speed: 4000,
+  speed: 3000,
   autoplay: {
     delay: 12000,
     disableOnInteraction: false,
@@ -34,7 +34,7 @@ new Swiper('.services__swiper', {
   },
   slidesPerView: 1,
   spaceBetween: 20,
-  speed: 4000,
+  speed: 3000,
   autoplay: {
     delay: 12000,
     disableOnInteraction: false,
@@ -58,7 +58,7 @@ new Swiper('.swiper-first', {
   },
   slidesPerView: 1,
   spaceBetween: 100,
-  speed: 4000,
+  speed: 3000,
   autoplay: {
     delay: 12000,
     disableOnInteraction: false,
@@ -74,9 +74,9 @@ new Swiper('.swiper-second', {
   },
   slidesPerView: 1,
   spaceBetween: 100,
-  speed: 4000,
+  speed: 3000,
   autoplay: {
-    delay: 12000,
+    delay: 11000,
     disableOnInteraction: false,
   },
 });
