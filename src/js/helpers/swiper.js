@@ -48,3 +48,35 @@ new Swiper('.services__swiper', {
     },
   },
 });
+
+new Swiper('.swiper-first', {
+  loop: true,
+  navigation: {
+    nextEl: '.swiper-first-button-next',
+    prevEl: '.swiper-first-button-prev',
+    clickable: true,
+  },
+  slidesPerView: 1,
+  spaceBetween: 100,
+  speed: 4000,
+  autoplay: {
+    delay: 12000,
+    disableOnInteraction: false,
+  },
+});
+
+new Swiper('.swiper-second', {
+  loop: true,
+  navigation: {
+    nextEl: '.swiper-second-button-next',
+    prevEl: '.swiper-second-button-prev',
+    clickable: true,
+  },
+  slidesPerView: 1,
+  spaceBetween: 100,
+  speed: 4000,
+  autoplay: {
+    delay: 12000,
+    disableOnInteraction: false,
+  },
+});
