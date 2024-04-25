@@ -56,6 +56,8 @@
   }
 
   &__phone {
+    position: relative;
+
     .fixed-block__btn {
       --border: 5px;
 
@@ -101,7 +103,7 @@
 
   &__wrap {
     position: absolute;
-    top: 0;
+    bottom: 60%;
     right: 70%;
     z-index: -1;
     border-radius: rem(16);
@@ -125,79 +127,81 @@
       transform: translate(0, 0);
     }
   }
-}
 
-.messangers {
-  z-index: 2;
+  &__messangers {
+    z-index: 2;
 
-  &__list {
-    position: absolute;
-    bottom: rem(-3);
-    left: 50%;
-    z-index: -1;
-    transform: translate(-50%, rem(4));
-    background-color: rgba(255, 255, 255, 0.85);
-    box-shadow: 0px 0px 20px 0px #494f5538;
-    border-radius: 100vmax;
-    cursor: pointer;
-    max-height: calc(100vh - rem(40) - var(--height-header));
-    overflow: clip overlay;
+    .socials {
+      position: absolute;
+      bottom: rem(-3);
+      left: 50%;
+      z-index: -1;
+      transform: translate(-50%, rem(4));
+      background-color: rgba(255, 255, 255, 0.85);
+      box-shadow: 0px 0px 20px 0px #494f5538;
+      border-radius: 100vmax;
+      cursor: pointer;
+      max-height: calc(100vh - rem(40) - var(--height-header));
+      overflow: clip overlay;
 
-    display: flex;
-    flex-direction: column-reverse;
-    gap: rem(6);
-    padding: rem(3) rem(3) rem(53);
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    transform: translate(-50%, rem(10));
-    transition: all var(--bs-transition);
+      display: flex;
+      flex-direction: column;
+      gap: rem(6);
+      padding: rem(3) rem(3) rem(53);
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transform: translate(-50%, rem(10));
+      transition: all var(--bs-transition);
 
-    @media (min-width: 768px) {
-      padding: rem(3) rem(3) rem(61);
+      @media (min-width: 768px) {
+        padding: rem(3) rem(3) rem(61);
+      }
+
+      @media (min-width: 1200px) {
+        padding: rem(3) rem(3) rem(67);
+      }
+
+      &__link {
+        display: flex;
+        width: rem(42);
+        height: rem(42);
+        transition: opacity var(--bs-transition);
+
+        @media (min-width: 768px) {
+          width: rem(50);
+          height: rem(50);
+        }
+
+        @media (min-width: 1200px) {
+          width: rem(56);
+          height: rem(56);
+        }
+
+        @include any-hover {
+          opacity: 0.7;
+        }
+
+        &:focus-visible,
+        &:active {
+          opacity: 0.7;
+        }
+
+        img {
+          display: block;
+          width: 100%;
+          height: 100%;
+        }
+      }
     }
 
-    @media (min-width: 1200px) {
-      padding: rem(3) rem(3) rem(67);
-    }
-
-    .open & {
-      opacity: 1;
-      visibility: visible;
-      pointer-events: all;
-      transform: translate(-50%, 0);
-    }
-  }
-
-  &__link {
-    display: flex;
-    width: rem(42);
-    height: rem(42);
-    transition: opacity var(--bs-transition);
-
-    @media (min-width: 768px) {
-      width: rem(50);
-      height: rem(50);
-    }
-
-    @media (min-width: 1200px) {
-      width: rem(56);
-      height: rem(56);
-    }
-
-    @include any-hover {
-      opacity: 0.7;
-    }
-
-    &:focus-visible,
-    &:active {
-      opacity: 0.7;
-    }
-
-    img {
-      display: block;
-      width: 100%;
-      height: 100%;
+    &.open {
+      .socials {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
+        transform: translate(-50%, 0);
+      }
     }
   }
 }

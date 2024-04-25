@@ -3,7 +3,7 @@
   gap: rem(24);
   align-items: flex-end;
   max-width: rem(930);
-  padding-top: rem(20);
+  padding-top: calc(var(--height-header) + rem(20));
   padding-bottom: rem(20);
 
   @media (min-width: 1200px) {

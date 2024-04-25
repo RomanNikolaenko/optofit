@@ -341,9 +341,8 @@
 
     .hero-internal & {
       top: 80%;
-      left: 6%;
 
-      @media (min-width: 420px) {
+      @media (min-width: 768px) {
         top: 70%;
         left: 30%;
       }
@@ -414,7 +413,7 @@
 
   &__wrap {
     position: absolute;
-    top: -200%;
+    bottom: 75%;
     left: 50%;
     z-index: -1;
     display: grid;
@@ -434,13 +433,8 @@
     transition: all var(--bs-transition);
 
     @media (min-width: 768px) {
-      top: -140%;
       transform: translate(-10px, 10px);
       padding: rem(20) rem(20) rem(20) rem(34);
-    }
-
-    @media (min-width: 1200px) {
-      top: -115%;
     }
 
     .tooltip_open & {
