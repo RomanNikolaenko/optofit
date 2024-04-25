@@ -82,6 +82,7 @@ class PopupManager extends Popup {
   }
 
   openPopup(popup) {
+    popup.scrollTop = 0;
     popup.classList.add(this.options.isOpenClass);
     popup.setAttribute('aria-hidden', 'false');
     if (popup.querySelector(`.${this.options.buttonCloseName}`)) {

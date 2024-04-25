@@ -20,7 +20,7 @@
     }
 
     @media (max-width: 767.98px) {
-      grid-template-columns: minmax(rem(185), max-content) 1fr;
+      grid-template-columns: minmax(rem(250), max-content) 1fr;
     }
 
     .button__white {
@@ -36,10 +36,14 @@
   }
 
   &__wrap {
-    display: flex;
+    display: none;
     align-items: flex-start;
     gap: rem(12);
     overflow: hidden;
+
+    @media (min-width: 420px) {
+      display: flex;
+    }
   }
 
   &__inner {
@@ -143,17 +147,18 @@
     font-size: rem(26);
     line-height: 1;
     height: rem(52);
-    background-image: url('../../../images/service-title.png');
+    padding: 0 rem(34) 0 rem(27);
+    margin-left: -6px;
+
+    background-image: url('../../../images/service-title-mob.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    padding: 0 rem(27);
-    border-top-left-radius: rem(40);
-    margin-left: -2px;
 
     @media (min-width: 768px) {
       font-size: rem(34);
       height: rem(63);
       margin-left: -2.5px;
+      background-image: url('../../../images/service-title.png');
     }
 
     @media (min-width: 1200px) {
@@ -279,6 +284,7 @@
   .service-popular__item {
     gap: 0;
     padding-bottom: rem(40);
+    height: auto;
 
     @media (max-width: 1199.98px) {
       border-radius: rem(32);
@@ -299,7 +305,7 @@
       font-size: rem(26);
     }
 
-    @media (min-width: 1200px) {
+    @media (min-width: 1600px) {
       font-size: rem(30);
       margin-top: rem(26);
     }
