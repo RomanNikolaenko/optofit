@@ -1,0 +1,906 @@
+<div class="popup test-popup" data-popup="test" data-close-overlay>
+  <div class="popup__wrapper" data-close-overlay>
+    <div class="popup__content">
+      <div class="popup__body">
+        <div class="test-popup__welcome welcome">
+          <div class="welcome__image">
+            <img src="../images/test.jpg" width="930" height="445" alt
+              class="welcome__image-img">
+          </div>
+
+          <div class="welcome__wrap">
+            <div class="welcome__title">
+              <h3>Діагностичний тест стану стоп</h3>
+            </div>
+            <div class="welcome__subtitle">
+              <p>Шановні відвідувачі сайту "Ортофіт", для Вашої зручності ми
+                підготували діагностичний тест стану стоп який можна пройти в
+                онлайн-режимі</p>
+            </div>
+            <div class="welcome__inner">
+              Час проходження: <span>5 хв</span>
+            </div>
+          </div>
+
+          @@include('./components/button.html', { "title":
+          "Почати тест",
+          "flag": false, "class": 'button__blue welcome__btn' })
+        </div>
+
+        <div class="test-popup__step step-popup step-1"
+          style="--step: 1; --stepMax: 8;">
+          <div class="step-popup__header">
+            <div class="step-popup__header-wrap">
+              <div class="step-popup__question">Питання: <span>1</span> з
+                8</div>
+              <div class="step-popup__line"></div>
+            </div>
+            <button class="popup__close button-close" tabindex="-1"
+              type="button">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M6 6L18.7742 18.7742"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path
+                  d="M6 18.7742L18.7742 5.99998"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+
+          <div class="step-popup__wrap">
+            <div class="step-popup__title">1. Орієнтовно перевіряємо стан
+              склепінь
+              стопи</div>
+
+            <div class="step-popup__text">
+              <p>Нанесіть на підошовну поверхню стоп жирний крем і наступите на
+                аркуш паперу.</p>
+              <p>Оцініть отриманий відбиток. На який із наведених
+                нижче малюнків він схожий?</p>
+            </div>
+          </div>
+
+          <div class="step-line"></div>
+
+          <div class="step-popup__choose">Оберіть 1 варіант</div>
+
+          <div class="step-popup__content content-step">
+            <fieldset class="content-step__fieldset">
+              <input id="step-1-1" type="radio" name="step-1"
+                class="content-step__input visually-hidden">
+              <label for="step-1-1" class="content-step__field">
+                <img class="content-step__img" src="../images/steps/1/1.png"
+                  width="142" height="198" alt>
+              </label>
+            </fieldset>
+
+            <fieldset class="content-step__fieldset">
+              <input id="step-1-2" type="radio" name="step-1"
+                class="content-step__input visually-hidden">
+              <label for="step-1-2" class="content-step__field">
+                <img class="content-step__img" src="../images/steps/1/2.png"
+                  width="142" height="198" alt>
+              </label>
+            </fieldset>
+
+            <fieldset class="content-step__fieldset">
+              <input id="step-1-3" type="radio" name="step-1"
+                class="content-step__input visually-hidden">
+              <label for="step-1-3" class="content-step__field">
+                <img class="content-step__img" src="../images/steps/1/3.png"
+                  width="142" height="198" alt>
+              </label>
+            </fieldset>
+
+            <fieldset class="content-step__fieldset">
+              <input id="step-1-4" type="radio" name="step-1"
+                class="content-step__input visually-hidden">
+              <label for="step-1-4" class="content-step__field">
+                <img class="content-step__img" src="../images/steps/1/4.png"
+                  width="142" height="198" alt>
+              </label>
+            </fieldset>
+
+            <fieldset class="content-step__fieldset">
+              <input id="step-1-5" type="radio" name="step-1"
+                class="content-step__input visually-hidden">
+              <label for="step-1-5" class="content-step__field">
+                <img class="content-step__img" src="../images/steps/1/5.png"
+                  width="142" height="198" alt>
+              </label>
+            </fieldset>
+          </div>
+
+          <div class="step-popup__btns">
+            @@include('./components/button.html', { "title":
+            "Далі",
+            "flag": 'right', "class": 'button__blue' })
+          </div>
+        </div>
+
+        <div class="test-popup__step step-popup step-2"
+          style="--step: 2; --stepMax: 8;">
+          <div class="step-popup__header">
+            <div class="step-popup__header-wrap">
+              <div class="step-popup__question">Питання: <span>2</span> з
+                8</div>
+              <div class="step-popup__line"></div>
+            </div>
+            <button class="popup__close button-close" tabindex="-1"
+              type="button">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M6 6L18.7742 18.7742"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path
+                  d="M6 18.7742L18.7742 5.99998"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+
+          <div class="step-popup__wrap">
+            <div class="step-popup__title">2. Перевірте положення
+              заднього відділу стоп</div>
+
+            <div class="step-popup__text">
+              <p>Подивіться на стопи дитини зі спини.</p>
+              <p>Для дорослих - можна попросити, когось сфотографувати задній
+                відділ Ваших стоп</p>
+            </div>
+          </div>
+
+          <div class="step-line"></div>
+
+          <div class="step-popup__choose">Оберіть 1 варіант</div>
+
+          <div class="step-popup__content content-step">
+            <fieldset class="content-step__fieldset">
+              <input id="step-2-1" type="radio" name="step-2"
+                class="content-step__input visually-hidden">
+              <label for="step-2-1" class="content-step__field">
+                <img class="content-step__img" src="../images/steps/2/1.png"
+                  width="256" height="198" alt>
+              </label>
+            </fieldset>
+
+            <fieldset class="content-step__fieldset">
+              <input id="step-2-2" type="radio" name="step-2"
+                class="content-step__input visually-hidden">
+              <label for="step-2-2" class="content-step__field">
+                <img class="content-step__img" src="../images/steps/2/2.png"
+                  width="256" height="198" alt>
+              </label>
+            </fieldset>
+
+            <fieldset class="content-step__fieldset">
+              <input id="step-2-3" type="radio" name="step-2"
+                class="content-step__input visually-hidden">
+              <label for="step-2-3" class="content-step__field">
+                <img class="content-step__img" src="../images/steps/2/3.png"
+                  width="256" height="198" alt>
+              </label>
+            </fieldset>
+          </div>
+
+          <div class="step-popup__btns">
+            @@include('./components/button.html', { "title":
+            "Назад",
+            "flag": 'left', "class": 'button__white' })
+
+            @@include('./components/button.html', { "title":
+            "Далі",
+            "flag": 'right', "class": 'button__blue' })
+          </div>
+        </div>
+
+        <div class="test-popup__step step-popup step-4"
+          style="--step: 4; --stepMax: 8;">
+          <div class="step-popup__header">
+            <div class="step-popup__header-wrap">
+              <div class="step-popup__question">Питання: <span>4</span> з
+                8</div>
+              <div class="step-popup__line"></div>
+            </div>
+            <button class="popup__close button-close" tabindex="-1"
+              type="button">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M6 6L18.7742 18.7742"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path
+                  d="M6 18.7742L18.7742 5.99998"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+
+          <div class="step-popup__wrap">
+            <div class="step-popup__title">4. Перевіряємо наявність приведення
+              переднього відділу стопи</div>
+
+            <div class="step-popup__text">
+              <p>Подивившись зверху на стопу, відзначте, чи утворює кут
+                поздовжня вісь стопи. Чи має місце приведення пальців всередину
+                або назовні?</p>
+              <p>На який малюнок більше схоже?</p>
+            </div>
+          </div>
+
+          <div class="step-line"></div>
+
+          <div class="step-popup__choose">Оберіть 1 варіант</div>
+
+          <div class="step-popup__content content-step">
+            <fieldset class="content-step__fieldset">
+              <input id="step-4-1" type="radio" name="step-4"
+                class="content-step__input visually-hidden">
+              <label for="step-4-1" class="content-step__field">
+                <img class="content-step__img" src="../images/steps/4/1.png"
+                  width="256" height="198" alt>
+              </label>
+            </fieldset>
+
+            <fieldset class="content-step__fieldset">
+              <input id="step-4-2" type="radio" name="step-4"
+                class="content-step__input visually-hidden">
+              <label for="step-4-2" class="content-step__field">
+                <img class="content-step__img" src="../images/steps/4/2.png"
+                  width="256" height="198" alt>
+              </label>
+            </fieldset>
+
+            <fieldset class="content-step__fieldset">
+              <input id="step-4-3" type="radio" name="step-4"
+                class="content-step__input visually-hidden">
+              <label for="step-4-3" class="content-step__field">
+                <img class="content-step__cancel" src="../images/svg/cancel.svg"
+                  width="44" height="44" alt>
+                <span>Немає мого варіанту</span>
+              </label>
+            </fieldset>
+          </div>
+
+          <div class="step-popup__btns">
+            @@include('./components/button.html', { "title":
+            "Назад",
+            "flag": 'left', "class": 'button__white' })
+
+            @@include('./components/button.html', { "title":
+            "Далі",
+            "flag": 'right', "class": 'button__blue' })
+          </div>
+        </div>
+
+        <div class="test-popup__step step-popup step-5"
+          style="--step: 5; --stepMax: 8;">
+          <div class="step-popup__header">
+            <div class="step-popup__header-wrap">
+              <div class="step-popup__question">Питання: <span>5</span> з
+                8</div>
+              <div class="step-popup__line"></div>
+            </div>
+            <button class="popup__close button-close" tabindex="-1"
+              type="button">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M6 6L18.7742 18.7742"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path
+                  d="M6 18.7742L18.7742 5.99998"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+
+          <div class="step-popup__wrap">
+            <div class="step-popup__title">5. Перевіряємо положення колінних
+              суглобів відносно вертикальної осі</div>
+
+            <div class="step-popup__text">
+              <p>Подивіться на положення колінних суглобів, на який малюнок
+                більше схоже?</p>
+            </div>
+          </div>
+
+          <div class="step-line"></div>
+
+          <div class="step-popup__choose">Оберіть 1 варіант</div>
+
+          <div class="step-popup__content content-step">
+            <fieldset class="content-step__fieldset">
+              <input id="step-5-1" type="radio" name="step-5"
+                class="content-step__input visually-hidden">
+              <label for="step-5-1" class="content-step__field">
+                <img class="content-step__img" src="../images/steps/5/1.png"
+                  width="256" height="198" alt>
+              </label>
+            </fieldset>
+
+            <fieldset class="content-step__fieldset">
+              <input id="step-5-2" type="radio" name="step-5"
+                class="content-step__input visually-hidden">
+              <label for="step-5-2" class="content-step__field">
+                <img class="content-step__img" src="../images/steps/5/2.png"
+                  width="256" height="198" alt>
+              </label>
+            </fieldset>
+
+            <fieldset class="content-step__fieldset">
+              <input id="step-5-3" type="radio" name="step-5"
+                class="content-step__input visually-hidden">
+              <label for="step-5-3" class="content-step__field">
+                <img class="content-step__img" src="../images/steps/5/3.png"
+                  width="256" height="198" alt>
+              </label>
+            </fieldset>
+          </div>
+
+          <div class="step-popup__btns">
+            @@include('./components/button.html', { "title":
+            "Назад",
+            "flag": 'left', "class": 'button__white' })
+
+            @@include('./components/button.html', { "title":
+            "Далі",
+            "flag": 'right', "class": 'button__blue' })
+          </div>
+        </div>
+
+        <div class="test-popup__step step-popup step-6"
+          style="--step: 6; --stepMax: 8;">
+          <div class="step-popup__header">
+            <div class="step-popup__header-wrap">
+              <div class="step-popup__question">Питання: <span>6</span> з
+                8</div>
+              <div class="step-popup__line"></div>
+            </div>
+            <button class="popup__close button-close" tabindex="-1"
+              type="button">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M6 6L18.7742 18.7742"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path
+                  d="M6 18.7742L18.7742 5.99998"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+
+          <div class="step-popup__wrap">
+            <div class="step-popup__title">6. Перевіряємо як зношується
+              взуття</div>
+
+            <div class="step-popup__text">
+              <p>Подивіться на підошву зношеного взуття. Позначте, де найбільш
+                стирається підошва. Яким зонам відповідає малюнок стирання?</p>
+            </div>
+          </div>
+
+          <div class="step-line"></div>
+
+          <div class="step-popup__choose">Оберіть 1 варіант</div>
+
+          <div class="step-popup__inner">
+            <img class="step-popup__inner-img" src="../images/steps/6/fon.png"
+              width="263" height="269" alt>
+
+            <div class="step-popup__content content-step">
+              <fieldset class="content-step__fieldset">
+                <input id="step-6-1" type="radio" name="step-6"
+                  class="content-step__input visually-hidden">
+                <label for="step-6-1" class="content-step__field">
+                  <span>Варіант</span>
+                </label>
+              </fieldset>
+
+              <fieldset class="content-step__fieldset">
+                <input id="step-6-2" type="radio" name="step-6"
+                  class="content-step__input visually-hidden">
+                <label for="step-6-2" class="content-step__field">
+                  <span>Варіант</span>
+                </label>
+              </fieldset>
+
+              <fieldset class="content-step__fieldset">
+                <input id="step-6-3" type="radio" name="step-6"
+                  class="content-step__input visually-hidden">
+                <label for="step-6-3" class="content-step__field">
+                  <span>Варіант</span>
+                </label>
+              </fieldset>
+
+              <fieldset class="content-step__fieldset">
+                <input id="step-6-4" type="radio" name="step-6"
+                  class="content-step__input visually-hidden">
+                <label for="step-6-4" class="content-step__field">
+                  <span>Варіант</span>
+                </label>
+              </fieldset>
+
+              <fieldset class="content-step__fieldset">
+                <input id="step-6-5" type="radio" name="step-6"
+                  class="content-step__input visually-hidden">
+                <label for="step-6-5" class="content-step__field">
+                  <span>Варіант</span>
+                </label>
+              </fieldset>
+
+              <fieldset class="content-step__fieldset">
+                <input id="step-6-6" type="radio" name="step-6"
+                  class="content-step__input visually-hidden">
+                <label for="step-6-6" class="content-step__field">
+                  <span>Варіант</span>
+                </label>
+              </fieldset>
+            </div>
+          </div>
+
+          <div class="step-popup__btns">
+            @@include('./components/button.html', { "title":
+            "Назад",
+            "flag": 'left', "class": 'button__white' })
+
+            @@include('./components/button.html', { "title":
+            "Далі",
+            "flag": 'right', "class": 'button__blue' })
+          </div>
+        </div>
+
+        <div class="test-popup__step step-popup step-7"
+          style="--step: 7; --stepMax: 8;">
+          <div class="step-popup__header">
+            <div class="step-popup__header-wrap">
+              <div class="step-popup__question">Питання: <span>7</span> з
+                8</div>
+              <div class="step-popup__line"></div>
+            </div>
+            <button class="popup__close button-close" tabindex="-1"
+              type="button">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M6 6L18.7742 18.7742"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path
+                  d="M6 18.7742L18.7742 5.99998"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+
+          <div class="step-popup__wrap">
+            <div class="step-popup__title">7. Ви відчуваєте біль?</div>
+          </div>
+
+          <div class="step-line"></div>
+
+          <div class="step-popup__choose">Оберіть 1 варіант</div>
+
+          <div class="step-popup__content content-step">
+            <fieldset class="content-step__fieldset">
+              <input id="step-7-1" type="radio" name="step-7"
+                class="content-step__input visually-hidden">
+              <label for="step-7-1" class="content-step__field">
+                <img class="content-step__cancel" src="../images/steps/7/1.svg"
+                  width="44" height="44" alt>
+                <span>Не відчуваю</span>
+              </label>
+            </fieldset>
+
+            <fieldset class="content-step__fieldset">
+              <input id="step-7-2" type="radio" name="step-7"
+                class="content-step__input visually-hidden">
+              <label for="step-7-2" class="content-step__field">
+                <img class="content-step__cancel" src="../images/steps/7/2.svg"
+                  width="44" height="44" alt>
+                <span>Болить голова</span>
+              </label>
+            </fieldset>
+
+            <fieldset class="content-step__fieldset">
+              <input id="step-7-3" type="radio" name="step-7"
+                class="content-step__input visually-hidden">
+              <label for="step-7-3" class="content-step__field">
+                <img class="content-step__cancel" src="../images/steps/7/3.svg"
+                  width="44" height="44" alt>
+                <span>Болить спина</span>
+              </label>
+            </fieldset>
+
+            <fieldset class="content-step__fieldset">
+              <input id="step-7-4" type="radio" name="step-7"
+                class="content-step__input visually-hidden">
+              <label for="step-7-4" class="content-step__field">
+                <img class="content-step__cancel" src="../images/steps/7/4.svg"
+                  width="44" height="44" alt>
+                <span>Болять ноги</span>
+              </label>
+            </fieldset>
+
+            <fieldset class="content-step__fieldset">
+              <input id="step-7-5" type="radio" name="step-7"
+                class="content-step__input visually-hidden">
+              <label for="step-7-5" class="content-step__field">
+                <img class="content-step__cancel" src="../images/steps/7/5.svg"
+                  width="44" height="44" alt>
+                <span>Інші болі</span>
+              </label>
+            </fieldset>
+          </div>
+
+          <div class="step-popup__btns">
+            @@include('./components/button.html', { "title":
+            "Назад",
+            "flag": 'left', "class": 'button__white' })
+
+            @@include('./components/button.html', { "title":
+            "Далі",
+            "flag": 'right', "class": 'button__blue' })
+          </div>
+        </div>
+
+        <div class="test-popup__step step-popup step-8"
+          style="--step: 8; --stepMax: 8;">
+          <div class="step-popup__header">
+            <div class="step-popup__header-wrap">
+              <div class="step-popup__question">Питання: <span>8</span> з
+                8</div>
+              <div class="step-popup__line"></div>
+            </div>
+            <button class="popup__close button-close" tabindex="-1"
+              type="button">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M6 6L18.7742 18.7742"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path
+                  d="M6 18.7742L18.7742 5.99998"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+
+          <div class="step-popup__wrap">
+            <div class="step-popup__title">8. Укажіть вік</div>
+          </div>
+
+          <div class="step-line"></div>
+
+          <div class="step-popup__choose">Оберіть 1 варіант</div>
+
+          <div class="step-popup__content content-step">
+            <fieldset class="content-step__fieldset">
+              <input id="step-8-1" type="radio" name="step-8"
+                class="content-step__input visually-hidden">
+              <label for="step-8-1" class="content-step__field">
+                <span>До 2-х років</span>
+              </label>
+            </fieldset>
+
+            <fieldset class="content-step__fieldset">
+              <input id="step-8-2" type="radio" name="step-8"
+                class="content-step__input visually-hidden">
+              <label for="step-8-2" class="content-step__field">
+                <span>3-5 років</span>
+              </label>
+            </fieldset>
+
+            <fieldset class="content-step__fieldset">
+              <input id="step-8-3" type="radio" name="step-8"
+                class="content-step__input visually-hidden">
+              <label for="step-8-3" class="content-step__field">
+                <span>6-9 років</span>
+              </label>
+            </fieldset>
+
+            <fieldset class="content-step__fieldset">
+              <input id="step-8-4" type="radio" name="step-8"
+                class="content-step__input visually-hidden">
+              <label for="step-8-4" class="content-step__field">
+                <span>10-16 років</span>
+              </label>
+            </fieldset>
+
+            <fieldset class="content-step__fieldset">
+              <input id="step-8-5" type="radio" name="step-8"
+                class="content-step__input visually-hidden">
+              <label for="step-8-5" class="content-step__field">
+                <span>17-19 років</span>
+              </label>
+            </fieldset>
+
+            <fieldset class="content-step__fieldset">
+              <input id="step-8-6" type="radio" name="step-8"
+                class="content-step__input visually-hidden">
+              <label for="step-8-6" class="content-step__field">
+                <span>20+ років</span>
+              </label>
+            </fieldset>
+          </div>
+
+          <div class="step-popup__btns">
+            @@include('./components/button.html', { "title":
+            "Назад",
+            "flag": 'left', "class": 'button__white' })
+
+            @@include('./components/button.html', { "title":
+            "Результат",
+            "flag": 'right', "class": 'button__blue' })
+          </div>
+        </div>
+
+        <div class="test-popup__results results">
+          <div class="results__header">
+            <div class="results__title step-popup__title">
+              <h3>Результат тесту</h3>
+            </div>
+            <button class="popup__close button-close" tabindex="-1"
+              type="button">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M6 6L18.7742 18.7742"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path
+                  d="M6 18.7742L18.7742 5.99998"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+
+          <div class="step-line"></div>
+
+          <div class="results__content content-results">
+            <div class="content-results__text">
+              <div class="content-results__title">Попередній діагноз:</div>
+              <p class="content-results__subtitle"><span>Вальгусна стопа.</span>
+                Нормальне положення заднього відділу стопи. Варус позиція
+                переднього відділу стопи. Варусна вісь нижніх кінцівок
+                ("О-подібні ноги"). Больовий синдром</p>
+            </div>
+
+            <div class="content-results__wrap">
+              <div class="content-results__service">
+                <div class="content-results__service-title">Рекомендована
+                  послуга</div>
+                <div class="service-popular__item">
+                  <div class="service-popular__img">
+                    <img
+                      src="../../images/Item1.png"
+                      width="317"
+                      height="214"
+                      alt="service" />
+                  </div>
+
+                  <div class="service-popular__text">
+                    <h3 class="service-popular__title popular-title">
+                      Кінезіотейпування
+                    </h3>
+                    <p class="service-popular__subtitle popular-subtitle">
+                      Наша клініка обладнана передовими технологіями для надання
+                      сучасних і ефективних медичних послуг
+                    </p>
+                  </div>
+                  <div class="service-popular__btns">
+                    <a href="#" class="button-line">Дізнатися більше</a>
+                    @@include('./components/button.html', { "title":
+                    "Записатися на прийом",
+                    "flag": 'up', "class": 'button__white' })
+                  </div>
+                </div>
+              </div>
+
+              <div class="content-results__products">
+                <div class="content-results__products-wrap">
+                  <div class="content-results__service-title">Також вам
+                    підійде</div>
+
+                  @@include('./components/button.html', { "title":
+                  "Усі товари",
+                  "flag": false, "class": 'button__white' })
+                </div>
+
+                <ul class="content-results__products-list">
+                  <li class="products-popular__item">
+                    <a href="#" class="products-popular__link">
+                      <div class="products-popular__img">
+                        <img src="../../images/Item.png" width="70" height="70"
+                          alt="product">
+                      </div>
+
+                      <div class="products-popular__text">
+                        <h3 class="popular-title products-popular__title">
+                          Ski comfort black/orange
+                        </h3>
+                        <p class="popular-subtitle products-popular__subtitle">
+                          Чорно-Помаранчеві Ортопедичні Устілки для Комфортного
+                          Гірськолижного Відпочинку
+                        </p>
+                      </div>
+                      <div class="products-popular__price">
+                        <span class="products-popular__old-price">320,79
+                          <span>₴</span></span>
+                        <span class="products-popular__new-price">220,79
+                          <span>₴</span></span>
+                      </div>
+                    </a>
+                  </li>
+
+                  <li class="products-popular__item">
+                    <a href="#" class="products-popular__link">
+                      <div class="products-popular__img">
+                        <img src="../../images/Item.png" width="70" height="70"
+                          alt="product">
+                      </div>
+
+                      <div class="products-popular__text">
+                        <h3 class="popular-title products-popular__title">
+                          Ski comfort black/orange
+                        </h3>
+                        <p class="popular-subtitle products-popular__subtitle">
+                          Чорно-Помаранчеві Ортопедичні Устілки для Комфортного
+                          Гірськолижного Відпочинку
+                        </p>
+                      </div>
+                      <div class="products-popular__price">
+                        <span class="products-popular__old-price">320,79
+                          <span>₴</span></span>
+                        <span class="products-popular__new-price">220,79
+                          <span>₴</span></span>
+                      </div>
+                    </a>
+                  </li>
+
+                  <li class="products-popular__item">
+                    <a href="#" class="products-popular__link">
+                      <div class="products-popular__img">
+                        <img src="../../images/Item.png" width="70" height="70"
+                          alt="product">
+                      </div>
+
+                      <div class="products-popular__text">
+                        <h3 class="popular-title products-popular__title">
+                          Ski comfort black/orange
+                        </h3>
+                        <p class="popular-subtitle products-popular__subtitle">
+                          Чорно-Помаранчеві Ортопедичні Устілки для Комфортного
+                          Гірськолижного Відпочинку
+                        </p>
+                      </div>
+                      <div class="products-popular__price">
+                        <span class="products-popular__old-price">320,79
+                          <span>₴</span></span>
+                        <span class="products-popular__new-price">220,79
+                          <span>₴</span></span>
+                      </div>
+                    </a>
+                  </li>
+
+                  <li class="products-popular__item">
+                    <a href="#" class="products-popular__link">
+                      <div class="products-popular__img">
+                        <img src="../../images/Item.png" width="70" height="70"
+                          alt="product">
+                      </div>
+
+                      <div class="products-popular__text">
+                        <h3 class="popular-title products-popular__title">
+                          Ski comfort black/orange
+                        </h3>
+                        <p class="popular-subtitle products-popular__subtitle">
+                          Чорно-Помаранчеві Ортопедичні Устілки для Комфортного
+                          Гірськолижного Відпочинку
+                        </p>
+                      </div>
+                      <div class="products-popular__price">
+                        <span class="products-popular__old-price">320,79
+                          <span>₴</span></span>
+                        <span class="products-popular__new-price">220,79
+                          <span>₴</span></span>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="step-popup__btns">
+            @@include('./components/button.html', { "title":
+            "Дивитися всі послуги",
+            "flag": 'up', "class": 'button__blue' })
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

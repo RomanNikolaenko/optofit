@@ -61,6 +61,7 @@
     position: relative;
     width: 100%;
     margin: 0 auto;
+    // overflow: hidden;
 
     /** Установить свои значения */
     @include property('padding-inline', 50, 20);
@@ -74,6 +75,12 @@
 
     @media (min-width: 768px) {
       border-radius: rem(40);
+    }
+
+    .test-popup & {
+      max-width: rem(1565);
+      width: auto;
+      @include property('padding-block', 50, 20);
     }
 
     .search-popup & {
