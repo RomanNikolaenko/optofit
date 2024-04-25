@@ -4,8 +4,8 @@
     z-index: 1;
     overflow: hidden;
     width: 100%;
-    @include property('max-height', 675, 320);
-    @include property('min-height', 675, 320);
+    @include property('max-height', 575, 320);
+    @include property('min-height', 575, 320);
     border-radius: rem(30);
   }
 
