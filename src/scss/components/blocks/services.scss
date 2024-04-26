@@ -324,6 +324,7 @@
 
   .service-popular__img {
     max-height: rem(140);
+    background-color: #06739a;
 
     @media (min-width: 768px) {
       max-height: rem(182);
@@ -331,10 +332,6 @@
 
     @media (min-width: 1200px) {
       max-height: rem(249);
-    }
-
-    img {
-      object-fit: cover;
     }
   }
 

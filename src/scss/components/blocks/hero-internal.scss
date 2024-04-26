@@ -39,8 +39,35 @@
   }
 
   &__image {
+    position: relative;
+    z-index: 3;
     display: flex;
     height: 100%;
+
+    @include pseudo-cell(before) {
+      left: 0;
+      bottom: 0;
+      width: 600px;
+      height: 1000px;
+      z-index: -1;
+      background-image: url(../../images/slider-first-1.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      transform: rotate(-20deg) translate(-50%, 40%);
+      filter: blur(140px);
+
+      @media (min-width: 576px) {
+        transform: rotate(-20deg) translate(-46%, 43%);
+      }
+
+      @media (min-width: 768px) {
+        transform: rotate(-20deg) translate(-44%, 20%);
+      }
+
+      @media (min-width: 1366px) {
+        transform: rotate(-20deg) translate(-22%, 37%);
+      }
+    }
 
     &-wrap {
       position: relative;
@@ -108,7 +135,7 @@
 
   &__description {
     position: relative;
-    z-index: 2;
+    z-index: 10;
     color: #ffffff;
     @include property('margin-top', 85, 42, 768, 320);
     padding-inline: rem(20);

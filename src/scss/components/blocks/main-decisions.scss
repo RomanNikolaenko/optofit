@@ -26,8 +26,10 @@
   }
 
   &__inner {
+    aspect-ratio: 1.38/1;
     overflow: hidden;
     border-radius: rem(30);
+    background-color: #06739a;
 
     @media (min-width: 768px) {
       border-radius: rem(40);
@@ -42,7 +44,7 @@
       display: block;
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
       object-position: center;
     }
   }
