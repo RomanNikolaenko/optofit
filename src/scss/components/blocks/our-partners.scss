@@ -1,0 +1,104 @@
+.our-partners {
+  display: grid;
+  gap: rem(20);
+
+  @media (min-width: 1200px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &__wrap {
+    box-shadow: 0px 4px 20px 0px #00719b0d;
+    background-color: #ffffff;
+    border-radius: rem(30);
+    padding: rem(30);
+
+    @media (min-width: 768px) {
+      border-radius: rem(40);
+      padding: rem(32) rem(35);
+    }
+  }
+
+  &__title {
+    font-size: rem(26);
+
+    @media (min-width: 768px) {
+      font-size: rem(34);
+    }
+
+    @media (min-width: 1200px) {
+      font-size: rem(46);
+    }
+  }
+
+  &__subtitle {
+    margin-top: rem(28);
+    max-width: rem(550);
+  }
+
+  &__inner {
+    box-shadow: 0px 4px 20px 0px #00719b0d;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: rem(30);
+    @include property('padding-inline', 80, 20, 1920, 768);
+    @include property('padding-block', 74, 30, 1920, 768);
+
+    @media (min-width: 768px) {
+      border-radius: rem(40);
+    }
+  }
+
+  &__image {
+    border-radius: rem(30);
+    overflow: hidden;
+    aspect-ratio: 1.72/1;
+    max-height: rem(450);
+    margin: 0 auto;
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__partners {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(rem(100), rem(200)));
+    gap: rem(20);
+    @include property('padding-top', 48, 24, 768);
+    @include property('margin-top', 48, 24, 768);
+    border-top: 1px solid rgba(0, 113, 155, 0.3);
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    &-wrap {
+      overflow: hidden;
+      box-shadow: 0px 0px 20px 0px #00719b1a;
+      border-radius: rem(20);
+      @include property('padding', 20, 12, 768);
+      aspect-ratio: 1/1;
+    }
+
+    &-img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+
+  &__desc {
+    font-size: rem(24);
+    margin-top: rem(20);
+    letter-spacing: -0.3px;
+
+    @media (min-width: 1200px) {
+      font-size: rem(30);
+    }
+  }
+}
