@@ -101,3 +101,24 @@ new Swiper('.company-in-persons__wrapper', {
     },
   },
 });
+
+new Swiper('.licenses__swiper', {
+  loop: true,
+  navigation: {
+    nextEl: '.licenses__swiper-button-next',
+    prevEl: '.licenses__swiper-button-prev',
+    clickable: true,
+  },
+  slidesPerView: 1,
+  spaceBetween: 30,
+  speed: 2000,
+  autoplay: {
+    delay: 12000,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    576: {
+      slidesPerView: 2,
+    },
+  },
+});

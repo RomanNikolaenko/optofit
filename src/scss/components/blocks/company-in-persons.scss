@@ -90,19 +90,6 @@
       @include property('margin-top', 130, 80, 1200, 768);
     }
   }
-
-  .sliders__btns {
-    justify-content: flex-end;
-    gap: rem(26);
-  }
-
-  [class*='company-in-persons-button'] {
-    @include property('margin-top', 34, 24, 768);
-  }
-
-  .company-in-persons-button-next {
-    transform: rotate(180deg);
-  }
 }
 
 .socials-persons {

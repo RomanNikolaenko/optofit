@@ -717,3 +717,19 @@
     padding-top: rem(50);
   }
 }
+
+.licenses,
+.company-in-persons {
+  .sliders__btns {
+    justify-content: flex-end;
+    gap: rem(26);
+  }
+
+  [class*='swiper-button'] {
+    @include property('margin-top', 34, 24, 768);
+  }
+
+  [class*='button-next'] {
+    transform: rotate(180deg);
+  }
+}

@@ -1,0 +1,30 @@
+.licenses {
+  &__slide {
+    box-shadow: 0px 0px 15px 0px #00719b12;
+    background-color: #ffffff;
+    border-radius: rem(30);
+    @include property('padding-inline', 60, 28, 1920, 1440);
+    @include property('padding-block', 34, 24, 1920, 1440);
+
+    @media (min-width: 768px) {
+      border-radius: rem(40);
+    }
+  }
+
+  &__wrap {
+    box-shadow: 0px 0px 15px 0px #00719b12;
+    border-radius: rem(27);
+    overflow: hidden;
+    aspect-ratio: 1/1.12;
+    margin: 0 auto;
+    max-height: rem(382);
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+}
