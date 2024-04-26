@@ -1,0 +1,55 @@
+.appointment-popup {
+  &__body {
+    display: grid;
+    gap: rem(20);
+
+    @media (min-width: 1200px) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__title {
+    font-size: rem(24);
+    margin-bottom: rem(20);
+
+    @media (min-width: 1200px) {
+      font-size: rem(32);
+      max-width: 93%;
+    }
+
+    @media (min-width: 1440px) {
+      font-size: rem(40);
+      max-width: 95%;
+    }
+  }
+
+  &__image {
+    overflow: hidden;
+    border-radius: rem(30);
+    aspect-ratio: 1.5/1;
+    background-color: currentColor;
+    min-height: rem(200);
+    max-height: rem(567);
+    width: 100%;
+
+    @media (min-width: 768px) {
+      border-radius: rem(40);
+    }
+
+    @media (min-width: 1200px) {
+      aspect-ratio: 1.26/1;
+    }
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center bottom;
+  }
+
+  .form-contacts {
+    padding: 0;
+  }
+}

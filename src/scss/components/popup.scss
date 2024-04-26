@@ -77,7 +77,8 @@
       border-radius: rem(40);
     }
 
-    .test-popup & {
+    .test-popup &,
+    .appointment-popup & {
       max-width: rem(1565);
       width: auto;
       @include property('padding-block', 50, 20);

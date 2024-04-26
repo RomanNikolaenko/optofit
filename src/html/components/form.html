@@ -14,6 +14,16 @@
             </label>
         </fieldset>
 
+        @@if(textarea == true) {
+        <fieldset class="form-contacts__fieldset">
+            <label class="form-contacts__label">
+                <textarea name="textarea"
+                    class="form-contacts__textarea"
+                    placeholder="Текст повідомлення (не обов’язково)"></textarea>
+            </label>
+        </fieldset>
+        }
+
         <fieldset class="form-contacts__fieldset">
             <label class="form-contacts__checkbox checkbox">
                 <input class="checkbox__input" type="checkbox"
@@ -29,7 +39,7 @@
         </fieldset>
 
         @@include('../components/button.html', { "title":
-        "Замовити дзвінок", "flag": 'up', "class":
+        "@@title", "data-type": false, "flag": 'up', "class":
         'button__blue' })
     </form>
 </div>

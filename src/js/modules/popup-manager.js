@@ -115,7 +115,8 @@ class PopupManager extends Popup {
   }
 
   cleanInput(popup) {
-    const inputs = popup.querySelectorAll('input[type="text"]');
+    const inputs = popup.querySelectorAll('input');
+    const textareas = popup.querySelectorAll('textarea');
     const searchPopular = popup.querySelector('.form-search__popular');
     const searchResults = popup.querySelector('.form-search__results');
 
@@ -123,7 +124,15 @@ class PopupManager extends Popup {
       inputs.forEach((item) => {
         item.value = null;
       });
+    }
 
+    if (textareas.length) {
+      textareas.forEach((item) => {
+        item.value = null;
+      });
+    }
+
+    if(searchPopular && searchResults) {
       searchPopular.classList.add('popular-search_hidden');
       searchResults.classList.add('popular-search_hidden');
     }

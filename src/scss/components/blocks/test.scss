@@ -10,6 +10,7 @@
   gap: rem(20);
 
   &__image {
+    position: relative;
     aspect-ratio: 1.8 / 1;
     margin-inline: clamp(
       rem(-50),

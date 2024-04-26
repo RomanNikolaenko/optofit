@@ -6,6 +6,28 @@
           <div class="welcome__image">
             <img src="../images/test-welcome.jpg" width="930" height="445" alt
               class="welcome__image-img">
+            <button class="popup__close button-close" tabindex="-1"
+              type="button">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M6 6L18.7742 18.7742"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path
+                  d="M6 18.7742L18.7742 5.99998"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
           </div>
 
           <div class="welcome__wrap">
@@ -24,7 +46,8 @@
 
           @@include('./components/button.html', { "title":
           "Почати тест",
-          "flag": false, "class": 'button__blue welcome__btn' })
+          "flag": false, "data-type": false, "class":
+          'button__blue welcome__btn' })
         </div>
 
         <div class="test-popup__step step-popup step-1"
@@ -126,7 +149,7 @@
           <div class="step-popup__btns">
             @@include('./components/button.html', { "title":
             "Далі",
-            "flag": 'right', "class": 'button__blue' })
+            "flag": 'right', "data-type": false, "class": 'button__blue' })
           </div>
         </div>
 
@@ -209,11 +232,11 @@
           <div class="step-popup__btns">
             @@include('./components/button.html', { "title":
             "Назад",
-            "flag": 'left', "class": 'button__white' })
+            "flag": 'left', "data-type": false, "class": 'button__white' })
 
             @@include('./components/button.html', { "title":
             "Далі",
-            "flag": 'right', "class": 'button__blue' })
+            "flag": 'right', "data-type": false, "class": 'button__blue' })
           </div>
         </div>
 
@@ -298,11 +321,11 @@
           <div class="step-popup__btns">
             @@include('./components/button.html', { "title":
             "Назад",
-            "flag": 'left', "class": 'button__white' })
+            "flag": 'left', "data-type": false, "class": 'button__white' })
 
             @@include('./components/button.html', { "title":
             "Далі",
-            "flag": 'right', "class": 'button__blue' })
+            "flag": 'right', "data-type": false, "class": 'button__blue' })
           </div>
         </div>
 
@@ -384,11 +407,11 @@
           <div class="step-popup__btns">
             @@include('./components/button.html', { "title":
             "Назад",
-            "flag": 'left', "class": 'button__white' })
+            "flag": 'left', "data-type": false, "class": 'button__white' })
 
             @@include('./components/button.html', { "title":
             "Далі",
-            "flag": 'right', "class": 'button__blue' })
+            "flag": 'right', "data-type": false, "class": 'button__blue' })
           </div>
         </div>
 
@@ -496,11 +519,11 @@
           <div class="step-popup__btns">
             @@include('./components/button.html', { "title":
             "Назад",
-            "flag": 'left', "class": 'button__white' })
+            "flag": 'left', "data-type": false, "class": 'button__white' })
 
             @@include('./components/button.html', { "title":
             "Далі",
-            "flag": 'right', "class": 'button__blue' })
+            "flag": 'right', "data-type": false, "class": 'button__blue' })
           </div>
         </div>
 
@@ -599,11 +622,11 @@
           <div class="step-popup__btns">
             @@include('./components/button.html', { "title":
             "Назад",
-            "flag": 'left', "class": 'button__white' })
+            "flag": 'left', "data-type": false, "class": 'button__white' })
 
             @@include('./components/button.html', { "title":
             "Далі",
-            "flag": 'right', "class": 'button__blue' })
+            "flag": 'right', "data-type": false, "class": 'button__blue' })
           </div>
         </div>
 
@@ -700,11 +723,11 @@
           <div class="step-popup__btns">
             @@include('./components/button.html', { "title":
             "Назад",
-            "flag": 'left', "class": 'button__white' })
+            "flag": 'left', "data-type": false, "class": 'button__white' })
 
             @@include('./components/button.html', { "title":
             "Результат",
-            "flag": 'right', "class": 'button__blue' })
+            "flag": 'right', "data-type": false, "class": 'button__blue' })
           </div>
         </div>
 
@@ -774,7 +797,9 @@
                     <a href="#" class="button-line">Дізнатися більше</a>
                     @@include('./components/button.html', { "title":
                     "Записатися на прийом",
-                    "flag": 'up', "class": 'button__white' })
+                    "flag": 'up', "data-type": 'appointment', "class":
+                    'button__white'
+                    })
                   </div>
                 </div>
               </div>
@@ -786,7 +811,7 @@
 
                   @@include('./components/button.html', { "title":
                   "Усі товари",
-                  "flag": false, "class": 'button__white' })
+                  "flag": false, "data-type": false, "class": 'button__white' })
                 </div>
 
                 <ul class="content-results__products-list">
@@ -897,7 +922,7 @@
           <div class="step-popup__btns">
             @@include('./components/button.html', { "title":
             "Дивитися всі послуги",
-            "flag": 'up', "class": 'button__blue' })
+            "flag": 'up', "data-type": false, "class": 'button__blue' })
           </div>
         </div>
       </div>
