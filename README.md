@@ -69,3 +69,7 @@ import * as helpers from './helpers'; // './helpers/index.js'
 ```
 
 По любым вопросам касающихся сборки пишите мне в [Telegram](https://t.me/StarkElessar).
+
+<!-- <svg class="">
+        <use xlink:href="images/sprite.svg#svg"></use>
+    </svg> -->

@@ -80,3 +80,24 @@ new Swiper('.swiper-second', {
     disableOnInteraction: false,
   },
 });
+
+new Swiper('.company-in-persons__wrapper', {
+  loop: true,
+  navigation: {
+    nextEl: '.company-in-persons-button-next',
+    prevEl: '.company-in-persons-button-prev',
+    clickable: true,
+  },
+  slidesPerView: 1,
+  spaceBetween: 30,
+  speed: 2000,
+  autoplay: {
+    delay: 12000,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    576: {
+      slidesPerView: 2,
+    },
+  },
+});

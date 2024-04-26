@@ -243,14 +243,12 @@
     align-items: center;
     justify-content: flex-end;
     gap: rem(20);
-    margin-top: rem(24);
 
     @media (min-width: 768px) {
       position: absolute;
       bottom: rem(24);
       z-index: 3;
       bottom: rem(30);
-      margin-top: 0;
 
       .swiper-first & {
         left: rem(24);
@@ -269,7 +267,7 @@
       position: initial;
       width: var(--width);
       height: var(--width);
-      margin-top: 0;
+      margin-top: rem(24);
       box-shadow: 0px 0px 12px 0px #00719b2e;
       background-color: #ffffff80;
       background-image: url('../../../images/svg/arrow-left.svg');
