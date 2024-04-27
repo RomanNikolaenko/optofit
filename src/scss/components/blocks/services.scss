@@ -60,14 +60,6 @@
     line-height: 1;
     font-size: rem(18);
 
-    @media (min-width: 768px) {
-      font-size: rem(34);
-    }
-
-    @media (min-width: 1200px) {
-      font-size: rem(46);
-    }
-
     &-line {
       position: relative;
       display: flex;

@@ -46,12 +46,7 @@
     line-height: 1;
 
     @media (min-width: 768px) {
-      font-size: rem(34);
       max-width: 280px;
-    }
-
-    @media (min-width: 1200px) {
-      font-size: rem(46);
     }
   }
 
