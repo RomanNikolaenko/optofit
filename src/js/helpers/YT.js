@@ -1,23 +1,11 @@
-const creationProcessButton = document.querySelector('.creation-process__button');
-const remotelyVideo = document.querySelector('.remotely__video-video');
-
 const tag = document.createElement('script');
 tag.src = 'https://www.youtube.com/iframe_api';
 const firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-if(creationProcessButton) {
-  creationProcessButton.addEventListener('click', (e)=> {
-    YTIframe(e.target);
-    creationProcessButton.classList.add('creation-process__button_hide');
-  });
-}
-
-if(remotelyVideo) {
-  remotelyVideo.addEventListener('click', (e)=> {
-    YTIframe(e.target);
-  })
-}
+// document.addEventListener('click', (e) => {
+  
+// })
 
 let player;
 
@@ -42,3 +30,5 @@ function YTIframe(event) {
 function onPlayerReady(event) {
   event.target.playVideo();
 }
+
+export default YTIframe;

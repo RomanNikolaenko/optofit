@@ -8,7 +8,9 @@
       <main class="page">
         @@include('html/blocks/hero-internal.html')
         @@include('html/components/breadcrumb.html')
-        @@include('html/blocks/stats.html')
+        @@include('html/blocks/stats.html', {
+        "scroll": false
+        })
         <div class="line"></div>
         @@include('html/blocks/about-company.html')
         <div class="line"></div>
@@ -27,6 +29,8 @@
         @@include('html/blocks/remotely.html')
         <div class="line"></div>
         @@include('html/blocks/licenses.html')
+        <div class="line"></div>
+        @@include('html/blocks/equipment.html')
         <div class="line"></div>
         @@include('html/blocks/frequently-asked-questions.html')
         <div class="line"></div>

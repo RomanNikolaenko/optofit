@@ -16,7 +16,7 @@ import './helpers/bounding-client-rect';
 import './helpers/search';
 import './helpers/animation';
 import './helpers/swiper';
-import './helpers/YT';
+import YTIframe from './helpers/YT';
 import BaseHelpers from './helpers/base-helpers';
 
 import PopupManager from './modules/popup-manager';
@@ -106,6 +106,14 @@ document.addEventListener('click', function (e) {
       fixedBlockMessangers.classList.remove('open');
     }
   }
+
+  if(e.target.getAttribute('data-type') == "video") {
+    YTIframe(e.target);
+
+    if(e.target.classList.contains('creation-process__button')) {
+      e.target.classList.add('creation-process__button_hide');
+    }
+  }
 });
 
 document.addEventListener('keydown', (e) => {
@@ -131,3 +139,10 @@ document.addEventListener('keydown', (e) => {
     }
   }
 });
+
+const statsScrolling = document.querySelector('.goToVideo');
+if(statsScrolling) {
+  statsScrolling.addEventListener('click', () => {
+    document.getElementById('creation-process')?.scrollIntoView({ behavior: 'smooth' });
+  })
+}
