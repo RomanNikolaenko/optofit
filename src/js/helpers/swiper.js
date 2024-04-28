@@ -122,3 +122,27 @@ new Swiper('.licenses__swiper', {
     },
   },
 });
+
+new Swiper('.reviews__swiper', {
+  loop: true,
+  navigation: {
+    nextEl: '.reviews__swiper-button-next',
+    prevEl: '.reviews__swiper-button-prev',
+    clickable: true,
+  },
+  slidesPerView: 1,
+  spaceBetween: 24,
+  speed: 2000,
+  autoplay: {
+    delay: 12000,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    650: {
+      slidesPerView: 2,
+    },
+    1200: {
+      slidesPerView: 3,
+    },
+  },
+});

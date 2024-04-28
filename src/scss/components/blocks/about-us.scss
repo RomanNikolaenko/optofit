@@ -7,6 +7,18 @@
   overflow: hidden;
   padding: rem(32) rem(20);
 
+  @include pseudo-cell(before) {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      145.49deg,
+      rgba(0, 113, 155, 0.085) 35.87%,
+      rgba(0, 113, 155, 0.85) 58.13%
+    );
+  }
+
   @media (min-width: 768px) {
     overflow: hidden;
     border-radius: rem(40);
@@ -30,6 +42,8 @@
   }
 
   &__title {
+    position: relative;
+    z-index: 2;
     font-size: rem(21);
     line-height: 1.1;
 
@@ -43,12 +57,16 @@
   }
 
   &__subtitle {
+    position: relative;
+    z-index: 2;
     max-width: rem(430);
     @include property('margin-top', 29, 16);
     @include property('margin-bottom', 74, 24);
   }
 
   &__inner {
+    position: relative;
+    z-index: 2;
     display: flex;
     flex-wrap: wrap;
     gap: rem(20);
@@ -85,6 +103,8 @@
   }
 
   &__columns {
+    position: relative;
+    z-index: 2;
     display: flex;
     flex-wrap: wrap;
     gap: rem(24);
