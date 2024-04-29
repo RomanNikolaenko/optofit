@@ -136,6 +136,8 @@
     }
 
     &-img {
+      position: relative;
+      z-index: 2;
       display: block;
       grid-column: 1;
       grid-row: 1;
