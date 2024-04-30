@@ -1,0 +1,77 @@
+.politics {
+  counter-reset: politics;
+
+  &__container {
+    display: grid;
+    gap: rem(24);
+
+    @media (min-width: 768px) {
+      gap: rem(32);
+    }
+  }
+
+  &__title {
+    max-width: min-content;
+    font-size: rem(26);
+    margin-bottom: rem(4);
+
+    @media (min-width: 768px) {
+      font-size: rem(34);
+      margin-bottom: rem(14);
+    }
+
+    @media (min-width: 1200px) {
+      font-size: rem(46);
+    }
+  }
+
+  &__column {
+    display: grid;
+    gap: rem(20);
+    counter-increment: section;
+
+    @media (min-width: 1200px) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    &-title {
+      font-size: rem(22);
+
+      @media (min-width: 768px) {
+        font-size: rem(30);
+      }
+
+      @include pseudo-cell(before, initial) {
+        content: counter(section) '.';
+      }
+
+      > * {
+        display: inline;
+      }
+    }
+  }
+
+  &__wrap {
+    display: grid;
+    gap: rem(20);
+  }
+
+  &__desc {
+    display: grid;
+    gap: rem(20);
+  }
+
+  &__list {
+    counter-reset: politicsList;
+    display: grid;
+    gap: rem(20);
+  }
+
+  &__item {
+    counter-increment: politicsList;
+
+    @include pseudo-cell(before, initial) {
+      content: counter(section) '.' counter(politicsList) '.';
+    }
+  }
+}
