@@ -1,0 +1,67 @@
+.licenses-two {
+  &__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: rem(20);
+  }
+
+  &__column {
+    aspect-ratio: 1/1.12;
+    width: calc(50% - rem(20) / 2);
+
+    &:not(:first-of-type) {
+      box-shadow: 0px 0px 15px 0px #00719b12;
+      background-color: #ffffff;
+      border-radius: rem(30);
+      @include property('padding-inline', 60, 16, 1920, 1440);
+      @include property('padding-block', 34, 16, 1920, 1440);
+
+      @media (min-width: 768px) {
+        border-radius: rem(40);
+      }
+    }
+
+    &:first-of-type {
+      @media (max-width: 767.98px) {
+        width: 100%;
+        aspect-ratio: initial;
+      }
+    }
+
+    @media (min-width: 576px) {
+      width: calc(33.333% - rem(20) * 2 / 3);
+    }
+
+    @media (min-width: 1200px) {
+      width: calc(25% - rem(20) * 3 / 4);
+    }
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  &__title {
+    font-size: rem(26);
+
+    @media (min-width: 768px) {
+      font-size: rem(34);
+    }
+
+    @media (min-width: 1200px) {
+      font-size: rem(46);
+    }
+  }
+
+  &__btns {
+    @include property('margin-top', 30, 20, 768);
+  }
+
+  .button__white {
+    width: 100%;
+  }
+}

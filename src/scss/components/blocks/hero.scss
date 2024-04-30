@@ -248,7 +248,7 @@
     max-width: rem(350);
     text-wrap: balance;
 
-    .hero-internal & {
+    &.title-italic {
       font-style: italic;
     }
 
