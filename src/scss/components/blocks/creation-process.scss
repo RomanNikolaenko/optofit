@@ -38,7 +38,7 @@
       opacity: 0.95;
     }
 
-    &_hide {
+    &.hide {
       opacity: 0;
       visibility: hidden;
       pointer-events: none;

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="uk">
+  @@include('html/head.html', { 'title': 'Відео' })
+  <body>
+    <div class="wrapper">
+      @@include('html/header.html')
+
+      <main class="page">
+        @@include('html/blocks/hero-internal.html', {
+        'class': ''
+        })
+        @@include('html/components/breadcrumb.html')
+        @@include('html/blocks/stats.html', {
+        "scroll": false
+        })
+        <div class="line"></div>
+        @@include('html/blocks/video.html')
+        <div class="line"></div>
+        @@include('html/blocks/about-us.html')
+        <div class="line"></div>
+        @@include('html/blocks/two-sliders.html')
+        <div class="line"></div>
+        @@include('html/blocks/advantages.html')
+        <div class="line"></div>
+        @@include('html/blocks/akcii.html')
+        <div class="line"></div>
+        @@include('html/blocks/frequently-asked-questions.html')
+        <div class="line"></div>
+        @@include('html/blocks/contacts.html')
+        <div class="line"></div>
+      </main>
+
+      @@include('html/footer.html')
+      @@include('html/components/fixed-block.html')
+    </div>
+
+    @@include('html/popups.html')
+  </body>
+</html>

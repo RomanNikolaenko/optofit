@@ -39,6 +39,7 @@ class PopupManager extends Popup {
         }
 
         this.cleanInput(popup);
+        this.deleteIframe(popup);
 
         setTimeout(() => {
           this.toggleBodyLock(false);
@@ -111,6 +112,7 @@ class PopupManager extends Popup {
         .setAttribute('tabindex', '-1');
     }
 
+    this.deleteIframe(popup);
     this.cleanInput(popup);
   }
 
@@ -136,6 +138,15 @@ class PopupManager extends Popup {
       searchPopular.classList.add('popular-search_hidden');
       searchResults.classList.add('popular-search_hidden');
     }
+  }
+
+  deleteIframe(popup) {
+    popup.querySelector('iframe').remove();
+
+    const tag = document.createElement('div');
+    const parent = popup.querySelector('.popup__body');
+    tag.id = 'player-2';
+    parent.insertBefore(tag, parent.firstChild);
   }
 }
 

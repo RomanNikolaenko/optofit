@@ -107,12 +107,9 @@ document.addEventListener('click', function (e) {
     }
   }
 
-  if(e.target.getAttribute('data-type') == "video") {
+  if(e.target.getAttribute('data-video')) {
     YTIframe(e.target);
-
-    if(e.target.classList.contains('creation-process__button')) {
-      e.target.classList.add('creation-process__button_hide');
-    }
+    e.target.classList.add('hide');
   }
 });
 
