@@ -217,3 +217,40 @@
     }
   }
 }
+
+.contacts-map {
+  &__wrap {
+    position: relative;
+    border-radius: rem(30);
+    overflow: hidden;
+    height: 100%;
+    aspect-ratio: 1.2/1;
+    max-height: rem(754);
+    margin-top: rem(20);
+
+    @include pseudo-cell(before) {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #07749926;
+    }
+
+    @media (min-width: 420px) {
+      aspect-ratio: 1.6/1;
+    }
+
+    @media (min-width: 576px) {
+      aspect-ratio: 2.49/1;
+    }
+
+    @media (min-width: 768px) {
+      border-radius: rem(40);
+    }
+  }
+
+  &__iframe {
+    width: 100%;
+    height: 100%;
+  }
+}
