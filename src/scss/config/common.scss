@@ -184,10 +184,13 @@
 .form-contacts {
   display: grid;
   align-items: center;
-  height: 100%;
   background-color: #ffffff;
   padding: rem(20) rem(12);
   border-radius: rem(30);
+
+  .akcii__wrap & {
+    height: 100%;
+  }
 
   @media (min-width: 768px) {
     border-radius: rem(40);

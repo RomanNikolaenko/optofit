@@ -1,0 +1,128 @@
+<div class="partners">
+    <div class="partners__container">
+        <div class="partners__wrap ">
+            <div class="partners__desc">
+                <div class="partners__title">
+                    <h2>Партнерам</h2>
+                </div>
+                <div class="partners__text">
+                    <p>Кожен партнерство - це можливість спільно працювати для
+                        забезпечення клієнтів високоякісними ортопедичними
+                        рішеннями
+                        та створення здорового та комфортного стилю життя</p>
+                </div>
+            </div>
+
+            <div class="partners__inner">
+                <div class="partners__inner-title">
+                    <h3>Хто може бути нашими партнерами</h3>
+                </div>
+
+                <ol class="partners__list">
+                    <li class="partners__item">
+                        Магазини та Роздрібні Торговці:
+                        <ul class="partners__sublist">
+                            <li class="partners__subitem">
+                                Магазини взуття та аксесуарів, що цінують якість
+                                та
+                                комфорт для своїх клієнтів
+                            </li>
+                            <li class="partners__subitem">
+                                Роздрібні торговці, які спеціалізуються на
+                                ортопедичних виробах та готові розширити свій
+                                асортимент
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="partners__item">
+                        Медичні Центри та Ортопедичні Клініки:
+                        <ul class="partners__sublist">
+                            <li class="partners__subitem">
+                                Лікарні та медичні заклади, які цінують
+                                ефективність ортопедичних рішень
+                            </li>
+                            <li class="partners__subitem">
+                                Ортопедичні клініки, які шукають високоякісні та
+                                інноваційні ортопедичні вироби для своїх
+                                пацієнтів
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="partners__item">
+                        Фітнес та Спортивні Центри:
+                        <ul class="partners__sublist">
+                            <li class="partners__subitem">
+                                Спортивні заклади, де покладають великий акцент
+                                на здоров'я та комфорт учасників
+                            </li>
+                            <li class="partners__subitem">
+                                Фітнес-центри, які бажають пропонувати своїм
+                                клієнтам індивідуалізовані та підтримуючі
+                                рішення для стоп та хребта
+                            </li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="partners__wrap partners__shadow">
+            <div class="partners__picture">
+                <img src="../../images/partners.png" width="930" height="754"
+                    alt class="partners__img">
+            </div>
+
+            <div class="partners__form">
+                <div class="partners__form-title">
+                    <h3>Залиште заявку на партнерство</h3>
+                </div>
+
+                <div class="partners__form-subtitle">
+                    <p>Ми зв’яжемося за Вами та обговоремо деталі</p>
+                </div>
+
+                <div class="form-contacts">
+                    <form class="form-contacts__form" action method="post">
+                        <fieldset class="form-contacts__fieldset">
+                            <label class="form-contacts__label">
+                                <input type="text" name="name"
+                                    class="form-contacts__input"
+                                    placeholder="Ім'я">
+                            </label>
+                        </fieldset>
+
+                        <fieldset class="form-contacts__fieldset">
+                            <label class="form-contacts__label">
+                                <input type="phone" name="phone"
+                                    class="form-contacts__input"
+                                    placeholder="Телефон">
+                            </label>
+                        </fieldset>
+
+                        <fieldset class="form-contacts__fieldset">
+                            <label class="form-contacts__checkbox checkbox">
+                                <input class="checkbox__input" type="checkbox"
+                                    name="politics" />
+                                <span class="checkbox__box"></span>
+                                <span class="checkbox__name">
+                                    Підтверджуючи, ви погоджуєтесь з <span
+                                        class="checkbox__politics">
+                                        політикою конфіденційності
+                                    </span>
+                                </span>
+                            </label>
+                        </fieldset>
+
+                        @@include('../components/button.html', { "title":
+                        "Лишити заявку на партерство", "data-type": '', "flag":
+                        false, "class":
+                        'button__blue' })
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
