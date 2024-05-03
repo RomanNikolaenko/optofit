@@ -39,8 +39,8 @@ new Accordion('.frequently-asked-questions__accordion', {
   collapsedClass: 'open',
 });
 
-const stats = document.querySelectorAll('.reviews .data-stats__title span');
-const dataStats = document.querySelector('.reviews .data-stats');
+const stats = document.querySelectorAll('.stats .data-stats__title span');
+const dataStats = document.querySelector('.stats .data-stats');
 const statsRev = document.querySelectorAll('.reviews-block .data-stats__title span');
 const dataStatsRev = document.querySelector('.reviews-block .data-stats');
 

@@ -1,4 +1,9 @@
 <div class="banner">
+    @@if(img == true) {
+    <div class="banner__img">
+        <img src="../../images/example2.png" width="455" height="377" alt>
+    </div>
+    }
     <div class="banner__title">
         <h3>@@title</h3>
     </div>
@@ -6,14 +11,14 @@
         <p>@@subtitle</p>
     </div>
     <div class="banner__btns">
-        <a href="#" class="button-line">Дізнатися більше</a>
+        <a href="akcii-one.html" class="button-line">Дізнатися більше</a>
 
-        @@if(btn == true) {
+        @@if(btn) {
         @@include('../components/button.html', { "title":
-        "Проконсультуватися", "data-type": '', "flag":
+        "@@btn", "data-type": '', "flag":
         false,
         "class":
-        'button__blue' })
+        'button__blue banner__btn' })
         }
     </div>
 </div>

@@ -424,6 +424,15 @@
     .top & {
       background-color: #ffffff;
     }
+
+    .akcii-product & {
+      aspect-ratio: 1/1.09;
+      max-height: rem(320);
+
+      @media (min-width: 768px) {
+        max-height: rem(495);
+      }
+    }
   }
 
   &__footer {

@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="uk">
+  @@include('html/head.html', { 'title': 'Акції' })
+  <body>
+    <div class="wrapper">
+      @@include('html/header.html')
+
+      <main class="page">
+        @@include('html/blocks/hero-internal.html', {
+        'class': ''
+        })
+        @@include('html/components/breadcrumb.html')
+        @@include('html/blocks/stats.html', {
+        "scroll": false
+        })
+        <div class="line"></div>
+        <div class="akcii-main __container">
+          <div class="akcii-one">
+            <div class="akcii-one__wrap">
+              <div class="akcii-one__desc">
+                <div class="akcii-main__title">
+                  <h2>Літо з Комфортом: Знижки на Відпочинкову Колекцію!</h2>
+                </div>
+                <div class="akcii-main__text">
+                  <p>Не пропустіть шанс отримати якісні ортопедичні вироби за
+                    вигідними цінами! Слідкуйте за нашими акціями та
+                    спеціальними
+                    пропозиціями для найкращого обрання здоров'я та комфорту</p>
+                </div>
+              </div>
+
+              <div class="akcii-one__body">
+                <div class="akcii-one__body-title">
+                  <h3>Умови Акції!</h3>
+                </div>
+
+                <ul class="akcii-one__list">
+                  <li class="akcii-one__item">
+                    <span>Купуй більше - Економь більше!</span>
+
+                    <p>Отримайте додаткові знижки при покупці двох або більше
+                      товарів з нашої Відпочинкової Колекції. Чим більше ви
+                      придбаєте, тим більше ви заощадите! Розгляньте вибір
+                      моделей у наших магазинах та відправтеся в літню пригоду з
+                      економією</p>
+                  </li>
+                  <li class="akcii-one__item">
+                    <span>Даруємо Подарунки за Покупки!</span>
+
+                    <p>Кожен покупець нашої Відпочинкової Колекції отримає
+                      безкоштовний подарунок від нас. Це може бути стильна сумка
+                      для пляжу, зручна пляжна рушник або інший корисний
+                      аксесуар для вашого літнього відпочинку. Підкресліть ваш
+                      стиль та забезпечте собі максимальний комфорт з нашими
+                      подарунками</p>
+                  </li>
+                  <li class="akcii-one__item">
+                    <span>Додаткові Знижки для Постійних Клієнтів!</span>
+
+                    <p>Наші постійні клієнти отримують ще більше переваг! При
+                      пред'явленні карти постійного покупця ви отримаєте
+                      додаткову знижку на весь асортимент Відпочинкової
+                      Колекції. Зробіть свій відпочинок ще більш приємним та
+                      вигідним разом з нами!</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="akcii-one__wrap">
+              <div class="akcii-one__data">
+                <h3>Залишіть свої дані і ми зв'яжемося з вами через 20
+                  хвилин</h3>
+              </div>
+              @@include('./html/components/form.html', {"textarea": false,
+              "title":
+              "Замовити дзвінок"})
+            </div>
+          </div>
+        </div>
+        <div class="line"></div>
+        <div class="__container services-akcii">
+          <div class="services-akcii__header">
+            <div class="akcii-main__title">
+              <h2>Вас може зацікавити</h2>
+            </div>
+            @@include('./html/components/button.html', { "title":
+            "Усі акції", "data-type": '', "flag":
+            false,
+            "class":
+            'button__white' })
+          </div>
+          <div class="akcii-main__services">
+            @@include('./html/components/banner.html', {
+            "title":
+            'Унікальні персоналізовані стельки для вашого комфорту',
+            "subtitle":
+            'Унікальні персоналізовані стельки для вашого комфорту',
+            "btn": 'Замовити',
+            "img": true,
+            })
+            @@include('./html/components/banner.html', {
+            "title":
+            'Унікальні персоналізовані стельки для вашого комфорту',
+            "subtitle":
+            'Унікальні персоналізовані стельки для вашого комфорту',
+            "btn": 'Замовити',
+            "img": true,
+            })
+            @@include('./html/components/banner.html', {
+            "title":
+            'Унікальні персоналізовані стельки для вашого комфорту',
+            "subtitle":
+            'Унікальні персоналізовані стельки для вашого комфорту',
+            "btn": 'Замовити',
+            "img": true,
+            })
+            @@include('./html/components/banner.html', {
+            "title":
+            'Унікальні персоналізовані стельки для вашого комфорту',
+            "subtitle":
+            'Унікальні персоналізовані стельки для вашого комфорту',
+            "btn": 'Замовити',
+            "img": true,
+            })
+
+            @@include('./html/components/button.html', { "title":
+            "Завантажити більше акцій", "data-type":
+            '', "flag":
+            false,
+            "class":
+            'button__white' })
+          </div>
+        </div>
+        <div class="line"></div>
+        <div class="akcii-service">
+          <div class="akcii-service__container">
+            <div class="akcii-product__title">
+              <h2>Акційні товари</h2>
+            </div>
+
+            <div class="akcii-service__wrap">
+              <div class="service-popular__item">
+                <div class="service-popular__img">
+                  <img src="../../images/service/2.jpg" width="317" height="214"
+                    alt="service">
+                </div>
+
+                <div class="service-popular__text">
+                  <h3 class="popular-title service-popular__title">
+                    Комп’ютерна та клінічна діагностика і аналіз
+                    стану
+                  </h3>
+                  <p class="popular-subtitle service-popular__subtitle">Стоп,
+                    ходи та постави, експертного рівня</p>
+                </div>
+                <div class="service-popular__btns">
+                  <a href="#" class="button-line">Дізнатися
+                    більше</a>
+
+                  @@include('./html/components/button.html', { "title":
+                  "Записатися на прийом", "data-type":
+                  'data-type="appointment"', "flag":
+                  'up',
+                  "class":
+                  'button__white' })
+                </div>
+              </div>
+
+              <div class="service-popular__item">
+                <div class="service-popular__img">
+                  <img src="../../images/service/2.jpg" width="317" height="214"
+                    alt="service">
+                </div>
+
+                <div class="service-popular__text">
+                  <h3 class="popular-title service-popular__title">
+                    Комп’ютерна та клінічна діагностика і аналіз
+                    стану
+                  </h3>
+                  <p class="popular-subtitle service-popular__subtitle">Стоп,
+                    ходи та постави, експертного рівня</p>
+                </div>
+                <div class="service-popular__btns">
+                  <a href="#" class="button-line">Дізнатися
+                    більше</a>
+
+                  @@include('./html/components/button.html', { "title":
+                  "Записатися на прийом", "data-type":
+                  'data-type="appointment"', "flag":
+                  'up',
+                  "class":
+                  'button__white' })
+                </div>
+              </div>
+
+              <div class="service-popular__item">
+                <div class="service-popular__img">
+                  <img src="../../images/service/2.jpg" width="317" height="214"
+                    alt="service">
+                </div>
+
+                <div class="service-popular__text">
+                  <h3 class="popular-title service-popular__title">
+                    Комп’ютерна та клінічна діагностика і аналіз
+                    стану
+                  </h3>
+                  <p class="popular-subtitle service-popular__subtitle">Стоп,
+                    ходи та постави, експертного рівня</p>
+                </div>
+                <div class="service-popular__btns">
+                  <a href="#" class="button-line">Дізнатися
+                    більше</a>
+
+                  @@include('./html/components/button.html', { "title":
+                  "Записатися на прийом", "data-type":
+                  'data-type="appointment"', "flag":
+                  'up',
+                  "class":
+                  'button__white' })
+                </div>
+              </div>
+
+              @@include('./html/components/button.html', { "title":
+              "Завантажити більше послуг", "data-type":
+              '', "flag":
+              false,
+              "class":
+              'button__white' })
+            </div>
+          </div>
+        </div>
+        <div class="line"></div>
+        <div class="akcii-product">
+          <div class="akcii-product__container">
+            <div class="akcii-product__title">
+              <h2>Акційні товари</h2>
+            </div>
+
+            <div class="akcii-product__wrap">
+              <div class="block-slider">
+                <div class="block-slider__header">
+                  <div class="block-slider__inner">
+                    <p class="block-slider__percent">-25%</p>
+                  </div>
+                  <img
+                    class="block-slider__img"
+                    src="../../images/Item.png"
+                    width="576"
+                    height="459"
+                    loading="lazy"
+                    alt="product" />
+                </div>
+                <div class="block-slider__footer">
+                  <h2 class="block-slider__title">Ski comfort
+                    black/orange</h2>
+                  <p class="block-slider__subtitle">
+                    Чорно-Помаранчеві Ортопедичні Устілки для
+                    Комфортного
+                    Гірськолижного Відпочинку
+                  </p>
+                  <div class="block-slider__wrap">
+                    <div class="block-slider__prices">
+                      <span class="block-slider__new-price">360
+                        <span>₴</span></span>
+                      <span class="block-slider__old-price">420
+                        <span>₴</span></span>
+                    </div>
+                    <a href="#" class="button button__blue">
+                      <span>Замовити</span>
+                      <svg
+                        width="16"
+                        height="17"
+                        viewBox="0 0 16 17"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M10.0311 5.76184L4.20472 5.76184L4.20472 4.76184L12.4834 4.76184L12.4834 4.76185L12.4834 5.76184L12.4834 13.0405L11.4834 13.0405L11.4834 5.76184L11.4453 5.76184L3.70711 13.5L3 12.7929L10.0311 5.76184Z"
+                          fill="currentColor" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="block-slider">
+                <div class="block-slider__header">
+                  <div class="block-slider__inner">
+                    <p class="block-slider__percent">-25%</p>
+                  </div>
+                  <img
+                    class="block-slider__img"
+                    src="../../images/Item.png"
+                    width="576"
+                    height="459"
+                    loading="lazy"
+                    alt="product" />
+                </div>
+                <div class="block-slider__footer">
+                  <h2 class="block-slider__title">Ski comfort
+                    black/orange</h2>
+                  <p class="block-slider__subtitle">
+                    Чорно-Помаранчеві Ортопедичні Устілки для
+                    Комфортного
+                    Гірськолижного Відпочинку
+                  </p>
+                  <div class="block-slider__wrap">
+                    <div class="block-slider__prices">
+                      <span class="block-slider__new-price">360
+                        <span>₴</span></span>
+                      <span class="block-slider__old-price">420
+                        <span>₴</span></span>
+                    </div>
+                    <a href="#" class="button button__blue">
+                      <span>Замовити</span>
+                      <svg
+                        width="16"
+                        height="17"
+                        viewBox="0 0 16 17"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M10.0311 5.76184L4.20472 5.76184L4.20472 4.76184L12.4834 4.76184L12.4834 4.76185L12.4834 5.76184L12.4834 13.0405L11.4834 13.0405L11.4834 5.76184L11.4453 5.76184L3.70711 13.5L3 12.7929L10.0311 5.76184Z"
+                          fill="currentColor" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="block-slider">
+                <div class="block-slider__header">
+                  <div class="block-slider__inner">
+                    <p class="block-slider__percent">-25%</p>
+                  </div>
+                  <img
+                    class="block-slider__img"
+                    src="../../images/Item.png"
+                    width="576"
+                    height="459"
+                    loading="lazy"
+                    alt="product" />
+                </div>
+                <div class="block-slider__footer">
+                  <h2 class="block-slider__title">Ski comfort
+                    black/orange</h2>
+                  <p class="block-slider__subtitle">
+                    Чорно-Помаранчеві Ортопедичні Устілки для
+                    Комфортного
+                    Гірськолижного Відпочинку
+                  </p>
+                  <div class="block-slider__wrap">
+                    <div class="block-slider__prices">
+                      <span class="block-slider__new-price">360
+                        <span>₴</span></span>
+                      <span class="block-slider__old-price">420
+                        <span>₴</span></span>
+                    </div>
+                    <a href="#" class="button button__blue">
+                      <span>Замовити</span>
+                      <svg
+                        width="16"
+                        height="17"
+                        viewBox="0 0 16 17"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M10.0311 5.76184L4.20472 5.76184L4.20472 4.76184L12.4834 4.76184L12.4834 4.76185L12.4834 5.76184L12.4834 13.0405L11.4834 13.0405L11.4834 5.76184L11.4453 5.76184L3.70711 13.5L3 12.7929L10.0311 5.76184Z"
+                          fill="currentColor" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              @@include('./html/components/button.html', { "title":
+              "Завантажити більше товарів", "data-type":
+              '', "flag":
+              false,
+              "class":
+              'button__white' })
+            </div>
+          </div>
+        </div>
+        <div class="line"></div>
+        @@include('html/blocks/two-sliders.html')
+        <div class="line"></div>
+        @@include('html/blocks/advantages.html')
+        <div class="line"></div>
+        @@include('html/blocks/akcii.html')
+        <div class="line"></div>
+        @@include('html/blocks/frequently-asked-questions.html')
+        <div class="line"></div>
+        @@include('html/blocks/contacts.html')
+        <div class="line"></div>
+      </main>
+
+      @@include('html/footer.html')
+      @@include('html/components/fixed-block.html')
+    </div>
+
+    @@include('html/popups.html')
+  </body>
+</html>
