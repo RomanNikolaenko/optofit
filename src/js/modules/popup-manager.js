@@ -141,12 +141,15 @@ class PopupManager extends Popup {
   }
 
   deleteIframe(popup) {
-    popup.querySelector('iframe').remove();
+    const frame = popup.querySelector('iframe');
+    if(frame) {
+      popup.querySelector('iframe').remove();
 
-    const tag = document.createElement('div');
-    const parent = popup.querySelector('.popup__body');
-    tag.id = 'player-2';
-    parent.insertBefore(tag, parent.firstChild);
+      const tag = document.createElement('div');
+      const parent = popup.querySelector('.popup__body');
+      tag.id = 'player-2';
+      parent.insertBefore(tag, parent.firstChild);
+    }
   }
 }
 

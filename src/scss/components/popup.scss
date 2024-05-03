@@ -84,6 +84,11 @@
       @include property('padding-block', 50, 20);
     }
 
+    .review-popup & {
+      max-width: rem(1245);
+      width: 100%;
+    }
+
     .search-popup & {
       border-radius: 0;
       max-width: 100%;

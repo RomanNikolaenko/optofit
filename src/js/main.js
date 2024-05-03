@@ -39,8 +39,10 @@ new Accordion('.frequently-asked-questions__accordion', {
   collapsedClass: 'open',
 });
 
-const stats = document.querySelectorAll('.data-stats__title span');
-const dataStats = document.querySelector('.data-stats');
+const stats = document.querySelectorAll('.reviews .data-stats__title span');
+const dataStats = document.querySelector('.reviews .data-stats');
+const statsRev = document.querySelectorAll('.reviews-block .data-stats__title span');
+const dataStatsRev = document.querySelector('.reviews-block .data-stats');
 
 const count = (parent, stats) => {
   const options = {
@@ -64,6 +66,10 @@ const count = (parent, stats) => {
 
 if(dataStats) {
   count(dataStats, stats);
+}
+
+if(dataStatsRev) {
+  count(dataStatsRev, statsRev);
 }
 
 // --------

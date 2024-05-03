@@ -72,6 +72,19 @@
 
   @media (min-width: 1440px) {
     grid-template-columns: repeat(4, 1fr);
+
+    .stats-reviews__stats & {
+      box-shadow: 0px 4px 20px 0px #00719b0d;
+      background-color: #ffffff;
+      border-radius: rem(30);
+      height: 100%;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 1fr 1fr;
+
+      @media (min-width: 768px) {
+        border-radius: rem(40);
+      }
+    }
   }
 
   &__item {
@@ -90,6 +103,24 @@
 
     @media (min-width: 1440px) {
       padding: rem(30) rem(15);
+
+      .stats-reviews__stats & {
+        padding: rem(48);
+        border: none;
+
+        &:nth-of-type(1) {
+          border-bottom: 1px solid #06739a4d;
+          border-right: 1px solid #06739a4d;
+        }
+
+        &:nth-of-type(2) {
+          border-bottom: 1px solid #06739a4d;
+        }
+
+        &:nth-of-type(3) {
+          border-right: 1px solid #06739a4d;
+        }
+      }
     }
 
     @media (max-width: 1439.98px) {
