@@ -1,9 +1,25 @@
-@keyframes show-header {
+@keyframes marquee {
   0% {
-    top: -100%;
+    letter-spacing: 0px;
+    transform: translateX(100%);
   }
-
+  1% {
+    letter-spacing: 1px;
+  }
   100% {
-    top: 0;
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes marquee2 {
+  0% {
+    letter-spacing: 0px;
+    transform: translateX(0%);
+  }
+  1% {
+    letter-spacing: 1px;
+  }
+  100% {
+    transform: translateX(-200%);
   }
 }

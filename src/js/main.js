@@ -39,6 +39,13 @@ new Accordion('.frequently-asked-questions__accordion', {
   collapsedClass: 'open',
 });
 
+new Accordion('.product-info__accordion', {
+  shouldOpenAll: true, // true
+  defaultOpen: [], // [0,1]
+  defaultOpenAll: false,
+  collapsedClass: 'open',
+});
+
 const stats = document.querySelectorAll('.stats .data-stats__title span');
 const dataStats = document.querySelector('.stats .data-stats');
 const statsRev = document.querySelectorAll('.reviews-block .data-stats__title span');
@@ -94,6 +101,42 @@ if(fixedBlockMessangers) {
   });
 }
 
+const dropdowns = document.querySelectorAll('.dropdown');
+if(dropdowns.length) {
+  dropdowns.forEach((dropdown) => {
+    const select = dropdown.querySelector('.dropdown__select');
+    const options = dropdown.querySelectorAll('.dropdown__item-select');
+    const selected = dropdown.querySelector('.dropdown__select-selected');
+
+    select.addEventListener('click', ()=> {
+      dropdown.classList.toggle('select-open');
+    })
+
+    options.forEach((option)=> {
+      option.addEventListener('click', ()=> {
+        selected.innerText = option.innerText;
+        dropdown.classList.remove('select-open');
+  
+        options.forEach((option)=> {
+          option.classList.remove('dropdown__item-select_active');
+        })
+  
+        option.classList.add('dropdown__item-select_active');
+      })
+    })
+  })
+}
+
+const infoProductMore = document.querySelector('.info-product__more');
+if(infoProductMore) {
+  infoProductMore.addEventListener('click', ()=> {
+    console.log('sdfsdf');
+    const height = document.querySelector('.info-product__desc-wrap').offsetHeight;
+    document.querySelector('.info-product__desc-text').style.setProperty('--heightBlock', `${height}px`)
+    document.querySelector('.info-product__desc').classList.toggle('info-product__desc_more')
+  })
+}
+
 document.addEventListener('click', function (e) {
   if(tooltip) {
     if (!e.target.closest('.tooltip') && tooltip.classList.contains('tooltip_open')) {
@@ -117,6 +160,12 @@ document.addEventListener('click', function (e) {
     YTIframe(e.target);
     e.target.classList.add('hide');
   }
+
+  if(dropdowns.length && !e.target.classList.contains('dropdown__select') && !e.target.classList.contains('dropdown__list')) {
+    dropdowns.forEach((dropdown) => {
+      dropdown.classList.remove('select-open');
+    })
+  }
 });
 
 document.addEventListener('keydown', (e) => {
@@ -139,6 +188,12 @@ document.addEventListener('keydown', (e) => {
       if (!e.target.closest('.fixed-block__messangers') && fixedBlockMessangers.classList.contains('open')) {
         fixedBlockMessangers.classList.remove('open');
       }
+    }
+
+    if(dropdowns.length) {
+      dropdowns.forEach((dropdown) => {
+        dropdown.classList.remove('select-open');
+      })
     }
   }
 });

@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="uk">
+  @@include('html/head.html', { 'title': 'Каталог товарів' })
+  <body>
+    <div class="wrapper">
+      @@include('html/header.html')
+
+      <main class="page">
+        @@include('html/blocks/hero-internal.html', {
+        'class': ''
+        })
+        @@include('html/components/breadcrumb.html')
+        @@include('html/blocks/stats.html', {
+        "scroll": false
+        })
+        <div class="line"></div>
+        <div class="products products-all">
+          <div class="products__container">
+            <div class="products__header">
+              <div class="products__header-shadow">
+                <div class="products__header-bg">
+                  <svg
+                    viewBox="0 0 625 72" preserveAspectRatio="none">
+                    <path xmlns="http://www.w3.org/2000/svg"
+                      d="M0 0H516.63C533.627 0 550.043 6.18443 562.816 17.3992L625 72H0V0Z"
+                      fill="white" />
+                    <defs>
+                      <clippath id="mask">
+                        <path xmlns="http://www.w3.org/2000/svg"
+                          d="M0 0H516.63C533.627 0 550.043 6.18443 562.816 17.3992L625 72H0V0Z"
+                          fill="white" />
+                      </clippath>
+                    </defs>
+                  </svg>
+                </div>
+              </div>
+              <div class="services__marquee" style="--count: 8;">
+                <div class="services__marquee-line">
+                  <span>Усі товари</span>
+                  <span>Каталог</span>
+                  <span>Усі товари для стоп</span>
+                  <span>Дитячi устiлки</span>
+                  <span>Усі товари</span>
+                  <span>Каталог</span>
+                  <span>Усі товари для стоп</span>
+                  <span>Дитячi устiлки</span>
+                </div>
+                <div class="services__marquee-line">
+                  <span>Усі товари</span>
+                  <span>Каталог</span>
+                  <span>Усі товари для стоп</span>
+                  <span>Дитячi устiлки</span>
+                  <span>Усі товари</span>
+                  <span>Каталог</span>
+                  <span>Усі товари для стоп</span>
+                  <span>Дитячi устiлки</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="products__content content-products">
+              <div class="products__title">
+                <h2>Усі товари</h2>
+              </div>
+              <div class="products__subtitle">
+                <p>За допомогою наших ортопедичних стілець, які
+                  об'єднують в собі передові технології та ергономічний дизайн для максимального забезпечення здоров'я
+                  та комфорту вашим стопам</p>
+              </div>
+
+              <div class="content-products__main">
+                <a class="content-products__link img-bg"
+                  href="products-category.html">
+                  <img src="./images/main-decisions-1.jpg" width="587"
+                    height="600" alt>
+                  <span>Індивідуальне рішення</span>
+                </a>
+                <a class="content-products__link img-bg"
+                  href="products-category.html">
+                  <img src="./images/main-decisions-1.jpg" width="587"
+                    height="600" alt>
+                  <span>Готове рішення з персоналізацією</span>
+                </a>
+                <a class="content-products__link img-bg"
+                  href="products-category.html">
+                  <img src="./images/main-decisions-1.jpg" width="587"
+                    height="600" alt>
+                  <span>Готове рішення</span>
+                </a>
+              </div>
+
+              <div class="content-products__wrap">
+                <a class="content-products__link img-bg"
+                  href="products-category.html">
+                  <img src="./images/main-decisions-1.jpg" width="587"
+                    height="600" alt>
+                  <span>Модельні</span>
+                </a>
+                <a class="content-products__link img-bg"
+                  href="products-category.html">
+                  <img src="./images/main-decisions-1.jpg" width="587"
+                    height="600" alt>
+                  <span>Спортивні</span>
+                </a>
+                <a class="content-products__link img-bg"
+                  href="products-category.html">
+                  <img src="./images/main-decisions-1.jpg" width="587"
+                    height="600" alt>
+                  <span>Готове рішення</span>
+                </a>
+                <a class="content-products__link img-bg"
+                  href="products-category.html">
+                  <img src="./images/main-decisions-1.jpg" width="587"
+                    height="600" alt>
+                  <span>Готове рішення</span>
+                </a>
+                <a class="content-products__link img-bg"
+                  href="products-category.html">
+                  <img src="./images/main-decisions-1.jpg" width="587"
+                    height="600" alt>
+                  <span>Готове рішення</span>
+                </a>
+                <a class="content-products__link img-bg"
+                  href="products-category.html">
+                  <img src="./images/main-decisions-1.jpg" width="587"
+                    height="600" alt>
+                  <span>Готове рішення</span>
+                </a>
+              </div>
+
+              <div class="content-products__products">
+                <div class="content-products__btns">
+                  <div class="content-products__dropdown dropdown">
+                    <button class="dropdown__select">
+                      <span class="dropdown__select-img"></span>
+                      <span class="dropdown__select-selected">Популярні</span>
+                      <span class="dropdown__select-caret"></span>
+                    </button>
+
+                    <ul class="dropdown__list">
+                      <li class="dropdown__item">
+                        <button
+                          class="dropdown__item-select dropdown__item-select_active">Популярні</button>
+                      </li>
+                      <li class="dropdown__item">
+                        <button class="dropdown__item-select">Популярні
+                          2</button>
+                      </li>
+                      <li class="dropdown__item">
+                        <button class="dropdown__item-select">Популярні
+                          3</button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="content-products__inner">
+                  <div class="block-slider">
+                    <div class="block-slider__header">
+                      <div class="block-slider__inner">
+                        <p class="block-slider__sale">Розпродаж</p>
+                        <p class="block-slider__hit">ХIT продаж</p>
+                        <p class="block-slider__percent">-30%</p>
+                      </div>
+                      <img class="block-slider__img" src="../../images/Item.png"
+                        width="576" height="459" loading="lazy" alt="product">
+                    </div>
+                    <div class="block-slider__footer">
+                      <h2 class="block-slider__title">Французьки устiлки
+                        Podiatech</h2>
+                      <p class="block-slider__subtitle">
+                        Cиньо-помаранчеві ортопедичні устілки для
+                        комфортного та
+                        повседенної ходьби
+                      </p>
+                      <div class="block-slider__wrap">
+                        <div class="block-slider__prices">
+                          <span class="block-slider__new-price">890
+                            <span>₴</span></span>
+                          <span class="block-slider__old-price">1350
+                            <span>₴</span></span>
+                        </div>
+                        <a href="products-category.html"
+                          class="button button__blue">
+                          <span>Замовити</span>
+                          <svg width="16" height="17" viewBox="0 0 16 17"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M10.0311 5.76184L4.20472 5.76184L4.20472 4.76184L12.4834 4.76184L12.4834 4.76185L12.4834 5.76184L12.4834 13.0405L11.4834 13.0405L11.4834 5.76184L11.4453 5.76184L3.70711 13.5L3 12.7929L10.0311 5.76184Z"
+                              fill="currentColor"></path>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="block-slider">
+                    <div class="block-slider__header">
+                      <div class="block-slider__inner">
+                        <p class="block-slider__sale">Розпродаж</p>
+                        <p class="block-slider__hit">ХIT продаж</p>
+                        <p class="block-slider__percent">-30%</p>
+                      </div>
+                      <img class="block-slider__img" src="../../images/Item.png"
+                        width="576" height="459" loading="lazy" alt="product">
+                    </div>
+                    <div class="block-slider__footer">
+                      <h2 class="block-slider__title">Французьки устiлки
+                        Podiatech</h2>
+                      <p class="block-slider__subtitle">
+                        Cиньо-помаранчеві ортопедичні устілки для
+                        комфортного та
+                        повседенної ходьби
+                      </p>
+                      <div class="block-slider__wrap">
+                        <div class="block-slider__prices">
+                          <span class="block-slider__new-price">890
+                            <span>₴</span></span>
+                          <span class="block-slider__old-price">1350
+                            <span>₴</span></span>
+                        </div>
+                        <a href="products-category.html"
+                          class="button button__blue">
+                          <span>Замовити</span>
+                          <svg width="16" height="17" viewBox="0 0 16 17"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M10.0311 5.76184L4.20472 5.76184L4.20472 4.76184L12.4834 4.76184L12.4834 4.76185L12.4834 5.76184L12.4834 13.0405L11.4834 13.0405L11.4834 5.76184L11.4453 5.76184L3.70711 13.5L3 12.7929L10.0311 5.76184Z"
+                              fill="currentColor"></path>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="block-slider top">
+                    <div class="block-slider__header">
+                      <div class="block-slider__inner">
+                        <p class="block-slider__sale">Розпродаж</p>
+                        <p class="block-slider__hit">ХIT продаж</p>
+                        <p class="block-slider__percent">-30%</p>
+                      </div>
+                      <img class="block-slider__img" src="../../images/Item.png"
+                        width="576" height="459" loading="lazy" alt="product">
+                    </div>
+                    <div class="block-slider__footer">
+                      <h2 class="block-slider__title">Французьки устiлки
+                        Podiatech</h2>
+                      <p class="block-slider__subtitle">
+                        Cиньо-помаранчеві ортопедичні устілки для
+                        комфортного та
+                        повседенної ходьби
+                      </p>
+                      <div class="block-slider__wrap">
+                        <div class="block-slider__prices">
+                          <span class="block-slider__new-price">890
+                            <span>₴</span></span>
+                          <span class="block-slider__old-price">1350
+                            <span>₴</span></span>
+                        </div>
+                        <a href="products-category.html"
+                          class="button button__blue">
+                          <span>Замовити</span>
+                          <svg width="16" height="17" viewBox="0 0 16 17"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M10.0311 5.76184L4.20472 5.76184L4.20472 4.76184L12.4834 4.76184L12.4834 4.76185L12.4834 5.76184L12.4834 13.0405L11.4834 13.0405L11.4834 5.76184L11.4453 5.76184L3.70711 13.5L3 12.7929L10.0311 5.76184Z"
+                              fill="currentColor"></path>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="block-slider">
+                    <div class="block-slider__header">
+                      <div class="block-slider__inner">
+                        <p class="block-slider__sale">Розпродаж</p>
+                        <p class="block-slider__hit">ХIT продаж</p>
+                        <p class="block-slider__percent">-30%</p>
+                      </div>
+                      <img class="block-slider__img" src="../../images/Item.png"
+                        width="576" height="459" loading="lazy" alt="product">
+                    </div>
+                    <div class="block-slider__footer">
+                      <h2 class="block-slider__title">Французьки устiлки
+                        Podiatech</h2>
+                      <p class="block-slider__subtitle">
+                        Cиньо-помаранчеві ортопедичні устілки для
+                        комфортного та
+                        повседенної ходьби
+                      </p>
+                      <div class="block-slider__wrap">
+                        <div class="block-slider__prices">
+                          <span class="block-slider__new-price">890
+                            <span>₴</span></span>
+                          <span class="block-slider__old-price">1350
+                            <span>₴</span></span>
+                        </div>
+                        <a href="products-category.html"
+                          class="button button__blue">
+                          <span>Замовити</span>
+                          <svg width="16" height="17" viewBox="0 0 16 17"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M10.0311 5.76184L4.20472 5.76184L4.20472 4.76184L12.4834 4.76184L12.4834 4.76185L12.4834 5.76184L12.4834 13.0405L11.4834 13.0405L11.4834 5.76184L11.4453 5.76184L3.70711 13.5L3 12.7929L10.0311 5.76184Z"
+                              fill="currentColor"></path>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="block-slider top">
+                    <div class="block-slider__header">
+                      <div class="block-slider__inner">
+                        <p class="block-slider__sale">Розпродаж</p>
+                        <p class="block-slider__hit">ХIT продаж</p>
+                        <p class="block-slider__percent">-30%</p>
+                      </div>
+                      <img class="block-slider__img" src="../../images/Item.png"
+                        width="576" height="459" loading="lazy" alt="product">
+                    </div>
+                    <div class="block-slider__footer">
+                      <h2 class="block-slider__title">Французьки устiлки
+                        Podiatech</h2>
+                      <p class="block-slider__subtitle">
+                        Cиньо-помаранчеві ортопедичні устілки для
+                        комфортного та
+                        повседенної ходьби
+                      </p>
+                      <div class="block-slider__wrap">
+                        <div class="block-slider__prices">
+                          <span class="block-slider__new-price">890
+                            <span>₴</span></span>
+                          <span class="block-slider__old-price">1350
+                            <span>₴</span></span>
+                        </div>
+                        <a href="products-category.html"
+                          class="button button__blue">
+                          <span>Замовити</span>
+                          <svg width="16" height="17" viewBox="0 0 16 17"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M10.0311 5.76184L4.20472 5.76184L4.20472 4.76184L12.4834 4.76184L12.4834 4.76185L12.4834 5.76184L12.4834 13.0405L11.4834 13.0405L11.4834 5.76184L11.4453 5.76184L3.70711 13.5L3 12.7929L10.0311 5.76184Z"
+                              fill="currentColor"></path>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="block-slider">
+                    <div class="block-slider__header">
+                      <div class="block-slider__inner">
+                        <p class="block-slider__sale">Розпродаж</p>
+                        <p class="block-slider__hit">ХIT продаж</p>
+                        <p class="block-slider__percent">-30%</p>
+                      </div>
+                      <img class="block-slider__img" src="../../images/Item.png"
+                        width="576" height="459" loading="lazy" alt="product">
+                    </div>
+                    <div class="block-slider__footer">
+                      <h2 class="block-slider__title">Французьки устiлки
+                        Podiatech</h2>
+                      <p class="block-slider__subtitle">
+                        Cиньо-помаранчеві ортопедичні устілки для
+                        комфортного та
+                        повседенної ходьби
+                      </p>
+                      <div class="block-slider__wrap">
+                        <div class="block-slider__prices">
+                          <span class="block-slider__new-price">890
+                            <span>₴</span></span>
+                          <span class="block-slider__old-price">1350
+                            <span>₴</span></span>
+                        </div>
+                        <a href="products-category.html"
+                          class="button button__blue">
+                          <span>Замовити</span>
+                          <svg width="16" height="17" viewBox="0 0 16 17"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M10.0311 5.76184L4.20472 5.76184L4.20472 4.76184L12.4834 4.76184L12.4834 4.76185L12.4834 5.76184L12.4834 13.0405L11.4834 13.0405L11.4834 5.76184L11.4453 5.76184L3.70711 13.5L3 12.7929L10.0311 5.76184Z"
+                              fill="currentColor"></path>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="block-slider">
+                    <div class="block-slider__header">
+                      <div class="block-slider__inner">
+                        <p class="block-slider__sale">Розпродаж</p>
+                        <p class="block-slider__hit">ХIT продаж</p>
+                        <p class="block-slider__percent">-30%</p>
+                      </div>
+                      <img class="block-slider__img" src="../../images/Item.png"
+                        width="576" height="459" loading="lazy" alt="product">
+                    </div>
+                    <div class="block-slider__footer">
+                      <h2 class="block-slider__title">Французьки устiлки
+                        Podiatech</h2>
+                      <p class="block-slider__subtitle">
+                        Cиньо-помаранчеві ортопедичні устілки для
+                        комфортного та
+                        повседенної ходьби
+                      </p>
+                      <div class="block-slider__wrap">
+                        <div class="block-slider__prices">
+                          <span class="block-slider__new-price">890
+                            <span>₴</span></span>
+                          <span class="block-slider__old-price">1350
+                            <span>₴</span></span>
+                        </div>
+                        <a href="products-category.html"
+                          class="button button__blue">
+                          <span>Замовити</span>
+                          <svg width="16" height="17" viewBox="0 0 16 17"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M10.0311 5.76184L4.20472 5.76184L4.20472 4.76184L12.4834 4.76184L12.4834 4.76185L12.4834 5.76184L12.4834 13.0405L11.4834 13.0405L11.4834 5.76184L11.4453 5.76184L3.70711 13.5L3 12.7929L10.0311 5.76184Z"
+                              fill="currentColor"></path>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="block-slider">
+                    <div class="block-slider__header">
+                      <div class="block-slider__inner">
+                        <p class="block-slider__sale">Розпродаж</p>
+                        <p class="block-slider__hit">ХIT продаж</p>
+                        <p class="block-slider__percent">-30%</p>
+                      </div>
+                      <img class="block-slider__img" src="../../images/Item.png"
+                        width="576" height="459" loading="lazy" alt="product">
+                    </div>
+                    <div class="block-slider__footer">
+                      <h2 class="block-slider__title">Французьки устiлки
+                        Podiatech</h2>
+                      <p class="block-slider__subtitle">
+                        Cиньо-помаранчеві ортопедичні устілки для
+                        комфортного та
+                        повседенної ходьби
+                      </p>
+                      <div class="block-slider__wrap">
+                        <div class="block-slider__prices">
+                          <span class="block-slider__new-price">890
+                            <span>₴</span></span>
+                          <span class="block-slider__old-price">1350
+                            <span>₴</span></span>
+                        </div>
+                        <a href="products-category.html"
+                          class="button button__blue">
+                          <span>Замовити</span>
+                          <svg width="16" height="17" viewBox="0 0 16 17"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M10.0311 5.76184L4.20472 5.76184L4.20472 4.76184L12.4834 4.76184L12.4834 4.76185L12.4834 5.76184L12.4834 13.0405L11.4834 13.0405L11.4834 5.76184L11.4453 5.76184L3.70711 13.5L3 12.7929L10.0311 5.76184Z"
+                              fill="currentColor"></path>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="block-slider">
+                    <div class="block-slider__header">
+                      <div class="block-slider__inner">
+                        <p class="block-slider__sale">Розпродаж</p>
+                        <p class="block-slider__hit">ХIT продаж</p>
+                        <p class="block-slider__percent">-30%</p>
+                      </div>
+                      <img class="block-slider__img" src="../../images/Item.png"
+                        width="576" height="459" loading="lazy" alt="product">
+                    </div>
+                    <div class="block-slider__footer">
+                      <h2 class="block-slider__title">Французьки устiлки
+                        Podiatech</h2>
+                      <p class="block-slider__subtitle">
+                        Cиньо-помаранчеві ортопедичні устілки для
+                        комфортного та
+                        повседенної ходьби
+                      </p>
+                      <div class="block-slider__wrap">
+                        <div class="block-slider__prices">
+                          <span class="block-slider__new-price">890
+                            <span>₴</span></span>
+                          <span class="block-slider__old-price">1350
+                            <span>₴</span></span>
+                        </div>
+                        <a href="products-category.html"
+                          class="button button__blue">
+                          <span>Замовити</span>
+                          <svg width="16" height="17" viewBox="0 0 16 17"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M10.0311 5.76184L4.20472 5.76184L4.20472 4.76184L12.4834 4.76184L12.4834 4.76185L12.4834 5.76184L12.4834 13.0405L11.4834 13.0405L11.4834 5.76184L11.4453 5.76184L3.70711 13.5L3 12.7929L10.0311 5.76184Z"
+                              fill="currentColor"></path>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="block-slider">
+                    <div class="block-slider__header">
+                      <div class="block-slider__inner">
+                        <p class="block-slider__sale">Розпродаж</p>
+                        <p class="block-slider__hit">ХIT продаж</p>
+                        <p class="block-slider__percent">-30%</p>
+                      </div>
+                      <img class="block-slider__img" src="../../images/Item.png"
+                        width="576" height="459" loading="lazy" alt="product">
+                    </div>
+                    <div class="block-slider__footer">
+                      <h2 class="block-slider__title">Французьки устiлки
+                        Podiatech</h2>
+                      <p class="block-slider__subtitle">
+                        Cиньо-помаранчеві ортопедичні устілки для
+                        комфортного та
+                        повседенної ходьби
+                      </p>
+                      <div class="block-slider__wrap">
+                        <div class="block-slider__prices">
+                          <span class="block-slider__new-price">890
+                            <span>₴</span></span>
+                          <span class="block-slider__old-price">1350
+                            <span>₴</span></span>
+                        </div>
+                        <a href="products-category.html"
+                          class="button button__blue">
+                          <span>Замовити</span>
+                          <svg width="16" height="17" viewBox="0 0 16 17"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M10.0311 5.76184L4.20472 5.76184L4.20472 4.76184L12.4834 4.76184L12.4834 4.76185L12.4834 5.76184L12.4834 13.0405L11.4834 13.0405L11.4834 5.76184L11.4453 5.76184L3.70711 13.5L3 12.7929L10.0311 5.76184Z"
+                              fill="currentColor"></path>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="block-slider">
+                    <div class="block-slider__header">
+                      <div class="block-slider__inner">
+                        <p class="block-slider__sale">Розпродаж</p>
+                        <p class="block-slider__hit">ХIT продаж</p>
+                        <p class="block-slider__percent">-30%</p>
+                      </div>
+                      <img class="block-slider__img" src="../../images/Item.png"
+                        width="576" height="459" loading="lazy" alt="product">
+                    </div>
+                    <div class="block-slider__footer">
+                      <h2 class="block-slider__title">Французьки устiлки
+                        Podiatech</h2>
+                      <p class="block-slider__subtitle">
+                        Cиньо-помаранчеві ортопедичні устілки для
+                        комфортного та
+                        повседенної ходьби
+                      </p>
+                      <div class="block-slider__wrap">
+                        <div class="block-slider__prices">
+                          <span class="block-slider__new-price">890
+                            <span>₴</span></span>
+                          <span class="block-slider__old-price">1350
+                            <span>₴</span></span>
+                        </div>
+                        <a href="products-category.html"
+                          class="button button__blue">
+                          <span>Замовити</span>
+                          <svg width="16" height="17" viewBox="0 0 16 17"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M10.0311 5.76184L4.20472 5.76184L4.20472 4.76184L12.4834 4.76184L12.4834 4.76185L12.4834 5.76184L12.4834 13.0405L11.4834 13.0405L11.4834 5.76184L11.4453 5.76184L3.70711 13.5L3 12.7929L10.0311 5.76184Z"
+                              fill="currentColor"></path>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  @@include('./html/components/button.html', { "title":
+                  "Завантажити більше товарів", "flag": false, "data-type":
+                  '',
+                  "class":
+                  'button__white' })
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="line"></div>
+        @@include('html/blocks/two-sliders.html')
+        <div class="line"></div>
+        @@include('html/blocks/advantages.html')
+        <div class="line"></div>
+        @@include('html/blocks/akcii.html')
+        <div class="line"></div>
+        @@include('html/blocks/reviews.html')
+        <div class="line"></div>
+        @@include('html/blocks/frequently-asked-questions.html')
+        <div class="line"></div>
+        @@include('html/blocks/contacts.html')
+        <div class="line"></div>
+      </main>
+
+      @@include('html/footer.html')
+      @@include('html/components/fixed-block.html')
+    </div>
+
+    @@include('html/popups.html')
+  </body>
+</html>

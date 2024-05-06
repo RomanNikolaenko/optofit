@@ -58,7 +58,13 @@
 @import 'components/blocks/magazine';
 @import 'components/blocks/magazine-block';
 @import 'components/blocks/magazine-article';
+@import 'components/blocks/products';
+@import 'components/blocks/recommend';
+@import 'components/blocks/slider-thumb';
 
 @import 'components/footer';
 @import 'components/not-found';
 @import 'components/breadcrumb';
+
+/** Базовые анимации: */
+@import 'config/keyframes';

@@ -1,7 +1,7 @@
 import Swiper from 'swiper';
-import { Autoplay, Navigation } from 'swiper/modules';
+import { Autoplay, Navigation, Thumbs } from 'swiper/modules';
 
-Swiper.use([Navigation, Autoplay]);
+Swiper.use([Navigation, Autoplay, Thumbs]);
 
 new Swiper('.catalog__swiper', {
   loop: true,
@@ -144,5 +144,33 @@ new Swiper('.reviews__swiper', {
     1200: {
       slidesPerView: 3,
     },
+  },
+});
+
+const swiper = new Swiper(".swiperThumb", {
+  loop:true,
+  freeMode: true,
+  watchSlidesProgress: true,
+  spaceBetween: 30,
+  slidesPerView: 2,
+  speed: 2000,
+  breakpoints: {
+    420: {
+      slidesPerView: 3,
+    },
+  },
+});
+
+const swiper2 = new Swiper(".swiperThumb2", {
+  loop:true,
+  slidesPerView: 1,
+  speed: 2000,
+  spaceBetween: 30,
+  navigation: {
+    nextEl: ".swiperThumb-button-next",
+    prevEl: ".swiperThumb-button-prev",
+  },
+  thumbs: {
+    swiper: swiper,
   },
 });

@@ -1,0 +1,41 @@
+.recommend {
+  &__container {
+    display: grid;
+    gap: rem(20);
+
+    @media (min-width: 768px) {
+      gap: rem(30);
+    }
+  }
+
+  &__title {
+    font-size: rem(22);
+    line-height: 1;
+
+    @media (min-width: 768px) {
+      font-size: rem(34);
+    }
+
+    @media (min-width: 1200px) {
+      font-size: rem(46);
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: rem(20);
+
+    .block-slider {
+      flex: 1 1 auto;
+
+      @media (min-width: 768px) {
+        width: calc(50% - rem(20) / 2);
+      }
+
+      @media (min-width: 1200px) {
+        width: calc(33.333% - rem(40) / 3);
+      }
+    }
+  }
+}
