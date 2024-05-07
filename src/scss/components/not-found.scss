@@ -41,6 +41,8 @@
   }
 
   &__text {
+    display: grid;
+    gap: rem(16);
     font-size: rem(20);
     color: #6aabc2;
 

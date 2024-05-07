@@ -8,8 +8,10 @@
   &__column {
     aspect-ratio: 1/1.12;
     width: calc(50% - rem(20) / 2);
+    border: 1px solid transparent;
+    transition: all var(--bs-transition);
 
-    &:not(:first-of-type) {
+    &:not(:first-child) {
       box-shadow: 0px 0px 15px 0px #00719b12;
       background-color: #ffffff;
       border-radius: rem(30);
@@ -19,13 +21,26 @@
       @media (min-width: 768px) {
         border-radius: rem(40);
       }
+
+      @include any-hover {
+        border-color: #06739a;
+      }
+
+      &:focus-visible,
+      &:active {
+        border-color: #06739a;
+      }
     }
 
-    &:first-of-type {
+    &:first-child {
       @media (max-width: 767.98px) {
         width: 100%;
         aspect-ratio: initial;
       }
+    }
+
+    * {
+      pointer-events: none;
     }
 
     @media (min-width: 576px) {
@@ -43,6 +58,11 @@
     height: 100%;
     object-fit: contain;
     object-position: center;
+    border-radius: rem(30);
+
+    @media (min-width: 768px) {
+      border-radius: rem(40);
+    }
   }
 
   &__title {

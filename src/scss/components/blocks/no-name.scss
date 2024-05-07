@@ -1,10 +1,12 @@
 .no-name {
   &__text {
-    font-size: rem(22);
-    letter-spacing: -0.3px;
+    &:not(.block1-services__two &) {
+      font-size: rem(22);
+      letter-spacing: -0.3px;
 
-    @media (min-width: 1200px) {
-      font-size: rem(30);
+      @media (min-width: 1200px) {
+        font-size: rem(30);
+      }
     }
   }
 
@@ -30,7 +32,12 @@
     grid-template-rows: subgrid;
     font-size: rem(20);
     padding: rem(20) rem(32);
+    padding-right: 0;
     border-bottom: 1px solid rgba(0, 113, 155, 0.45);
+
+    .block1-services__two & {
+      font-weight: 300;
+    }
 
     &:nth-last-of-type(1) {
       border-bottom: none;
@@ -38,6 +45,7 @@
 
     @media (min-width: 768px) {
       padding: rem(20) rem(40);
+      padding-right: 0;
 
       &:nth-last-of-type(-n + 2) {
         border-bottom: none;

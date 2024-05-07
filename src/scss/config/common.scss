@@ -86,6 +86,25 @@
     }
   }
 
+  &__white-br {
+    border: 1px solid #06739a;
+    background-color: #ffffff;
+    color: #06739a;
+
+    @include any-hover {
+      background-color: #06739a;
+      color: #ffffff;
+      border-color: #ffffff;
+    }
+
+    &:focus-visible,
+    &:active {
+      background-color: #06739a;
+      color: #ffffff;
+      border-color: #ffffff;
+    }
+  }
+
   &__transparent {
     border: 1px solid #ffffff;
     background-color: transparent;

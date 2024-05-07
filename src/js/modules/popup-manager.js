@@ -51,9 +51,17 @@ class PopupManager extends Popup {
   togglePopup({ target }) {
     if (target.closest('[data-type]')) {
       const popup = this.getPopupBySelector(target.dataset.type);
-
       this.isOpenElements.forEach((modal) => this.closePopup(modal));
-      this.openPopup(popup);
+
+      if(target.dataset.type == 'lightbox') {
+        const lightboxImg = target.querySelector('.licenses-two__img').cloneNode(true);
+        popup.querySelector('.popup__body').innerHTML = '';
+        popup.querySelector('.popup__body').appendChild(lightboxImg)
+
+        this.openPopup(popup);
+      } else {
+        this.openPopup(popup);
+      }
       this.toggleBodyLock(true);
     }
 

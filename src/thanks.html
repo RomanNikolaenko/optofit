@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="uk">
+    @@include('html/head.html', { 'title': 'Thanks' })
+    <body>
+        <div class="wrapper">
+            @@include('html/header.html')
+
+            <main class="page">
+                <div class="thanks __container">
+                    <img class="thanks__img" width="614" height="414"
+                        src="./images/Thanks.png"
+                        alt>
+
+                    <img class="thanks__check" width="184" height="184"
+                        src="./images/thanks-check.png"
+                        alt>
+
+                    <div class="thanks__wrap">
+                        <div class="thanks__title">
+                            <h2>Дякуємо!</h2>
+                        </div>
+                        <div class="thanks__subtitle">
+                            <p>Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Sunt fuga delectus quo non rem
+                                perspiciatis.</p>
+                        </div>
+                    </div>
+
+                    <a href="/" class="button button__blue thanks__link">
+                        <span>На головну</span>
+                    </a>
+                </div>
+                <div class="line"></div>
+            </main>
+
+            @@include('html/footer.html')
+            @@include('html/components/fixed-block.html')
+        </div>
+
+        @@include('html/popups.html')
+    </body>
+</html>

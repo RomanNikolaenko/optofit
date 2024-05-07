@@ -130,6 +130,7 @@
 
   &__image {
     display: grid;
+    align-content: flex-start;
     gap: rem(16);
   }
 
