@@ -84,8 +84,8 @@ new Swiper('.swiper-second', {
 new Swiper('.company-in-persons__wrapper', {
   loop: true,
   navigation: {
-    nextEl: '.company-in-persons-button-next',
-    prevEl: '.company-in-persons-button-prev',
+    nextEl: '.company-in-persons-swiper-button-next',
+    prevEl: '.company-in-persons-swiper-button-prev',
     clickable: true,
   },
   slidesPerView: 1,
