@@ -766,7 +766,15 @@
 
     .size-info & {
       justify-content: flex-start;
-      column-gap: rem(48);
+      flex-wrap: nowrap;
+
+      .block-slider__prices {
+        flex: 0 0 auto;
+      }
+
+      @media (min-width: 1200px) {
+        column-gap: rem(48);
+      }
     }
   }
 }

@@ -176,14 +176,16 @@
       margin-top: auto;
     }
 
-    .button__white {
-      max-width: rem(300);
-      width: 100%;
+    .button__play {
+      font-weight: 400;
+      font-size: rem(18);
     }
 
     &-btn {
       margin-top: auto;
       border-color: #ffffff;
+      max-width: rem(300);
+      width: 100%;
     }
 
     .video__subtitle {
