@@ -116,8 +116,18 @@
     @include property('padding', 34, 16, 1200);
     padding-top: 0;
 
+    .partners-popup & {
+      @include property('padding-block', 34, 16, 1200);
+      @include property('padding-inline', 34, 0, 1200);
+      padding-top: 0;
+    }
+
     @media (min-width: 1200px) {
       padding: rem(34) rem(34) 0 0;
+
+      .partners-popup & {
+        padding: 0 rem(34) 0 0;
+      }
     }
 
     &-title {

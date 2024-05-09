@@ -54,7 +54,7 @@ class PopupManager extends Popup {
       this.isOpenElements.forEach((modal) => this.closePopup(modal));
 
       if(target.dataset.type == 'lightbox') {
-        const lightboxImg = target.querySelector('.licenses-two__img').cloneNode(true);
+        const lightboxImg = target.querySelector('img').cloneNode(true);
         popup.querySelector('.popup__body').innerHTML = '';
         popup.querySelector('.popup__body').appendChild(lightboxImg)
 

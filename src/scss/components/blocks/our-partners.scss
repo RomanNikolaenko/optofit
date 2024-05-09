@@ -93,12 +93,19 @@
   }
 
   &__desc {
+    display: grid;
+    gap: rem(20);
     font-size: rem(24);
     margin-top: rem(20);
     letter-spacing: -0.3px;
 
     @media (min-width: 1200px) {
       font-size: rem(30);
+    }
+
+    .button__blue {
+      max-width: rem(300);
+      width: 100%;
     }
   }
 }
