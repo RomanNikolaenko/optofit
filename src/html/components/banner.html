@@ -14,12 +14,8 @@
         <a href="akcii-one.html" class="button-line">Дізнатися більше</a>
 
         @@if(btn) {
-        @@include('../components/button.html', { "title":
-        "@@btn", "data-type":
-        'data-type="appointment"', "flag":
-        false,
-        "class":
-        'button__blue banner__btn' })
+        @@include('../components/button.html', { "title": "@@btn", "data-type":
+        '@@dataType', "flag": false, "class": 'button__blue banner__btn' })
         }
     </div>
 </div>
