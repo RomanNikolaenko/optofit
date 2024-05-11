@@ -46,9 +46,21 @@
     @media (min-width: 768px) {
       padding: rem(20) rem(40);
       padding-right: 0;
+    }
 
-      &:nth-last-of-type(-n + 2) {
-        border-bottom: none;
+    &:not(.block1-services__two &) {
+      @media (min-width: 768px) {
+        &:nth-last-of-type(-n + 2) {
+          border-bottom: none;
+        }
+      }
+    }
+
+    .block1-services__two & {
+      @media (min-width: 1601px) {
+        &:nth-last-of-type(-n + 2) {
+          border-bottom: none;
+        }
       }
     }
 

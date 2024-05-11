@@ -20,7 +20,7 @@
     @include property('max-height', 462, 320, 1920, 1200);
     overflow: hidden;
     aspect-ratio: 1.2/1;
-    background-color: #06739a;
+    background-color: #07759b;
 
     @media (min-width: 768px) {
       margin-top: rem(-42);

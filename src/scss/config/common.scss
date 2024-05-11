@@ -361,10 +361,21 @@
   &__wrap {
     display: grid;
     align-content: flex-start;
-    @include property('gap', 30, 20);
     background-image: url('../../images/svg/crug-2.svg');
     background-position: center;
     background-repeat: no-repeat;
+
+    &-wrap {
+      display: grid;
+      align-content: flex-start;
+      @include property('gap', 30, 20);
+
+      @media (min-width: 1440px) {
+        position: sticky;
+        top: calc(var(--height-header) + rem(20));
+        left: 0;
+      }
+    }
   }
 
   &__title {
@@ -372,12 +383,6 @@
     text-wrap: balance;
     font-size: rem(26);
     line-height: 1.1;
-
-    @media (min-width: 1440px) {
-      position: sticky;
-      top: calc(var(--height-header) + rem(20));
-      left: 0;
-    }
   }
 
   &__subtitle {
@@ -848,7 +853,7 @@
 
 .img-bg {
   position: relative;
-  background-color: #06739a;
+  background-color: #07759b;
 
   @include pseudo-cell(before) {
     top: 0;

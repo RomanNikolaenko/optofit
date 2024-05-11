@@ -27,10 +27,21 @@
   &__desc {
     display: grid;
     align-content: flex-start;
-    gap: rem(20);
 
-    @media (min-width: 1200px) {
-      gap: rem(32);
+    &-wrap {
+      display: grid;
+      align-content: flex-start;
+      gap: rem(20);
+
+      @media (min-width: 1200px) {
+        gap: rem(32);
+      }
+
+      @media (min-width: 1440px) {
+        position: sticky;
+        top: calc(var(--height-header) + rem(20));
+        left: 0;
+      }
     }
   }
 
