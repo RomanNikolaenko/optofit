@@ -1,0 +1,7 @@
+review-block 
+akcii-main__services
+akcii-service__wrap
+akcii-product__wrap
+magazine__wrap
+services-page__wrap
+content-products__inner

@@ -25,17 +25,13 @@
     </ul>
 
     @@if(scroll) {
-    <button class="button button__blue stats__btn goToVideo"
-      type="button">Бiльше
-      про
-      компанiю</button>
+    <button class="button button__blue stats__btn goToVideo" type="button">
+      Бiльше про компанiю
+    </button>
+    } @@if(!scroll) {
+    <a class="button button__blue stats__btn" href="about-company.html"
+      >Бiльше про компанiю</a
+    >
     }
-
-    @@if(!scroll) {
-    <a class="button button__blue stats__btn" href="about-company.html">Бiльше
-      про
-      компанiю</a>
-    }
-
   </div>
 </div>

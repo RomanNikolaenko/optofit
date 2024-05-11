@@ -1,46 +1,52 @@
 <div class="form-contacts">
-    <form class="form-contacts__form" action method="post">
-        <fieldset class="form-contacts__fieldset">
-            <label class="form-contacts__label">
-                <input type="text" name="name"
-                    class="form-contacts__input" placeholder="Ім'я">
-            </label>
-        </fieldset>
+  <form class="form-contacts__form" action method="post">
+    <fieldset class="form-contacts__fieldset">
+      <label class="form-contacts__label">
+        <input
+          type="text"
+          name="name"
+          class="form-contacts__input"
+          placeholder="Ім'я"
+        />
+      </label>
+    </fieldset>
 
-        <fieldset class="form-contacts__fieldset">
-            <label class="form-contacts__label">
-                <input type="number" name="phone"
-                    value
-                    class="form-contacts__input" placeholder="Телефон">
-            </label>
-        </fieldset>
+    <fieldset class="form-contacts__fieldset">
+      <label class="form-contacts__label">
+        <input
+          type="number"
+          name="phone"
+          value
+          class="form-contacts__input"
+          placeholder="Телефон"
+        />
+      </label>
+    </fieldset>
 
-        @@if(textarea == true) {
-        <fieldset class="form-contacts__fieldset">
-            <label class="form-contacts__label">
-                <textarea name="textarea"
-                    class="form-contacts__textarea"
-                    placeholder="Текст повідомлення (не обов’язково)"></textarea>
-            </label>
-        </fieldset>
-        }
+    @@if(textarea == true) {
+    <fieldset class="form-contacts__fieldset">
+      <label class="form-contacts__label">
+        <textarea
+          name="textarea"
+          class="form-contacts__textarea"
+          placeholder="Текст повідомлення (не обов’язково)"
+        ></textarea>
+      </label>
+    </fieldset>
+    }
 
-        <fieldset class="form-contacts__fieldset">
-            <label class="form-contacts__checkbox checkbox">
-                <input class="checkbox__input" type="checkbox"
-                    name="politics" />
-                <span class="checkbox__box"></span>
-                <span class="checkbox__name">
-                    Підтверджуючи, ви погоджуєтесь з <span
-                        class="checkbox__politics">
-                        політикою конфіденційності
-                    </span>
-                </span>
-            </label>
-        </fieldset>
+    <fieldset class="form-contacts__fieldset">
+      <label class="form-contacts__checkbox checkbox">
+        <input class="checkbox__input" type="checkbox" name="politics" />
+        <span class="checkbox__box"></span>
+        <span class="checkbox__name">
+          Підтверджуючи, ви погоджуєтесь з
+          <span class="checkbox__politics"> політикою конфіденційності </span>
+        </span>
+      </label>
+    </fieldset>
 
-        @@include('../components/button.html', { "title":
-        "@@title", "data-type": '', "flag": 'up', "class":
-        'button__blue' })
-    </form>
+    @@include('../components/button.html', { "title": "@@title", "data-type":
+    '', "flag": 'up', "class": 'button__blue' })
+  </form>
 </div>

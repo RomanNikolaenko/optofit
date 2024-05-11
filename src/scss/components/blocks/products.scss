@@ -292,8 +292,7 @@
 
   &__inner {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
     gap: rem(20);
 
     .block-slider {
@@ -326,6 +325,46 @@
 
       &__footer {
         flex: 1 1 auto;
+      }
+    }
+
+    &-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: rem(20);
+
+      .block-slider {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 auto;
+        width: calc(100%);
+
+        @media (min-width: 768px) {
+          width: calc(50% - rem(20) / 2);
+        }
+
+        @media (min-width: 1200px) {
+          width: calc(33.333% - rem(40) / 2);
+          max-width: calc(60% - rem(20) / 2);
+
+          &.top {
+            width: calc(60% - rem(40) / 2);
+          }
+        }
+
+        @media (min-width: 1440px) {
+          width: calc(25% - rem(60) / 3);
+          max-width: calc(50% - rem(20) / 2);
+
+          &.top {
+            width: calc(33.333% - rem(60) / 3);
+          }
+        }
+
+        &__footer {
+          flex: 1 1 auto;
+        }
       }
     }
 

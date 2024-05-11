@@ -1,31 +1,27 @@
 <div class="equipment __container">
-    <div class="equipment__video">
-        <button class="equipment__video-btn" data-type="video"
-            data-id="player-2"
-            data-video="GWEzPc1uTns"
-            style="background-image: url(https://img.youtube.com/vi/GWEzPc1uTns/hqdefault.jpg)"
-            type="button">
-            <span class="visually-hidden">Video</span>
-        </button>
-    </div>
+  <div class="equipment__video">
+    <button
+      class="equipment__video-btn"
+      data-type="video"
+      data-id="player-2"
+      data-video="GWEzPc1uTns"
+      style="
+        background-image: url(https://img.youtube.com/vi/GWEzPc1uTns/hqdefault.jpg);
+      "
+      type="button"
+    >
+      <span class="visually-hidden">Video</span>
+    </button>
+  </div>
 
-    <div class="equipment__wrap">
-        @@include('../components/banner.html', {
-        "title":
-        'Як відбувається процес виготовлення устілки',
-        "subtitle":
-        'Наша клініка обладнана передовими технологіями для надання сучасних і ефективних медичних послуг',
-        "dataType": 'data-type=""',
-        "btn": false,
-        "img": false,
-        })
-        @@include('../components/banner.html', {
-        "title":
-        'Унікальні персоналізовані стельки для вашого комфорту', "subtitle":
-        'Унікальні персоналізовані стельки для вашого комфорту',
-        "dataType": 'data-type="appointment"',
-        "btn": 'Проконсультуватися',
-        "img": false,
-        })
-    </div>
+  <div class="equipment__wrap">
+    @@include('../components/banner.html', { "title": 'Як відбувається процес
+    виготовлення устілки', "subtitle": 'Наша клініка обладнана передовими
+    технологіями для надання сучасних і ефективних медичних послуг', "dataType":
+    'data-type=""', "btn": false, "img": false, })
+    @@include('../components/banner.html', { "title": 'Унікальні персоналізовані
+    стельки для вашого комфорту', "subtitle": 'Унікальні персоналізовані стельки
+    для вашого комфорту', "dataType": 'data-type="appointment"', "btn":
+    'Проконсультуватися', "img": false, })
+  </div>
 </div>

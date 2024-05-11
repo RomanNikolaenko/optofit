@@ -53,10 +53,10 @@ class PopupManager extends Popup {
       const popup = this.getPopupBySelector(target.dataset.type);
       this.isOpenElements.forEach((modal) => this.closePopup(modal));
 
-      if(target.dataset.type == 'lightbox') {
+      if (target.dataset.type == 'lightbox') {
         const lightboxImg = target.querySelector('img').cloneNode(true);
         popup.querySelector('.popup__body').innerHTML = '';
-        popup.querySelector('.popup__body').appendChild(lightboxImg)
+        popup.querySelector('.popup__body').appendChild(lightboxImg);
 
         this.openPopup(popup);
       } else {
@@ -142,7 +142,7 @@ class PopupManager extends Popup {
       });
     }
 
-    if(searchPopular && searchResults) {
+    if (searchPopular && searchResults) {
       searchPopular.classList.add('popular-search_hidden');
       searchResults.classList.add('popular-search_hidden');
     }
@@ -150,7 +150,7 @@ class PopupManager extends Popup {
 
   deleteIframe(popup) {
     const frame = popup.querySelector('iframe');
-    if(frame) {
+    if (frame && popup.getAttribute('data-popup') == 'video') {
       popup.querySelector('iframe').remove();
 
       const tag = document.createElement('div');

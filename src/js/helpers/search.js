@@ -10,7 +10,7 @@ searchInput.addEventListener('focus', (e) => {
 });
 
 searchInput.addEventListener('blur', (e) => {
-  if(!e.target.value) {
+  if (!e.target.value) {
     clean.classList.add('form-search__clean_hidden');
     searchPopular.classList.add('popular-search_hidden');
     searchResults.classList.add('popular-search_hidden');

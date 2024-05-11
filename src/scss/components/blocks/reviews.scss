@@ -291,6 +291,11 @@
   &__container {
     display: grid;
     gap: rem(20);
+  }
+
+  &__wrap {
+    display: grid;
+    gap: rem(20);
 
     @media (min-width: 768px) {
       grid-template-columns: repeat(2, 1fr);
@@ -299,10 +304,6 @@
     @media (min-width: 1200px) {
       grid-template-columns: repeat(3, 1fr);
     }
-  }
-
-  .button__white {
-    grid-column: 1/-1;
   }
 }
 

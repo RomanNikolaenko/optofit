@@ -1,5 +1,8 @@
-<div class="popup appointment-popup" data-popup="appointment"
-  data-close-overlay>
+<div
+  class="popup appointment-popup"
+  data-popup="appointment"
+  data-close-overlay
+>
   <div class="popup__wrapper" data-close-overlay>
     <div class="popup__content">
       <button class="popup__close button-close" tabindex="-1" type="button">
@@ -8,32 +11,39 @@
           height="24"
           viewBox="0 0 24 24"
           fill="none"
-          xmlns="http://www.w3.org/2000/svg">
+          xmlns="http://www.w3.org/2000/svg"
+        >
           <path
             d="M6 6L18.7742 18.7742"
             stroke="currentColor"
             stroke-width="2"
             stroke-linecap="round"
-            stroke-linejoin="round" />
+            stroke-linejoin="round"
+          />
           <path
             d="M6 18.7742L18.7742 5.99998"
             stroke="currentColor"
             stroke-width="2"
             stroke-linecap="round"
-            stroke-linejoin="round" />
+            stroke-linejoin="round"
+          />
         </svg>
       </button>
       <div class="popup__body appointment-popup__body">
         <div class="appointment-popup__image">
-          <img class="appointment-popup__img" src="../images/service/1.jpg"
-            width="717" height="567"
-            alt>
+          <img
+            class="appointment-popup__img"
+            src="../images/service/1.jpg"
+            width="717"
+            height="567"
+            alt
+          />
         </div>
 
         <div class="appointment-popup">
-          <h2 class="appointment-popup__title">Залиште ваш номер телефону і ми
-            зв’яжемося з вами
-            найближчим часом</h2>
+          <h2 class="appointment-popup__title">
+            Залиште ваш номер телефону і ми зв’яжемося з вами найближчим часом
+          </h2>
           @@include('./components/form.html', {"textarea": true, "title":
           "Отримати консультацію"})
         </div>

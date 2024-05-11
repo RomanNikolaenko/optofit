@@ -147,8 +147,8 @@ new Swiper('.reviews__swiper', {
   },
 });
 
-const swiper = new Swiper(".swiperThumb", {
-  loop:true,
+const swiper = new Swiper('.swiperThumb', {
+  loop: true,
   freeMode: true,
   watchSlidesProgress: true,
   spaceBetween: 30,
@@ -161,14 +161,14 @@ const swiper = new Swiper(".swiperThumb", {
   },
 });
 
-const swiper2 = new Swiper(".swiperThumb2", {
-  loop:true,
+const swiper2 = new Swiper('.swiperThumb2', {
+  loop: true,
   slidesPerView: 1,
   speed: 2000,
   spaceBetween: 30,
   navigation: {
-    nextEl: ".swiperThumb-button-next",
-    prevEl: ".swiperThumb-button-prev",
+    nextEl: '.swiperThumb-button-next',
+    prevEl: '.swiperThumb-button-prev',
   },
   thumbs: {
     swiper: swiper,

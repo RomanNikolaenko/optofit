@@ -6,7 +6,7 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 let player;
 
 function YTIframe(event) {
-  const videoId = event.getAttribute('data-video')
+  const videoId = event.getAttribute('data-video');
   const playerId = event.getAttribute('data-id');
 
   player = new YT.Player(playerId, {
