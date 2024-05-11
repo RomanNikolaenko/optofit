@@ -149,6 +149,10 @@
     margin-top: rem(22);
 
     @include property('max-width', 650, 619, 1200, 768);
+
+    .step-form & {
+      max-width: 100%;
+    }
   }
 
   &__question {
@@ -556,4 +560,10 @@
   height: 1px;
   background-color: rgba(0, 113, 155, 0.5);
   margin: rem(24) auto;
+}
+
+.step-form {
+  .form-contacts {
+    padding: 0;
+  }
 }

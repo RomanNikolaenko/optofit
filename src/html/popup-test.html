@@ -935,6 +935,57 @@
           </div>
         </div>
 
+        <div
+          class="test-popup__step step-popup step-form">
+          <div class="step-popup__header">
+            <div class="step-popup__header-wrap">
+              <div class="step-popup__question">
+                Дякую, що пройшли тест і відповіли на питання.
+              </div>
+              <div class="step-popup__line"></div>
+            </div>
+            <button
+              class="popup__close button-close"
+              tabindex="-1"
+              type="button">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M6 6L18.7742 18.7742"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path
+                  d="M6 18.7742L18.7742 5.99998"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+
+          <div class="step-popup__wrap">
+            <div class="step-popup__title">
+              Залиште ваші дані, ми уважно ознайомимося з вашими результатами,
+              та
+              найближчим часом з вами зв'яжеться наш спеціаліст</div>
+          </div>
+
+          <div class="step-line"></div>
+
+          @@include('./components/form.html', {"textarea": true, "email":
+          true,
+          "requiredEmail": 'required="false"',
+          "title":
+          "Отримати консультацію"})
+        </div>
+
         <div class="test-popup__results results">
           <div class="results__header">
             <div class="results__title step-popup__title">
@@ -1004,7 +1055,7 @@
                   <div class="service-popular__btns">
                     <a href="#" class="button-line">Дізнатися більше</a>
                     @@include('./components/button.html', { "title":
-                    "Записатися на прийом", "flag": 'up', "data-type":
+                    "Дізнатися результат", "flag": 'up', "data-type":
                     'data-type="appointment"', "class": 'button__white' })
                   </div>
                 </div>

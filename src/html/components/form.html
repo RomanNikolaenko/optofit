@@ -6,6 +6,7 @@
           type="text"
           name="name"
           class="form-contacts__input"
+          required="false"
           placeholder="Ім'я" />
       </label>
     </fieldset>
@@ -17,9 +18,24 @@
           name="phone"
           value
           class="form-contacts__input"
+          required="false"
           placeholder="Телефон" />
       </label>
     </fieldset>
+
+    @@if(email == true) {
+    <fieldset class="form-contacts__fieldset">
+      <label class="form-contacts__label">
+        <input
+          type="text"
+          name="email"
+          value
+          class="form-contacts__input"
+          @@requiredEmail
+          placeholder="Email" />
+      </label>
+    </fieldset>
+    }
 
     @@if(textarea == true) {
     <fieldset class="form-contacts__fieldset">
